@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  background-color: #F2F0EF;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  border-bottom: 1px solid #eee;
+  background-color: #e63946;
+  color: white;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #111;
+}
+.logo span {
+  color: #e63946; /* red accent */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+nav a:hover {
+  color: #e63946;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background: #fff;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.hero-text h1 span {
+  color: #e63946;
+}
+.hero-text p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e63946;
+  color: #e63946;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+.btn:hover {
+  background: #e63946;
+  color: #fff;
+}
+
+/* About */
+.about, .work, footer {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.about h2, .work h2, footer h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+
+/* Work grid */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.card {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+.card img {
+  width: 100%;
+  display: block;
+}
+.card h3 {
+  padding: 1rem;
+  color: #111;
+}
+.card p {
+  padding: 0 1rem 1.5rem;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+footer a {
+  color: #e63946;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer .copyright {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
