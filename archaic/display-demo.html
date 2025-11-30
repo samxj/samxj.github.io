@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Display Examples</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #fff;
+      color: #111;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #e63946;
+      margin-bottom: 3rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    h2 {
+      color: #111;
+      margin-bottom: 1rem;
+    }
+
+    .label {
+      display: inline-block;
+      background: #e63946;
+      color: white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Shared box styling */
+    .box {
+      background: #e63946;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* BLOCK example */
+    .block-container .box {
+      display: block;
+      margin: 0.5rem 0;
+    }
+
+    /* INLINE example */
+    .inline-container .box {
+      display: inline;
+      margin-right: 0.5rem;
+    }
+
+    /* INLINE-BLOCK example */
+    .inline-block-container .box {
+      display: inline-block;
+      width: 120px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      margin: 0.3rem;
+    }
+
+    /* FLEX example */
+    .flex-container {
+      display: flex;
+      gap: 2rem;
+    }
+    .flex-container .box {
+      flex: 1;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* JUSTIFY-CONTENT example */
+    .space-between-container {
+      display: flex;
+      justify-content: space-between;
+      border: 1px dashed #999;
+      padding: 2rem;
+    }
+
+    .space-between-container .box {
+      flex: 0 0 100px;
+      text-align: center;
+    }
+
+    .description {
+      font-size: 0.9rem;
+      color: #333;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Display Examples</h1>
+
+  <section class="block-container">
+    <h2><span class="label">display: block;</span></h2>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <p class="description">
+      Each <strong>block</strong> element takes up the full width and starts on a new line.
+    </p>
+  </section>
+
+  <section class="inline-container">
+    <h2><span class="label">display: inline;</span></h2>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <p class="description">
+      <strong>Inline</strong> elements only take up as much width as needed and stay in line with each other.  
+      They can’t have set widths or heights.
+    </p>
+  </section>
+
+  <section class="inline-block-container">
+    <h2><span class="label">display: inline-block;</span></h2>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <p class="description">
+      <strong>Inline-block</strong> elements stay on the same line like inline elements,  
+      but you can set their width and height like block elements.
+    </p>
+  </section>
+
+  <section class="flex-container">
+    <h2><span class="label">display: flex;</span></h2>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <p class="description">
+      <strong>Flex</strong> containers arrange their children in a flexible row or column.  
+      Items can stretch, shrink, and align automatically.
+    </p>
+  </section>
+
+  <section class="space-between-container">
+    <h2><span class="label">justify-content: space-between;</span></h2>
+    <div class="box">Left</div>
+    <div class="box">Middle</div>
+    <div class="box">Right</div>
+    <p class="description">
+      With <code>justify-content: space-between</code>, the first item sticks to the start,  
+      the last to the end, and the space between them is evenly distributed.
+    </p>
+  </section>
+
+</body>
+</html>
