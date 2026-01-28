@@ -1,51 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head id="mainhead"></head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Field | Coming Soon</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #eee;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+      color: #e63926;
+      padding: 20px;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    .construction {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .email {
+      margin-top: 40px;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    a {
+      color: black;
+      text-decoration: underline;
+      transition: opacity 0.3s ease;
+    }
+
+    a:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
 <body>
-  <div id="header"></div>
-  <section class="hero" style="background-image: url('Assets/lamp&moon.jpg'); height: 90vh;">
-    <div class="bg" id="bgA"></div>
-    <div class="bg" id="bgB"></div>
-  </section>
-
-  <section id="about" class="about">
-    <h1>Welcome to my portfolio :)</h1><br/><p style="text-align: center; font-size: 1.2rem;">I'm Sam Field and this is where I put lots of the things I do!<br/>From the photography you see above, to motorizing a pudding trolley for no particular reason; it's all here for you to see if you'd like to. Hope you enjoy!<br/>Check it all out in the header bar above, or have a look down below at some featured work.</p>
-    <div class="inner">
-    
+  <div class="container">
+    <div class="construction">🚧</div>
+    <!-- INSERT ADOBE ILLUSTRATOR FISHING IMAGE HITHER, INSTEAD OF EMOJI -->
+    <h1>Aw shucks!</h1>
+    <p>
+      My portfolio site is undergoing some refurb and a content overhaul. Check back by the end of March, all should be complete by then.
+    </p>
+    <div class="email">
+      <a href="mailto:whyareyou@stalkingme.com">Get in touch</a>
     </div>
-  </section>
-
-  <section id="work" class="work">
-    <h2>Featured Work</h2>
-    <div class="work-grid">
-      <a href="language.html#leuiraciu" style="text-decoration: none;">
-        <div class="card">
-          <img src="Assets/Language/leuiraciu.png" alt="Project 1">
-          <h3>Leuiráciu language</h3>
-          <p>Invented a fully-functional language, complete with complex gramamar, evolution and vocabulary, all in a textbook.</p>
-        </div>
-      </a>
-
-      <a href="engineering.html#Pudding%20Trolley" style="text-decoration: none;">
-        <div class="card">
-          <img src="Assets/Engineering/plen-temp.jpg" alt="Project 2">
-          <h3>STEM Fair 2025</h3>
-          <p>Designed and made an RC-plane as part of the team, capable of balancing itself and avoiding crashes on its own with a flight computer.</p>
-        </div>
-      </a>
-
-      <a href="video.html#immaroy" style="text-decoration: none;">
-        <div class="card">
-          <img src="Assets/Video/sign.jpg" alt="Project 3">
-          <h3>Chinatown restaurant photography</h3>
-          <p>Did some product shooting for a restaurant in Chinatown's menu.</p>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <div id="footer"></div>
-  <script src="Scripts/slideshow.js"></script>
-  <script src="Scripts/hdft.js"></script>
+  </div>
 </body>
 </html>
