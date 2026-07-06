@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/c/Users/samgf/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/fnm.exe env *)",
+      "Read(//c/Users/samgf/AppData/Local/**)",
+      "Read(//c/Users/samgf/**)",
+      "Skill(run)",
+      "Skill(run:*)"
+    ]
+  }
+}

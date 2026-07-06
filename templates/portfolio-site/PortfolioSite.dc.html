@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Portfolio Site" description="Full click-through portfolio: Home, About, Work, Resume, Contact" -->
+<helmet>
+  <script src="./ds-base.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg-page); }
+    a { color: var(--accent); }
+    a:hover { color: var(--accent-hover); }
+    @keyframes heroWordIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes heroWordCalm {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes heroWordKinetic {
+      0% { opacity: 0; transform: scale(0.8) rotate(-4deg) translateY(6px); }
+      60% { opacity: 1; transform: scale(1.05) rotate(1deg) translateY(-2px); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg) translateY(0); }
+    }
+    [data-mood="light"] {
+      --bg-page: var(--cream-1);
+      --bg-surface: #FFFFFF;
+      --bg-surface-raised: #FFFFFF;
+      --text-primary: var(--black-1);
+      --text-secondary: #3A362E;
+      --text-muted: #6B6659;
+      --border-hairline: #DED6C4;
+      --border-strong: #B9AF98;
+    }
+    [data-mood="light"] nav {
+      background: rgba(246,241,231,0.75) !important;
+    }
+  </style>
+</helmet>
+<div data-mood="{{ moodAttr }}">
+  <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Nav" active="{{ page }}" onNavigate="{{ navigate }}" hint-size="100%,72"></x-import>
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+    <section style="min-height:86vh; display:flex; flex-direction:column; justify-content:center; gap:32px; padding:96px clamp(24px,5vw,64px)">
+      <div style="font:600 0.75rem/1 'Inter',sans-serif; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent)">Engineering × photography × story</div>
+      <h1 style="font:900 clamp(3.5rem,9vw,8.5rem)/0.92 'Archivo',sans-serif; letter-spacing:-0.03em; color:var(--text-primary); margin:0; max-width:22ch">Real tech, raw <span key="{{ wordIndex }}" style="{{ wordStyle }}">{{ heroWord }}</span>.</h1>
+      <p style="font:400 1.25rem/1.55 'Inter',sans-serif; color:var(--text-secondary); max-width:52ch; margin:0">I'm Sam Field — I build things (code, machines, film) and I tell stories with them. Camera in one hand, CAD file in the other.</p>
+      <div style="display:flex; gap:16px; margin-top:12px">
+        <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Button" variant="primary" size="lg" icon="arrow" onClick="{{ goWork }}" hint-size="180,56">See my work</x-import>
+        <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Button" variant="secondary" size="lg" onClick="{{ goContact }}" hint-size="180,56">Get in touch</x-import>
+      </div>
+    </section>
+    <section style="padding:0 clamp(24px,5vw,64px) 96px; display:grid; grid-template-columns:repeat(4,1fr); gap:32px">
+      <sc-for list="{{ highlights }}" as="h" hint-placeholder-count="4">
+        <div style="border-top:1px solid var(--border-hairline); padding-top:16px; display:flex; flex-direction:column; gap:8px">
+          <h3 style="font:800 1.15rem/1.05 'Archivo',sans-serif; color:var(--text-primary); margin:0">{{ h.title }}</h3>
+          <p style="font:400 0.9375rem/1.5 'Inter',sans-serif; color:var(--text-muted); margin:0">{{ h.desc }}</p>
+        </div>
+      </sc-for>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{ isAbout }}">
+    <div style="padding:96px clamp(24px,5vw,64px); display:flex; flex-direction:column; gap:64px">
+      <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.SectionHeading" index="01" eyebrow="About" title="Two sides, one habit of mind." hint-size="100%,140"></x-import>
+      <p style="font:400 1.25rem/1.55 'Inter',sans-serif; color:var(--text-secondary); max-width:68ch; margin:0">I split my time between technical work — code, mechanisms, physics — and creative work — film, photography, writing. I don't really see them as separate: both start with a plan, both live or die on the details, and both need someone willing to sit with a problem until it's actually solved. Whichever one I'm doing, I try to bring the other one with me.</p>
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:48px">
+        <sc-for list="{{ aboutGroups }}" as="g" hint-placeholder-count="5">
+          <div style="display:flex; flex-direction:column; gap:12px">
+            <h3 style="font:800 1.25rem/1.05 'Archivo',sans-serif; color:var(--text-primary); margin:0">{{ g.title }}</h3>
+            <div style="display:flex; gap:8px; flex-wrap:wrap">
+              <sc-for list="{{ g.tags }}" as="t" hint-placeholder-count="4">
+                <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Tag" hint-size="auto,32">{{ t }}</x-import>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isWork }}">
+    <div style="padding:96px clamp(24px,5vw,64px); display:flex; flex-direction:column; gap:64px">
+      <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.SectionHeading" index="02" eyebrow="Selected Work" title="Things I've made" hint-size="100%,140"></x-import>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:32px">
+        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="6">
+          <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.ProjectCard" title="{{ p.title }}" year="{{ p.year }}" role="{{ p.role }}" dc-props="{{ p.cardProps }}" hint-size="100%,380"></x-import>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isResume }}">
+    <div style="padding:96px clamp(24px,5vw,64px); display:flex; flex-direction:column; gap:48px">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px">
+        <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.SectionHeading" index="03" eyebrow="Resume" title="Experience" hint-size="400,140"></x-import>
+        <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Button" variant="secondary" hint-size="200,50">Download CV (PDF)</x-import>
+      </div>
+      <div>
+        <sc-for list="{{ resumeRows }}" as="r" hint-placeholder-count="6">
+          <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.ExperienceRow" period="{{ r.period }}" title="{{ r.title }}" org="{{ r.org }}" description="{{ r.description }}" hint-size="100%,110"></x-import>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isContact }}">
+    <div style="padding:96px clamp(24px,5vw,64px); min-height:70vh; display:flex; flex-direction:column; gap:48px; justify-content:center">
+      <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.SectionHeading" index="04" eyebrow="Contact" title="Let's make something." hint-size="100%,140"></x-import>
+      <p style="font:400 1.25rem/1.55 'Inter',sans-serif; color:var(--text-secondary); max-width:56ch; margin:0">Whatever it is — a film, a build, a project that needs both — I'd like to hear about it.</p>
+      <div style="display:flex; gap:16px; flex-wrap:wrap">
+        <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Button" variant="primary" size="lg" icon="arrow" href="mailto:hello@samfield.co" hint-size="160,56">Email me</x-import>
+        <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Button" variant="ghost" size="lg" hint-size="140,56">Instagram</x-import>
+        <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Button" variant="ghost" size="lg" hint-size="120,56">Vimeo</x-import>
+      </div>
+    </div>
+  </sc-if>
+
+  <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Footer" email="hello@samfield.co" dc-props="{{ footerProps }}" hint-size="100%,220"></x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;mood&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Cinematic Dark&quot;,&quot;options&quot;:[&quot;Cinematic Dark&quot;,&quot;Editorial Light&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;,&quot;label&quot;:&quot;Mood&quot;},&quot;heroEnergy&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Calm&quot;,&quot;options&quot;:[&quot;Calm&quot;,&quot;Kinetic&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;,&quot;label&quot;:&quot;Hero energy&quot;},&quot;voice&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Balanced&quot;,&quot;options&quot;:[&quot;Technical&quot;,&quot;Creative&quot;,&quot;Balanced&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;,&quot;label&quot;:&quot;Voice&quot;}}">
+class Component extends DCLogic {
+  state = { page: 'home', wordIndex: 0 };
+
+  wordSets = {
+    Technical: [
+      { text: 'precision', fontFamily: "'Archivo', sans-serif", fontWeight: 900, fontStyle: 'normal', fontSize: '1em' },
+      { text: 'systems', fontFamily: "'Space Mono', monospace", fontWeight: 400, fontStyle: 'normal', fontSize: '0.62em' },
+      { text: 'logic', fontFamily: "'Archivo', sans-serif", fontWeight: 900, fontStyle: 'normal', fontSize: '1em' },
+      { text: 'autopilot', fontFamily: "'Space Mono', monospace", fontWeight: 400, fontStyle: 'normal', fontSize: '0.55em' },
+      { text: 'engineering', fontFamily: "'Archivo', sans-serif", fontWeight: 900, fontStyle: 'normal', fontSize: '0.85em' },
+    ],
+    Creative: [
+      { text: 'boldness', fontFamily: "'Caveat', cursive", fontWeight: 700, fontStyle: 'normal', fontSize: '1.15em' },
+      { text: 'imagination', fontFamily: "'Playfair Display', serif", fontWeight: 900, fontStyle: 'italic', fontSize: '0.78em' },
+      { text: 'curiosity', fontFamily: "'Caveat', cursive", fontWeight: 700, fontStyle: 'normal', fontSize: '1.15em' },
+      { text: 'storytelling', fontFamily: "'Playfair Display', serif", fontWeight: 900, fontStyle: 'italic', fontSize: '0.75em' },
+      { text: 'wonder', fontFamily: "'Caveat', cursive", fontWeight: 700, fontStyle: 'normal', fontSize: '1.2em' },
+    ],
+    Balanced: [
+      { text: 'creativity', fontFamily: "'Archivo', sans-serif", fontWeight: 900, fontStyle: 'normal', fontSize: '1em' },
+      { text: 'boldness', fontFamily: "'Caveat', cursive", fontWeight: 700, fontStyle: 'normal', fontSize: '1.15em' },
+      { text: 'communication', fontFamily: "'Playfair Display', serif", fontWeight: 900, fontStyle: 'italic', fontSize: '0.85em' },
+      { text: 'leadership', fontFamily: "'Space Mono', monospace", fontWeight: 400, fontStyle: 'normal', fontSize: '0.6em' },
+      { text: 'curiosity', fontFamily: "'Caveat', cursive", fontWeight: 700, fontStyle: 'normal', fontSize: '1.15em' },
+    ],
+  };
+
+  state = { page: 'home', wordIndex: 0 };
+
+  componentDidMount() {
+    this._startTimer();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.heroEnergy !== this.props.heroEnergy || prevProps.voice !== this.props.voice) {
+      this.setState({ wordIndex: 0 });
+      this._startTimer();
+    }
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._timer);
+  }
+
+  _startTimer() {
+    clearInterval(this._timer);
+    const energy = this.props.heroEnergy ?? 'Kinetic';
+    const words = this.wordSets[this.props.voice ?? 'Balanced'];
+    const ms = energy === 'Calm' ? 3200 : 1200;
+    this._timer = setInterval(() => {
+      this.setState((s) => ({ wordIndex: (s.wordIndex + 1) % words.length }));
+    }, ms);
+  }
+
+  renderVals() {
+    const page = this.state.page;
+    const navigate = (key) => this.setState({ page: key });
+    const mood = this.props.mood ?? 'Cinematic Dark';
+    const energy = this.props.heroEnergy ?? 'Kinetic';
+    const words = this.wordSets[this.props.voice ?? 'Balanced'];
+    const word = words[this.state.wordIndex % words.length];
+    const isCalm = energy === 'Calm';
+    return {
+      moodAttr: mood === 'Editorial Light' ? 'light' : 'dark',
+      wordIndex: this.state.wordIndex,
+      heroWord: word.text,
+      wordStyle: {
+        display: 'inline-block',
+        color: 'var(--accent)',
+        fontFamily: word.fontFamily,
+        fontWeight: word.fontWeight,
+        fontStyle: word.fontStyle,
+        fontSize: word.fontSize,
+        lineHeight: 0.92,
+        animation: isCalm
+          ? 'heroWordCalm 650ms cubic-bezier(0.16,1,0.3,1)'
+          : 'heroWordKinetic 420ms cubic-bezier(0.34,1.56,0.64,1)',
+      },
+      page,
+      isHome: page === 'home',
+      isAbout: page === 'about',
+      isWork: page === 'work',
+      isResume: page === 'resume',
+      isContact: page === 'contact',
+      navigate,
+      goWork: () => navigate('work'),
+      goContact: () => navigate('contact'),
+      highlights: [
+        { title: 'Film & photo', desc: 'Shot planning to grade, solo — Premiere, Photoshop, Lightroom, After Effects' },
+        { title: 'Engineering', desc: 'STEM-fair winner: an AI-guided seed-dropping RC plane, built from scratch' },
+        { title: 'Languages', desc: 'C1 Italian, B2 French, grade 9 Latin & Classical Greek GCSE' },
+        { title: 'Music & writing', desc: 'Grade-8 drums, grade-4 piano, nationally shortlisted short fiction' },
+      ],
+      aboutGroups: [
+        { title: 'Photography & videography', tags: ['Premiere Pro', 'Photoshop', 'Lightroom', 'After Effects', 'Solo production'] },
+        { title: 'Engineering', tags: ['CAD', 'Autopilot systems', 'Mechanism design', 'Project management'] },
+        { title: 'Linguistics', tags: ['C1 Italian', 'B2 French', 'Latin', 'Classical Greek', 'Constructed language'] },
+        { title: 'Music', tags: ['Grade-8 drums', 'Grade-4 piano', 'Band performance', 'Music theory'] },
+        { title: 'Writing', tags: ['Short fiction', 'National shortlist', 'School publication'] },
+      ],
+      projects: [
+        { title: "St John's Hampton Wick", year: '2025 —', role: 'Director, camera, edit', cardProps: { tags: ['Promo Film', 'Premiere Pro'] } },
+        { title: 'AI Seed-Dropping Plane', year: '2024', role: 'Dispenser design + autopilot code', cardProps: { tags: ['STEM Fair Winner', 'CAD'] } },
+        { title: 'Imm-Aroy Restaurant', year: '2025', role: 'Marketing photography', cardProps: { tags: ['Photoshop', 'Lightroom'] } },
+        { title: 'Christian Youth Journals', year: '2023–24', role: 'Design & sale', cardProps: { tags: ['Print Design'] } },
+        { title: 'Red Robin Art Studio', year: '2023', role: 'Promotional film', cardProps: { tags: ['Videography'] } },
+        { title: 'Chanctonbury Church', year: '2022', role: 'Promotional film', cardProps: { tags: ['Videography', 'Early Work'] } },
+      ],
+      resumeRows: [
+        { period: '2026', title: 'Runner', org: 'RED-d Awareness Film Shoot', description: 'On-set support for a professional production.' },
+        { period: '2025 — present', title: 'Promotional Films', org: "St John's Hampton Wick Church", description: 'Shot planning through edit and delivery, solo.' },
+        { period: '2025', title: 'Marketing Photography', org: 'Imm-Aroy, Chinatown London', description: "Stills for a restaurant's menu and social presence." },
+        { period: '2023 — 24', title: 'Christian Youth Journals', org: 'Independent', description: 'Designed and sold a run of youth journals.' },
+        { period: '2023', title: 'Promotional Film', org: 'Red Robin Art Studio, London', description: '' },
+        { period: '2022', title: 'Promotional Film', org: 'Chanctonbury Church', description: '' },
+      ],
+      footerProps: { socials: [{ label: 'Instagram', href: '#' }, { label: 'Vimeo', href: '#' }] },
+    };
+  }
+}
+</script>
+</body>
+</html>

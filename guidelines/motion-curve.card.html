@@ -1,0 +1,8 @@
+<!-- @dsCard group="Brand" viewport="700x150" name="Motion curve" subtitle="Cinematic ease-out — no bounce" -->
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;background:var(--bg-page);display:flex;align-items:center;justify-content:center;height:150px}
+  .dot{width:20px;height:20px;border-radius:50%;background:var(--accent);animation:move 2.4s var(--ease-cinematic) infinite}
+  @keyframes move{0%{transform:translateX(-220px)}50%{transform:translateX(220px)}100%{transform:translateX(-220px)}}
+</style>
+<div class="dot"></div>

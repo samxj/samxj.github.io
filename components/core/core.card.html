@@ -1,0 +1,54 @@
+<!-- @dsCard group="Components" viewport="700x1500" name="Core" subtitle="Button, Tag, SectionHeading, ProjectCard, ExperienceRow, Nav, Footer" -->
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  body { margin: 0; background: var(--bg-page); }
+  #root { padding: 28px; display: flex; flex-direction: column; gap: 36px; }
+  .row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { Button, Tag, SectionHeading, ProjectCard, ExperienceRow, Nav, Footer } = window.SamFieldDesignSystem_0559a7;
+
+function Demo() {
+  return (
+    <React.Fragment>
+      <Nav active="work" links={[{label:'Home',href:'#home'},{label:'About',href:'#about'},{label:'Work',href:'#work'},{label:'Resume',href:'#resume'}]} />
+      <div style={{padding: '0 20px', display:'flex', flexDirection:'column', gap:36}}>
+        <div className="row">
+          <Button variant="primary" icon="arrow">Get in touch</Button>
+          <Button variant="secondary">Download CV</Button>
+          <Button variant="ghost">See all work</Button>
+          <Button variant="primary" disabled>Disabled</Button>
+        </div>
+        <div className="row">
+          <Tag>Premiere Pro</Tag>
+          <Tag>C1 Italian</Tag>
+          <Tag variant="accent">2026</Tag>
+        </div>
+        <SectionHeading index="02" eyebrow="Selected Work" title="Things I've made" />
+        <div style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:24, maxWidth: 700}}>
+          <ProjectCard title="St John's Hampton Wick" year="2025" role="Director, camera, edit" tags={['Promo Film','Premiere Pro']} />
+          <ProjectCard title="AI Seed Plane" year="2024" role="Dispenser design + code" tags={['CAD','Autopilot']} />
+        </div>
+        <div>
+          <ExperienceRow period="2025 — present" title="Promotional Films" org="St John's Hampton Wick Church" description="Shot planning through edit and delivery, solo." />
+          <ExperienceRow period="2025" title="Marketing Photography" org="Imm-Aroy, Chinatown" description="Stills for menu and social." />
+        </div>
+      </div>
+      <Footer email="hello@samfield.co" socials={[{label:'Instagram',href:'#'},{label:'Vimeo',href:'#'}]} />
+    </React.Fragment>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>

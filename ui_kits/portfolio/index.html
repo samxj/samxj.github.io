@@ -1,0 +1,160 @@
+<!-- @dsCard group="Portfolio" viewport="1280x820" name="Portfolio site" subtitle="Home, About, Work, Resume, Contact — click-through" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sam Field — Portfolio</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg-page); }
+  a { color: var(--accent); }
+  a:hover { color: var(--accent-hover); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { Button, Tag, SectionHeading, ProjectCard, ExperienceRow, Nav, Footer } = window.SamFieldDesignSystem_0559a7;
+const { useState } = React;
+
+const highlights = [
+  { title: 'Film & photo', desc: 'Shot planning to grade, solo — Premiere, Photoshop, Lightroom, After Effects' },
+  { title: 'Engineering', desc: 'STEM-fair winner: an AI-guided seed-dropping RC plane, built from scratch' },
+  { title: 'Languages', desc: 'C1 Italian, B2 French, grade 9 Latin & Classical Greek GCSE' },
+  { title: 'Music & writing', desc: 'Grade-8 drums, grade-4 piano, nationally shortlisted short fiction' },
+];
+const aboutGroups = [
+  { title: 'Photography & videography', tags: ['Premiere Pro', 'Photoshop', 'Lightroom', 'After Effects', 'Solo production'] },
+  { title: 'Engineering', tags: ['CAD', 'Autopilot systems', 'Mechanism design', 'Project management'] },
+  { title: 'Linguistics', tags: ['C1 Italian', 'B2 French', 'Latin', 'Classical Greek', 'Constructed language'] },
+  { title: 'Music', tags: ['Grade-8 drums', 'Grade-4 piano', 'Band performance', 'Music theory'] },
+  { title: 'Writing', tags: ['Short fiction', 'National shortlist', 'School publication'] },
+];
+const projects = [
+  { title: "St John's Hampton Wick", year: '2025 —', role: 'Director, camera, edit', tags: ['Promo Film', 'Premiere Pro'] },
+  { title: 'AI Seed-Dropping Plane', year: '2024', role: 'Dispenser design + autopilot code', tags: ['STEM Fair Winner', 'CAD'] },
+  { title: 'Imm-Aroy Restaurant', year: '2025', role: 'Marketing photography', tags: ['Photoshop', 'Lightroom'] },
+  { title: 'Christian Youth Journals', year: '2023–24', role: 'Design & sale', tags: ['Print Design'] },
+  { title: 'Red Robin Art Studio', year: '2023', role: 'Promotional film', tags: ['Videography'] },
+  { title: 'Chanctonbury Church', year: '2022', role: 'Promotional film', tags: ['Videography', 'Early Work'] },
+];
+const resumeRows = [
+  { period: '2026', title: 'Runner', org: 'RED-d Awareness Film Shoot', description: 'On-set support for a professional production.' },
+  { period: '2025 — present', title: 'Promotional Films', org: "St John's Hampton Wick Church", description: 'Shot planning through edit and delivery, solo.' },
+  { period: '2025', title: 'Marketing Photography', org: 'Imm-Aroy, Chinatown London', description: "Stills for a restaurant's menu and social presence." },
+  { period: '2023 — 24', title: 'Christian Youth Journals', org: 'Independent', description: 'Designed and sold a run of youth journals.' },
+  { period: '2023', title: 'Promotional Film', org: 'Red Robin Art Studio, London', description: '' },
+  { period: '2022', title: 'Promotional Film', org: 'Chanctonbury Church', description: '' },
+];
+
+function Home({ onNavigate }) {
+  return (
+    <div>
+      <section style={{ minHeight: '86vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 'var(--space-6)', padding: 'var(--space-9) var(--gutter)' }}>
+        <div style={{ font: 'var(--text-eyebrow)', letterSpacing: 'var(--tracking-widest)', textTransform: 'uppercase', color: 'var(--accent)' }}>Engineering × photography × story</div>
+        <h1 style={{ font: 'var(--text-display-1)', letterSpacing: 'var(--tracking-tight)', color: 'var(--text-primary)', margin: 0, maxWidth: '18ch' }}>Real tech, raw creativity.</h1>
+        <p style={{ font: 'var(--text-body-lg)', color: 'var(--text-secondary)', maxWidth: '52ch', margin: 0 }}>I'm Sam Field — I build things (code, machines, film) and I tell stories with them. Camera in one hand, CAD file in the other.</p>
+        <div style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-3)' }}>
+          <Button variant="primary" size="lg" icon="arrow" onClick={() => onNavigate('work')}>See my work</Button>
+          <Button variant="secondary" size="lg" onClick={() => onNavigate('contact')}>Get in touch</Button>
+        </div>
+      </section>
+      <section style={{ padding: '0 var(--gutter) var(--space-9)', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'var(--space-6)' }}>
+        {highlights.map((h) => (
+          <div key={h.title} style={{ borderTop: '1px solid var(--border-hairline)', paddingTop: 'var(--space-4)', display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+            <h3 style={{ font: 'var(--text-display-3)', fontSize: '1.15rem', color: 'var(--text-primary)', margin: 0 }}>{h.title}</h3>
+            <p style={{ font: 'var(--text-body-sm)', color: 'var(--text-muted)', margin: 0 }}>{h.desc}</p>
+          </div>
+        ))}
+      </section>
+    </div>
+  );
+}
+
+function About() {
+  return (
+    <div style={{ padding: 'var(--space-9) var(--gutter)', display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
+      <SectionHeading index="01" eyebrow="About" title="Two sides, one habit of mind." />
+      <p style={{ font: 'var(--text-body-lg)', color: 'var(--text-secondary)', maxWidth: '68ch', margin: 0 }}>
+        I split my time between technical work — code, mechanisms, physics — and creative work — film, photography, writing.
+        I don't really see them as separate: both start with a plan, both live or die on the details, and both need someone
+        willing to sit with a problem until it's actually solved. Whichever one I'm doing, I try to bring the other one with me.
+      </p>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 'var(--space-7)' }}>
+        {aboutGroups.map((g) => (
+          <div key={g.title} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
+            <h3 style={{ font: 'var(--text-display-3)', fontSize: '1.25rem', color: 'var(--text-primary)', margin: 0 }}>{g.title}</h3>
+            <div style={{ display: 'flex', gap: 'var(--space-2)', flexWrap: 'wrap' }}>
+              {g.tags.map((t) => <Tag key={t}>{t}</Tag>)}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Work({ onOpen }) {
+  return (
+    <div style={{ padding: 'var(--space-9) var(--gutter)', display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
+      <SectionHeading index="02" eyebrow="Selected Work" title="Things I've made" />
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'var(--space-6)' }}>
+        {projects.map((p) => <ProjectCard key={p.title} {...p} onClick={() => onOpen && onOpen(p)} />)}
+      </div>
+    </div>
+  );
+}
+
+function Resume() {
+  return (
+    <div style={{ padding: 'var(--space-9) var(--gutter)', display: 'flex', flexDirection: 'column', gap: 'var(--space-7)' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: 'var(--space-4)' }}>
+        <SectionHeading index="03" eyebrow="Resume" title="Experience" />
+        <Button variant="secondary">Download CV (PDF)</Button>
+      </div>
+      <div>{resumeRows.map((r, i) => <ExperienceRow key={i} {...r} />)}</div>
+    </div>
+  );
+}
+
+function Contact() {
+  const [sent, setSent] = useState(false);
+  return (
+    <div style={{ padding: 'var(--space-9) var(--gutter)', minHeight: '70vh', display: 'flex', flexDirection: 'column', gap: 'var(--space-7)', justifyContent: 'center' }}>
+      <SectionHeading index="04" eyebrow="Contact" title="Let's make something." />
+      <p style={{ font: 'var(--text-body-lg)', color: 'var(--text-secondary)', maxWidth: '56ch', margin: 0 }}>
+        Whatever it is — a film, a build, a project that needs both — I'd like to hear about it.
+      </p>
+      <div style={{ display: 'flex', gap: 'var(--space-4)', flexWrap: 'wrap' }}>
+        <Button variant="primary" size="lg" icon="arrow" onClick={() => setSent(true)} href={sent ? undefined : 'mailto:hello@samfield.co'}>
+          {sent ? 'Opened your mail app' : 'Email me'}
+        </Button>
+        <Button variant="ghost" size="lg">Instagram</Button>
+        <Button variant="ghost" size="lg">Vimeo</Button>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [page, setPage] = useState('home');
+  const pages = { home: Home, about: About, work: Work, resume: Resume, contact: Contact };
+  const Page = pages[page] || Home;
+  return (
+    <React.Fragment>
+      <Nav active={page} onNavigate={setPage} />
+      <Page onNavigate={setPage} onOpen={() => {}} />
+      <Footer email="hello@samfield.co" socials={[{ label: 'Instagram', href: '#' }, { label: 'Vimeo', href: '#' }]} />
+    </React.Fragment>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
