@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Milestone Analyzer</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <a href="/" class="btn btn-ghost back-link">← Back to portfolio</a>
+  <div class="hero">
+    <h1>Milestone Analyzer</h1>
+    <p>Paste your list of milestones below — one per line, dates and times written however you naturally wrote them. We'll parse them and turn them into charts and stats on the next page.</p>
+  </div>
+
+  <div class="input-card">
+    <div class="row">
+      <label for="milestone-input">Your milestones</label>
+      <span class="meta-line"><span id="line-count">0</span> lines</span>
+    </div>
+    <textarea id="milestone-input" placeholder="First text: it was to mum, saying: Hi Mum! 13:33, Thu 1 Sep 2022&#10;First time in Belgium: 10:26 am Thursday 17th November 2022&#10;..."></textarea>
+
+    <div class="error-banner" id="error-banner"></div>
+
+    <div class="input-actions">
+      <div class="file-btn-wrap">
+        <button class="btn btn-ghost" type="button">Load from .txt file</button>
+        <input type="file" id="file-input" accept=".txt,text/plain">
+      </div>
+      <button class="btn btn-primary" id="analyze-btn">Analyze Milestones →</button>
+    </div>
+
+    <p class="example-note">Nothing leaves your browser — parsing and charting all happen locally on this page.</p>
+  </div>
+</div>
+
+<footer class="site-footer">😬😬😬😬😬😬😬😬😬</footer>
+
+<script src="js/parser.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

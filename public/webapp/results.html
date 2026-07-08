@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Milestone Analyzer — Results</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap" id="page-content" style="display:none;">
+  <div class="site-header">
+    <div>
+      <h1>Your milestones, by the numbers</h1>
+      <p class="tagline">Everything below was computed in your browser — nothing was uploaded anywhere.</p>
+    </div>
+    <a class="btn btn-ghost" href="index.html">← Edit milestones</a>
+  </div>
+
+  <div class="summary-bar" id="summary-bar"></div>
+
+  <div class="section-title">Highlights</div>
+  <div class="stat-grid" id="stat-grid"></div>
+
+  <div class="section-title">Check a specific date range</div>
+  <div class="range-tool">
+    <div class="field">
+      <label for="range-start">From</label>
+      <input type="date" id="range-start">
+    </div>
+    <div class="field">
+      <label for="range-end">To</label>
+      <input type="date" id="range-end">
+    </div>
+    <div class="result" id="range-result">Pick two dates to see how many milestones fall between them.</div>
+  </div>
+
+  <div class="section-title">Charts</div>
+  <div class="chart-grid">
+    <div class="chart-card">
+      <h3>Milestones per year</h3>
+      <p class="chart-sub">How your logging rate has changed over time</p>
+      <canvas id="chart-year"></canvas>
+      <details class="table-toggle"><summary>View as table</summary><div id="table-year"></div></details>
+    </div>
+
+    <div class="chart-card">
+      <h3>Milestones by month of year</h3>
+      <p class="chart-sub">Seasonality, all years combined</p>
+      <canvas id="chart-month"></canvas>
+      <details class="table-toggle"><summary>View as table</summary><div id="table-month"></div></details>
+    </div>
+
+    <div class="chart-card">
+      <h3>Milestones by hour of day</h3>
+      <p class="chart-sub">Only entries with a recorded time (<span id="timed-count-note"></span>)</p>
+      <canvas id="chart-hour"></canvas>
+      <details class="table-toggle"><summary>View as table</summary><div id="table-hour"></div></details>
+    </div>
+
+    <div class="chart-card">
+      <h3>Milestones by day of week</h3>
+      <p class="chart-sub">Which day of the week comes up most</p>
+      <canvas id="chart-dow"></canvas>
+      <details class="table-toggle"><summary>View as table</summary><div id="table-dow"></div></details>
+    </div>
+  </div>
+
+  <div class="section-title">Busiest single days</div>
+  <div class="chart-card" style="max-width:100%;">
+    <ol class="milestone-list" id="busiest-day-list"></ol>
+  </div>
+
+  <div class="section-title">Undated / unparseable lines (<span id="undated-count"></span>)</div>
+  <div class="chart-card" style="max-width:100%;">
+    <p class="chart-sub">These lines didn't contain a clear month, day and year together, so they're excluded from every chart above.</p>
+    <div class="fixer-row">
+      <button class="btn btn-primary" id="fix-undated-btn">Fix undated milestones →</button>
+      <span class="meta-line" id="fixer-note"></span>
+    </div>
+    <details class="table-toggle">
+      <summary>Show them</summary>
+      <ol class="milestone-list" id="undated-list"></ol>
+    </details>
+  </div>
+</div>
+
+<div class="empty-state" id="empty-state" style="display:none;">
+  <p>No milestones found yet.</p>
+  <p><a href="index.html">Go paste some in →</a></p>
+</div>
+
+<footer class="site-footer">Milestone Analyzer — a static, offline-friendly companion to the milestone journal.</footer>
+
+<div class="modal-overlay" id="wizard-overlay" style="display:none;">
+  <div class="modal" id="wizard-modal" role="dialog" aria-modal="true" aria-labelledby="wizard-raw">
+    <div class="modal-header">
+      <span class="meta-line" id="wizard-progress"></span>
+      <button class="modal-close" id="wizard-close" aria-label="Close">✕</button>
+    </div>
+    <p class="wizard-raw" id="wizard-raw"></p>
+    <div class="wizard-fields">
+      <div class="field">
+        <label for="wizard-date">Date</label>
+        <input type="date" id="wizard-date">
+      </div>
+      <div class="field">
+        <label for="wizard-time">Time (optional)</label>
+        <input type="time" id="wizard-time">
+      </div>
+    </div>
+    <div class="wizard-actions">
+      <button class="btn btn-ghost" id="wizard-nodate">There really was no date/time</button>
+      <div class="wizard-actions-right">
+        <button class="btn btn-ghost" id="wizard-skip">Skip for now</button>
+        <button class="btn btn-primary" id="wizard-save">Save &amp; next →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="jumpscare-overlay" id="jumpscare-overlay" aria-hidden="true">😬</div>
+
+<script src="vendor/chart.umd.min.js"></script>
+<script src="js/parser.js"></script>
+<script src="js/stats.js"></script>
+<script src="js/overrides.js"></script>
+<script src="js/results.js"></script>
+<script src="js/jumpscare.js"></script>
+</body>
+</html>
