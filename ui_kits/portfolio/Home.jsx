@@ -3,10 +3,10 @@ import { Button } from '../../components/core/Button.jsx';
 
 const HERO_WORDS = [
   { text: 'creativity', fontFamily: "'Archivo', sans-serif", fontWeight: 900, fontStyle: 'normal', fontSize: '1em' },
-  { text: 'boldness', fontFamily: "'Caveat', cursive", fontWeight: 700, fontStyle: 'normal', fontSize: '1.15em' },
+  { text: 'boldness', fontFamily: "'Roboto Mono', monospace", fontWeight: 700, fontStyle: 'normal', fontSize: '0.85em' },
   { text: 'communication', fontFamily: "'Playfair Display', serif", fontWeight: 900, fontStyle: 'italic', fontSize: '0.85em' },
-  { text: 'leadership', fontFamily: "'Space Mono', monospace", fontWeight: 400, fontStyle: 'normal', fontSize: '0.6em' },
-  { text: 'curiosity', fontFamily: "'Caveat', cursive", fontWeight: 700, fontStyle: 'normal', fontSize: '1.15em' },
+  { text: 'leadership', fontFamily: "'Roboto Mono', monospace", fontWeight: 700, fontStyle: 'normal', fontSize: '0.95em' },
+  { text: 'curiosity', fontFamily: "'Limelight', fantasy", fontWeight: 400, fontStyle: 'normal', fontSize: '0.95em' },
 ];
 
 export function Home({ onNavigate }) {
@@ -32,10 +32,10 @@ export function Home({ onNavigate }) {
         padding: 'var(--space-9) var(--gutter)',
       }}>
         <div style={{ font: 'var(--text-eyebrow)', letterSpacing: 'var(--tracking-widest)', textTransform: 'uppercase', color: 'var(--accent)' }}>
-          Engineering × photography × story
+          Engineering × designing × storytelling
         </div>
         <h1 style={{ font: 'var(--text-display-1)', letterSpacing: 'var(--tracking-tight)', color: 'var(--text-primary)', margin: 0, maxWidth: '22ch' }}>
-          Real tech, raw{' '}
+          Skilled tech experience meets powerful {' '}
           <span
             key={wordIndex}
             style={{
@@ -53,8 +53,9 @@ export function Home({ onNavigate }) {
           </span>.
         </h1>
         <p style={{ font: 'var(--text-body-lg)', color: 'var(--text-secondary)', maxWidth: '52ch', margin: 0 }}>
-          I'm Sam Field — I build things (code, machines, film) and I tell stories with them.
-          Camera in one hand, CAD file in the other.
+          Telling stories with code, CAD, eloquency and skill. <br></br>
+          Bridging the gap between dull tech and bold creativity: <br></br>
+          camera in one hand, CAD file in the other.
         </p>
         <div style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-3)' }}>
           <Button variant="primary" size="lg" icon="arrow" onClick={() => onNavigate('work')}>See my work</Button>
