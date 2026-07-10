@@ -12,6 +12,12 @@ const rows = [
   { period: '2022', title: 'Promotional Film', org: 'Chanctonbury Church', description: '' },
 ];
 
+// TODO: replace with your real education entries (period, qualification, institution, optional description)
+const education = [
+  { period: 'Starting September 2026', title: 'A-Levels', org: 'Hampton School, London', description: 'Will take Mathematics, Physics and French (Further Physics elective and Politics enrichment courses)' },
+  { period: '2023 - 26', title: 'GCSE Courses', org: 'Hampton School, London', description: 'Sat 13 GCSEs, results available 20/08.' },
+];
+
 export function Resume() {
   return (
     <div style={{ padding: 'var(--space-9) var(--gutter)', display: 'flex', flexDirection: 'column', gap: 'var(--space-7)' }}>
@@ -21,6 +27,12 @@ export function Resume() {
       </div>
       <div>
         {rows.map((r, i) => <ExperienceRow key={i} {...r} />)}
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-5)' }}>
+        <h3 style={{ font: 'var(--text-display-3)', fontSize: '1.25rem', color: 'var(--text-primary)', margin: 0 }}>Education</h3>
+        <div>
+          {education.map((e, i) => <ExperienceRow key={i} {...e} />)}
+        </div>
       </div>
     </div>
   );

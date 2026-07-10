@@ -35,7 +35,7 @@ export function Home({ onNavigate }) {
           Engineering × designing × storytelling
         </div>
         <h1 style={{ font: 'var(--text-display-1)', letterSpacing: 'var(--tracking-tight)', color: 'var(--text-primary)', margin: 0, maxWidth: '22ch' }}>
-          Skilled tech experience meets powerful {' '}
+          Real technology meets powerful {' '}
           <span
             key={wordIndex}
             style={{

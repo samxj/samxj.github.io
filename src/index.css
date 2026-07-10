@@ -25,6 +25,23 @@ a:hover {
   flex-direction: column;
 }
 
+.article-row {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.article-row--reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 640px) {
+  .article-row,
+  .article-row--reverse {
+    flex-direction: column;
+  }
+}
+
 @keyframes heroWordReveal {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
