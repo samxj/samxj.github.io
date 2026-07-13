@@ -16,7 +16,7 @@ export function Nav({ active = 'home', links = [
       position: 'sticky',
       top: 0,
       zIndex: 10,
-      background: 'rgba(10,10,10,0.7)',
+      background: 'color-mix(in srgb, var(--bg-page) 70%, transparent)',
       backdropFilter: 'blur(var(--blur-glass))',
       WebkitBackdropFilter: 'blur(var(--blur-glass))',
       borderBottom: '1px solid var(--border-hairline)',

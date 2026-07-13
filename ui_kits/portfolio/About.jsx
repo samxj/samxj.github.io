@@ -20,7 +20,7 @@ export function About({}) {
         on the details, and both need someone willing to sit with a problem until it's actually solved.
         Whichever one I'm doing, I try to bring the other one with me.
       </p>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 'var(--space-7)' }}>
+      <div className="about-skills-grid" style={{ display: 'grid', gap: 'var(--space-7)' }}>
         {groups.map((g) => (
           <div key={g.title} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
             <h3 style={{ font: 'var(--text-display-3)', fontSize: '1.25rem', color: 'var(--text-primary)', margin: 0 }}>{g.title}</h3>

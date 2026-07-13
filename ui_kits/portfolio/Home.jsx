@@ -1,12 +1,22 @@
 import React from 'react';
 import { Button } from '../../components/core/Button.jsx';
 
-const HERO_WORDS = [
+/*const HERO_WORDS = [
   { text: 'creativity', fontFamily: "'Archivo', sans-serif", fontWeight: 900, fontStyle: 'normal', fontSize: '1em' },
+  { text: 'storytelling', fontFamily: "'Playfair Display', serif", fontWeight: 900, fontStyle: 'normal', fontSize: '0.85em'},
   { text: 'boldness', fontFamily: "'Roboto Mono', monospace", fontWeight: 700, fontStyle: 'normal', fontSize: '0.85em' },
   { text: 'communication', fontFamily: "'Playfair Display', serif", fontWeight: 900, fontStyle: 'italic', fontSize: '0.85em' },
   { text: 'leadership', fontFamily: "'Roboto Mono', monospace", fontWeight: 700, fontStyle: 'normal', fontSize: '0.95em' },
   { text: 'curiosity', fontFamily: "'Limelight', fantasy", fontWeight: 400, fontStyle: 'normal', fontSize: '0.95em' },
+];*/
+
+const HERO_WORDS = [
+  { text: 'creativity', fontFamily: "'Archivo', sans-serif", fontWeight: 900, fontStyle: 'normal', fontSize: '1em' },
+  { text: 'storytelling', fontFamily: "'Archivo', sans-serif", fontWeight: 900, fontStyle: 'normal', fontSize: '1em'},
+  { text: 'boldness', fontFamily: "'Archivo', sans-serif", fontWeight: 900, fontStyle: 'normal', fontSize: '1em' },
+  { text: 'communication', fontFamily: "'Archivo', sans-serif", fontWeight: 900, fontStyle: 'normal', fontSize: '1em' },
+  { text: 'leadership', fontFamily: "'Archivo', sans-serif", fontWeight: 900, fontStyle: 'normal', fontSize: '1em' },
+  { text: 'curiosity', fontFamily: "'Archivo', sans-serif", fontWeight: 900, fontStyle: 'normal', fontSize: '1em' },
 ];
 
 export function Home({ onNavigate }) {
@@ -35,11 +45,12 @@ export function Home({ onNavigate }) {
           Engineering × designing × storytelling
         </div>
         <h1 style={{ font: 'var(--text-display-1)', letterSpacing: 'var(--tracking-tight)', color: 'var(--text-primary)', margin: 0, maxWidth: '22ch' }}>
-          Real technology meets powerful {' '}
+          Where tech smooshes with human {' '}
           <span
             key={wordIndex}
             style={{
               display: 'inline-block',
+              whiteSpace: 'nowrap',
               color: 'var(--accent)',
               fontFamily: word.fontFamily,
               fontWeight: word.fontWeight,
@@ -49,13 +60,12 @@ export function Home({ onNavigate }) {
               animation: 'heroWordReveal 650ms var(--ease-cinematic)',
             }}
           >
-            {word.text}
-          </span>.
+            {word.text}.
+          </span>
         </h1>
         <p style={{ font: 'var(--text-body-lg)', color: 'var(--text-secondary)', maxWidth: '52ch', margin: 0 }}>
-          Telling stories with code, CAD, eloquency and skill. <br></br>
-          Bridging the gap between dull tech and bold creativity: <br></br>
-          camera in one hand, CAD file in the other.
+          Telling stories with code, films and eloquency. <br></br>
+          Bridging the gap between dull tech and bold creativity - camera in one hand, CAD file in the other.
         </p>
         <div style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-3)' }}>
           <Button variant="primary" size="lg" icon="arrow" onClick={() => onNavigate('work')}>See my work</Button>
@@ -63,7 +73,7 @@ export function Home({ onNavigate }) {
         </div>
       </section>
 
-      <section style={{ padding: '0 var(--gutter) var(--space-9)', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'var(--space-6)' }}>
+      <section className="home-features-grid" style={{ padding: '0 var(--gutter) var(--space-9)', display: 'grid', gap: 'var(--space-6)' }}>
         {[
           ['Film & photo', 'Shot planning to grade, solo — Premiere, Photoshop, Lightroom, After Effects'],
           ['Engineering', 'STEM-fair winner: an AI-guided seed-dropping RC plane, built from scratch'],

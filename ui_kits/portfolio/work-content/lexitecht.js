@@ -2,4 +2,5 @@
 //   { type: 'paragraph', text: 'Some prose.' }
 //   { type: 'image', src: 'assets/images/sjhw/2.jpg', caption: 'Optional caption.' }  // src: a single file, or a directory of images
 //   { type: 'heading', text: 'A subheading.' }
+//   { type: 'list', items: ['First item.', 'Second item.'] }
 export const content = [];

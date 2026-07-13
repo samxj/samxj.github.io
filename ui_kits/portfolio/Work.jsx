@@ -89,6 +89,13 @@ function renderTextBlock({ block, i }, content) {
       }}>{block.text}</h4>
     );
   }
+  if (block.type === 'list') {
+    return (
+      <ul key={i} style={{ font: 'var(--text-body)', color: 'var(--text-secondary)', margin: 0, paddingLeft: '1.25em', display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+        {block.items.map((item, ii) => <li key={ii}>{item}</li>)}
+      </ul>
+    );
+  }
   return null;
 }
 
@@ -160,12 +167,18 @@ function ProjectDetail({ project, onBack }) {
 export function Work() {
   const [selected, setSelected] = React.useState(null);
   const [displayed, setDisplayed] = React.useState(null);
+  const savedScrollY = React.useRef(0);
 
   const openProject = (p) => {
+    savedScrollY.current = window.scrollY;
     setDisplayed(p);
     setSelected(p);
+    window.scrollTo(0, 0);
   };
-  const closeProject = () => setSelected(null);
+  const closeProject = () => {
+    setSelected(null);
+    window.scrollTo(0, savedScrollY.current);
+  };
 
   return (
     <div style={{ padding: 'var(--space-9) var(--gutter)', display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
@@ -181,7 +194,7 @@ export function Work() {
             transition: 'transform var(--duration-reveal) var(--ease-cinematic)',
           }}
         >
-          <div style={{ width: '50%', flexShrink: 0, display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'var(--space-6)' }}>
+          <div className="work-grid" style={{ width: '50%', flexShrink: 0, display: 'grid', gap: 'var(--space-6)' }}>
             {projects.map((p) => (
               <ProjectCard key={p.title} {...p} onClick={() => openProject(p)} />
             ))}
