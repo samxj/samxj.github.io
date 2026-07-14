@@ -1,6 +1,18 @@
 // This project's article: an ordered list of blocks rendered top to bottom on its detail page.
 //   { type: 'paragraph', text: 'Some prose.' }
 //   { type: 'image', src: 'assets/images/sjhw/2.jpg', caption: 'Optional caption.' }  // src: a single file, or a directory of images
+//   { type: 'video', src: 'https://youtu.be/VIDEO_ID', title: 'Optional header.', caption: 'Optional caption.' }  // src: a YouTube link, or a file in assets/videos
 //   { type: 'heading', text: 'A subheading.' }
-//   { type: 'list', items: ['First item.', 'Second item.'] }
-export const content = [];
+//   { type: 'list', items: ['First item.', { text: 'Item with sub-points.', items: ['Nested one.', 'Nested two.'] }] }
+//   { type: 'download', src: 'CV.pdf', label: 'Optional button label.' }  // src: a file in /public
+export const content = [
+    { type: 'heading', text: "Okraänian beginnings" },
+    { type: 'paragraph', text: "Exacerbated by studying Latin since Year 5, and having an Italian bilingual mother, I have always loved languages and grammar systems – especially ancient ones as they tend to be more interesting. As a result I made my first conlang at 11 years old – entitled Okraän. Having spent months working on it, I eventually finished two Excel spreadsheets – one being the language’s dictionary, but the other, larger, far more complicated one containing the language’s entire grammar structure. I had done research on other languages such as Turkish and even Elvish, and got to grips with grammar features such as evidentiality that I hadn’t seen before. I learnt the basics of the International Phonetic Alphabet too, in order to craft a small phonemic inventory. This language, however, was only the start." },
+    { type: 'heading', text: "Guy Deutscher’s mesmerising book" },
+    { type: 'paragraph', text: "Over the next year I continued to become more interested in languages – starting to learn Ancient Greek in Year 8 (which I continued to GCSE), I read The Unfolding of Language by Guy Deutscher over the summer, covering not only how sounds from apes began to transform into functional linguistics, but also how and why languages evolve in more recent times, from 3000 BC or so to now. I found it utterly fascinating! That year, I then decided to do an Extended Learning Project (HELP) with the school studying the evolution of languages. And the way I decided to showcase their evolution was with the production of my second conlang, Leúiraciu." },
+    { type: 'heading', text: "The birth of Leúiraciu" },
+    { type: 'paragraph', text: "Leúiraciu, in concept, was a language designed to replicate the language that may have been spoken in Corsica if it had not been invaded nor populated by the French, Italians, or anyone for that matter. It aimed to show how linguistic features can arise simply from socioeconomic factors of its speakers, and more significantly the geography of where it is spoken. Nevertheless, it was also an opportunity for me to display my language-making skills, which I loved – admittedly the mere creation of a language was a large proportion of the project rather than its evolution." },
+    { type: 'heading', text: "Leúiraciu itself" },
+    { type: 'paragraph', text: "Leúiraciu is too much of a complex language to simply be a spreadsheet, so I made a 35-page textbook with all of its grammar systems. Due to its complexity, which is higher than that of Okraän’s, I can’t explain it here, so please read the textbook to find out! Throughout, each feature has been thought through with respect to Corsica’s real geography and hypothetical society. Explaining these connections is a short Realism Summary at the end of the textbook." },
+    { type: 'paragraph', text: "Note: Leúiraciu does indeed have its own simple script system, which I made a font for in Adobe Illustrator. You can download the font below" },
+];

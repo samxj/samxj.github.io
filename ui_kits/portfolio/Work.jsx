@@ -31,6 +31,86 @@ const projects = [
   { title: 'Unsplash Account', year: '2021 - present day', role: 'Public photography account with 4M views and 35K+ downloads', tags: ['Photography'], content: unsplash }
 ];
 
+const VIDEO_EXT_RE = /\.(mp4|webm|mov|ogg)$/i;
+const YOUTUBE_RE = /(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{6,})/;
+
+// Local video files live under assets/videos; a directory path isn't supported here (unlike images), just a single file.
+const videoModules = import.meta.glob('/assets/videos/**/*.{mp4,webm,mov,ogg,MP4,WEBM,MOV,OGG}', { eager: true, import: 'default' });
+
+function resolveVideo(src) {
+  if (!src || VIDEO_EXT_RE.test(src) === false) return null;
+  const key = src.startsWith('/') ? src : `/${src}`;
+  return videoModules[key] || null;
+}
+
+function getYouTubeEmbedUrl(src) {
+  const match = src?.match(YOUTUBE_RE);
+  return match ? `https://www.youtube-nocookie.com/embed/${match[1]}` : null;
+}
+
+// Files in /public are served as-is at the site root, so a download block just needs a root-relative URL.
+function resolvePublicFile(src) {
+  if (!src) return null;
+  return src.startsWith('/') ? src : `/${src}`;
+}
+
+function ArticleVideo({ src, title, caption }) {
+  const youtubeUrl = getYouTubeEmbedUrl(src);
+  const localSrc = youtubeUrl ? null : resolveVideo(src);
+  if (!youtubeUrl && !localSrc) return null;
+  return (
+    <figure style={{
+      margin: 0, display: 'flex', flexDirection: 'column',
+      background: 'var(--bg-surface)', border: '1px solid var(--border-hairline)',
+      borderRadius: 'var(--radius-lg)', overflow: 'hidden',
+    }}>
+      {title && (
+        <div style={{
+          padding: 'var(--space-3) var(--space-4)', font: 'var(--text-mono)', color: 'var(--text-muted)',
+          letterSpacing: 'var(--tracking-wide)', borderBottom: '1px solid var(--border-hairline)',
+        }}>{title}</div>
+      )}
+      <div style={{ aspectRatio: '16 / 9' }}>
+        {youtubeUrl ? (
+          <iframe
+            src={youtubeUrl}
+            title={title || 'Video'}
+            style={{ width: '100%', height: '100%', border: 0, display: 'block' }}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : (
+          <video src={localSrc} controls style={{ width: '100%', height: '100%', display: 'block', objectFit: 'contain', background: '#000' }} />
+        )}
+      </div>
+      {caption && (
+        <figcaption style={{ padding: 'var(--space-3) var(--space-4)', font: 'var(--text-mono)', color: 'var(--text-muted)' }}>{caption}</figcaption>
+      )}
+    </figure>
+  );
+}
+
+// A list item is either a plain string, or { text, items } for one level of nested sub-bullets.
+function ArticleList({ items }) {
+  return (
+    <ul style={{ font: 'var(--text-body)', color: 'var(--text-secondary)', margin: 0, paddingLeft: '1.25em', display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+      {items.map((item, ii) => {
+        const isNested = typeof item === 'object' && item !== null;
+        return (
+          <li key={ii}>
+            {isNested ? item.text : item}
+            {isNested && item.items?.length > 0 && (
+              <ul style={{ paddingLeft: '1.25em', marginTop: 'var(--space-2)', display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+                {item.items.map((sub, si) => <li key={si}>{sub}</li>)}
+              </ul>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 function ArticleImage({ src, caption }) {
   const images = resolveImages(src);
   if (images.length === 0) return null;
@@ -57,18 +137,26 @@ function ArticleImage({ src, caption }) {
 function groupIntoRows(content) {
   const rows = [];
   let textRun = [];
+  const flushText = () => {
+    if (textRun.length > 0) rows.push({ kind: 'pair', text: textRun, image: null });
+    textRun = [];
+  };
   content.forEach((block, i) => {
     if (block.type === 'image') {
-      rows.push({ text: textRun, image: { block, i } });
+      rows.push({ kind: 'pair', text: textRun, image: { block, i } });
       textRun = [];
+    } else if (block.type === 'video') {
+      flushText();
+      rows.push({ kind: 'video', video: { block, i } });
     } else {
       textRun.push({ block, i });
     }
   });
-  if (textRun.length > 0) rows.push({ text: textRun, image: null });
+  flushText();
 
   let swapped = false;
   rows.forEach((row) => {
+    if (row.kind !== 'pair') return;
     if (row.text.some(({ block }) => block.type === 'heading')) swapped = false;
     row.swapped = swapped;
     swapped = !swapped;
@@ -90,10 +178,15 @@ function renderTextBlock({ block, i }, content) {
     );
   }
   if (block.type === 'list') {
+    return <ArticleList key={i} items={block.items} />;
+  }
+  if (block.type === 'download') {
+    const url = resolvePublicFile(block.src);
+    if (!url) return null;
     return (
-      <ul key={i} style={{ font: 'var(--text-body)', color: 'var(--text-secondary)', margin: 0, paddingLeft: '1.25em', display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
-        {block.items.map((item, ii) => <li key={ii}>{item}</li>)}
-      </ul>
+      <Button key={i} variant="secondary" size="sm" href={url} download style={{ alignSelf: 'flex-start' }}>
+        {block.label || 'Download'}
+      </Button>
     );
   }
   return null;
@@ -103,20 +196,32 @@ function ProjectArticle({ content }) {
   const rows = React.useMemo(() => groupIntoRows(content), [content]);
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
-      {rows.map((row, ri) => (
-        <div key={ri} className={`article-row${row.swapped ? ' article-row--reverse' : ''}`} style={{ gap: 'var(--space-6)' }}>
-          {row.text.length > 0 && (
-            <div style={{ flex: '1 1 0', minWidth: 0, maxWidth: '68ch', display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
-              {row.text.map((entry) => renderTextBlock(entry, content))}
-            </div>
-          )}
-          {row.image && (
-            <div style={{ flex: '1 1 0', minWidth: 0 }}>
-              <ArticleImage src={row.image.block.src} caption={row.image.block.caption} />
-            </div>
-          )}
-        </div>
-      ))}
+      {rows.map((row, ri) => {
+        if (row.kind === 'video') {
+          return (
+            <ArticleVideo
+              key={ri}
+              src={row.video.block.src}
+              title={row.video.block.title}
+              caption={row.video.block.caption}
+            />
+          );
+        }
+        return (
+          <div key={ri} className={`article-row${row.swapped ? ' article-row--reverse' : ''}`} style={{ gap: 'var(--space-6)' }}>
+            {row.text.length > 0 && (
+              <div style={{ flex: '1 1 0', minWidth: 0, maxWidth: '68ch', display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
+                {row.text.map((entry) => renderTextBlock(entry, content))}
+              </div>
+            )}
+            {row.image && (
+              <div style={{ flex: '1 1 0', minWidth: 0 }}>
+                <ArticleImage src={row.image.block.src} caption={row.image.block.caption} />
+              </div>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }

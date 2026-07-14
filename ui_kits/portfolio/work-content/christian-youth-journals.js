@@ -1,8 +1,10 @@
 // This project's article: an ordered list of blocks rendered top to bottom on its detail page.
 //   { type: 'paragraph', text: 'Some prose.' }
 //   { type: 'image', src: 'assets/images/sjhw/2.jpg', caption: 'Optional caption.' }  // src: a single file, or a directory of images
+//   { type: 'video', src: 'https://youtu.be/VIDEO_ID', title: 'Optional header.', caption: 'Optional caption.' }  // src: a YouTube link, or a file in assets/videos
 //   { type: 'heading', text: 'A subheading.' }
-//   { type: 'list', items: ['First item.', 'Second item.'] }
+//   { type: 'list', items: ['First item.', { text: 'Item with sub-points.', items: ['Nested one.', 'Nested two.'] }] }
+//   { type: 'download', src: 'CV.pdf', label: 'Optional button label.' }  // src: a file in /public
 export const content = [
     { type: 'heading', text: "The gap in the market" },
     { type: 'paragraph', text: "Journals exist for adults and teens alike in the secular industry. Journals for Christian adults exist too, but journals for Christian teens, after looking for one myself, are few and far between – leaving a variety far too small to ensure all Christian teens who want a journal have one. Already having experience in Adobe Illustrator as I helped my mum design greeting cards, I decided to make some myself with all the features I wanted." },

@@ -1,8 +1,10 @@
 // This project's article: an ordered list of blocks rendered top to bottom on its detail page.
 //   { type: 'paragraph', text: 'Some prose.' }
 //   { type: 'image', src: 'assets/images/sjhw/2.jpg', caption: 'Optional caption.' }  // src: a single file, or a directory of images
+//   { type: 'video', src: 'https://youtu.be/VIDEO_ID', title: 'Optional header.', caption: 'Optional caption.' }  // src: a YouTube link, or a file in assets/videos
 //   { type: 'heading', text: 'A subheading.' }
-//   { type: 'list', items: ['First item.', 'Second item.'] }
+//   { type: 'list', items: ['First item.', { text: 'Item with sub-points.', items: ['Nested one.', 'Nested two.'] }] }
+//   { type: 'download', src: 'CV.pdf', label: 'Optional button label.' }  // src: a file in /public
 export const content = [
     { type: 'heading', text: "Writer's Room" },
     { type: 'paragraph', text: "Since I joined my school I have been participating weekly in the Writer’s Room club, which I have loved – a chance to refine and maintain creative writing skills, which were all too rarely taught in our classrooms in my view. Having entered the Walter Scott Young Writer’s Award for 2025 with the piece Florentine Skies, a few months later I found myself shortlisted for my age group in a list of around 10 from a national competition. As a result, it was also published in our school’s annual Lion Print magazine, and there is to this day a poster in the English corridor bearing my achievement. You can read it below if you wish." },

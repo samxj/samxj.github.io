@@ -19,6 +19,68 @@ const HERO_WORDS = [
   { text: 'curiosity', fontFamily: "'Archivo', sans-serif", fontWeight: 900, fontStyle: 'normal', fontSize: '1em' },
 ];
 
+const BANNER_DURATION_MS = 15000;
+
+function UnfinishedBanner() {
+  const [open, setOpen] = React.useState(true);
+  const [closing, setClosing] = React.useState(false);
+
+  const dismiss = React.useCallback(() => {
+    setClosing(true);
+    setTimeout(() => setOpen(false), 300);
+  }, []);
+
+  React.useEffect(() => {
+    const id = setTimeout(dismiss, BANNER_DURATION_MS);
+    return () => clearTimeout(id);
+  }, [dismiss]);
+
+  if (!open) return null;
+
+  return (
+    <div style={{
+      overflow: 'hidden',
+      maxHeight: closing ? 0 : '200px',
+      opacity: closing ? 0 : 1,
+      transition: `max-height var(--duration-base) var(--ease-standard), opacity var(--duration-base) var(--ease-standard)`,
+    }}>
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 'var(--space-4)',
+        padding: 'var(--space-3) var(--gutter)',
+        background: '#B3261E',
+        color: '#FFFFFF',
+      }}>
+        <p style={{ font: 'var(--text-body-sm)', margin: 0, textAlign: 'center' }}>
+          This site is still under construction — full version coming by the end of summer.
+        </p>
+        <button
+          onClick={dismiss}
+          aria-label="Dismiss notification"
+          style={{
+            flexShrink: 0,
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '24px',
+            height: '24px',
+            padding: 0,
+            border: 'none',
+            background: 'transparent',
+            color: '#FFFFFF',
+            cursor: 'pointer',
+            opacity: 0.85,
+          }}
+        >
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1L13 13M13 1L1 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export function Home({ onNavigate }) {
   const [wordIndex, setWordIndex] = React.useState(0);
 
@@ -33,6 +95,7 @@ export function Home({ onNavigate }) {
 
   return (
     <div>
+      <UnfinishedBanner />
       <section style={{
         minHeight: '86vh',
         display: 'flex',
@@ -64,8 +127,9 @@ export function Home({ onNavigate }) {
           </span>
         </h1>
         <p style={{ font: 'var(--text-body-lg)', color: 'var(--text-secondary)', maxWidth: '52ch', margin: 0 }}>
-          Telling stories with code, films and eloquency. <br></br>
-          Bridging the gap between dull tech and bold creativity - camera in one hand, CAD file in the other.
+          Telling stories.<br></br>
+          Sometimes with code, sometimes with films, always with eloquency. <br></br>
+          Technical problems, creative solutions, and vice versa - camera in one hand, CAD file in the other.
         </p>
         <div style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-3)' }}>
           <Button variant="primary" size="lg" icon="arrow" onClick={() => onNavigate('work')}>See my work</Button>

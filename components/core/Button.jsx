@@ -11,6 +11,7 @@ export function Button({
   size = 'md',
   as = 'button',
   href,
+  download,
   icon,
   disabled = false,
   onClick,
@@ -70,6 +71,7 @@ export function Button({
   return (
     <Tag
       href={href}
+      download={download}
       onClick={disabled ? undefined : onClick}
       disabled={disabled}
       onMouseEnter={() => setHover(true)}
