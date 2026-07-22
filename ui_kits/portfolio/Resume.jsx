@@ -14,7 +14,7 @@ const rows = [
 
 // TODO: replace with your real education entries (period, qualification, institution, optional description)
 const education = [
-  { period: 'Starting September 2026', title: 'A-Levels', org: 'Hampton School, London', description: 'Will take Mathematics, Physics and French (Further Physics elective and Politics enrichment courses)' },
+  { period: 'Starting September 2026', title: 'A-Levels', org: 'Hampton School, London', description: 'Will take Mathematics, Physics and Computer Science (as well as French DELF and Politics enrichment courses)' },
   { period: '2023 - 26', title: 'GCSE Courses', org: 'Hampton School, London', description: 'Sat 13 GCSEs, results available 20/08.' },
 ];
 
@@ -24,6 +24,9 @@ export function Resume() {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: 'var(--space-4)' }}>
         <SectionHeading index="03" eyebrow="Resume" title="Experience" />
         <Button variant="secondary" href="/Sam Field - CV.pdf">Download CV (PDF)</Button>
+      </div>
+      <div>
+        <p>All the work I have been paid for is listed here - see all my projects, paid or unpaid, on the <a href="/work">Work</a> page.</p>
       </div>
       <div>
         {rows.map((r, i) => <ExperienceRow key={i} {...r} />)}

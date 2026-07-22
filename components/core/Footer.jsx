@@ -26,7 +26,7 @@ export function Footer({ email = 'hello@samfield.co', socials = [] }) {
         display: 'flex', justifyContent: 'space-between', font: 'var(--text-mono)', color: 'var(--text-muted)', fontSize: '0.75rem',
       }}>
         <span>{new Date().getFullYear()} Sam Field</span>
-        <span>Telling stories with code, CAD, eloquency and skill.</span>
+        <span>Telling stories with code, film and eloquency.</span>
       </div>
     </footer>
   );

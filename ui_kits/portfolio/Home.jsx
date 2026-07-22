@@ -19,7 +19,7 @@ const HERO_WORDS = [
   { text: 'curiosity', fontFamily: "'Archivo', sans-serif", fontWeight: 900, fontStyle: 'normal', fontSize: '1em' },
 ];
 
-const BANNER_DURATION_MS = 15000;
+const BANNER_DURATION_MS = 10000;
 
 function UnfinishedBanner() {
   const [open, setOpen] = React.useState(true);
@@ -54,7 +54,7 @@ function UnfinishedBanner() {
         color: '#FFFFFF',
       }}>
         <p style={{ font: 'var(--text-body-sm)', margin: 0, textAlign: 'center' }}>
-          This site is still under construction — full version coming by the end of summer.
+          This site is still under construction — but we're almost there! Full version coming by 4th September.
         </p>
         <button
           onClick={dismiss}

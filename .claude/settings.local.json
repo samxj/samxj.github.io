@@ -5,7 +5,10 @@
       "Read(//c/Users/samgf/AppData/Local/**)",
       "Read(//c/Users/samgf/**)",
       "Skill(run)",
-      "Skill(run:*)"
+      "Skill(run:*)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "Bash(git add *)"
     ]
   }
 }

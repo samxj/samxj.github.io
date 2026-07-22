@@ -17,7 +17,7 @@ import { content as lexitecht } from './work-content/lexitecht.js';
 import { content as unsplash } from './work-content/unsplash.js';
 
 const projects = [
-  { title: "St John's Hampton Wick Films", image: "assets/images/sjhw", year: '2025 - present day', role: 'Solo production projects for local church', tags: ['Photography', 'Videography', 'Promo Film', 'Premiere Pro'], content: sjhwContent },
+  { title: "St John's Hampton Wick Films", image: "assets/images/sjhw", year: '2025 - now', role: 'Solo production projects for local church', tags: ['Photography', 'Videography', 'Promo Film', 'Premiere Pro'], content: sjhwContent },
   { title: 'AI Seed-Dropping RC Plane', year: '2025', role: 'Autonomous RC plane powered by AI to drop seeds in fertile ground.', tags: ['STEM Fair Winner', 'Machine Learning', 'CAD'], content: seedPlaneContent },
   { title: 'Imm-Aroy Restaurant', year: '2025', role: 'Marketing photography', tags: ['Photography', 'Lightroom'], content: immAroyContent },
   { title: 'Motorised Pudding Trolley', year: '2025', role: "Full design and assembly of an RC car, calculated in design to bear the load of a trolley", tags: ['3D Printing', 'Electronics'], content: puddingTrolley},
@@ -28,7 +28,7 @@ const projects = [
   { title: 'La Torre di Sopra - drone shots', year: '2023', role: 'Operated a DJI Mavic Pro for marketing shots on torredisopra.com', tags: ['Videography', 'Drone'], content: italyDrone },
   { title: 'Lexitecht', year: "2023", role: "Python dektop app to aid language construction", tags: ["Linguistics", "Software"], content: lexitecht},
   { title: 'Chanctonbury Church', year: '2022', role: 'Promotional film', tags: ['Videography', 'Early Work'], content: chanctonburyContent },
-  { title: 'Unsplash Account', year: '2021 - present day', role: 'Public photography account with 4M views and 35K+ downloads', tags: ['Photography'], content: unsplash }
+  { title: 'Unsplash Account', year: '2021 - now', role: 'Public photography account with 4M views and 35K+ downloads', tags: ['Photography'], content: unsplash }
 ];
 
 const VIDEO_EXT_RE = /\.(mp4|webm|mov|ogg)$/i;
