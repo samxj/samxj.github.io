@@ -8,7 +8,8 @@
       "Skill(run:*)",
       "Bash(gh --version)",
       "Bash(gh auth *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git push *)"
     ]
   }
 }

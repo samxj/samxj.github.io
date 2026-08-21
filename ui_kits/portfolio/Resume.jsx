@@ -15,7 +15,7 @@ const rows = [
 // TODO: replace with your real education entries (period, qualification, institution, optional description)
 const education = [
   { period: 'Starting September 2026', title: 'A-Levels', org: 'Hampton School, London', description: 'Will take Mathematics, Physics and Computer Science (as well as French DELF and Politics enrichment courses)' },
-  { period: '2023 - 26', title: 'GCSE Courses', org: 'Hampton School, London', description: 'Sat 13 GCSEs, results available 20/08.' },
+  { period: '2023 - 26', title: 'GCSE Courses', org: 'Hampton School, London', description: 'Sat 13 GCSEs, received a grade 9 in all of them.' },
 ];
 
 export function Resume() {
