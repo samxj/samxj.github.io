@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { SectionHeading } from '../../components/core/SectionHeading.jsx';
 import { ExperienceRow } from '../../components/core/ExperienceRow.jsx';
 import { Button } from '../../components/core/Button.jsx';
@@ -14,8 +15,8 @@ const rows = [
 
 // TODO: replace with your real education entries (period, qualification, institution, optional description)
 const education = [
-  { period: 'Starting September 2026', title: 'A-Levels', org: 'Hampton School, London', description: 'Will take Mathematics, Physics and Computer Science (as well as French DELF and Politics enrichment courses)' },
-  { period: '2023 - 26', title: 'GCSE Courses', org: 'Hampton School, London', description: 'Sat 13 GCSEs, received a grade 9 in all of them.' },
+  { period: 'Sep 2026 - Jun 2028', title: 'A-Levels', org: 'Hampton School, London', description: 'Studying A-Level Maths, Physics, French, and Further Maths (as well as Further Physics and Politics enrichment courses)' },
+  { period: 'Sep 2023 - Jun 2026', title: 'GCSE Courses', org: 'Hampton School, London', description: 'Sat 13 GCSEs, received a grade 9 in all of them.' },
 ];
 
 export function Resume() {
@@ -26,7 +27,7 @@ export function Resume() {
         <Button variant="secondary" href="/Sam Field - CV.pdf">Download CV (PDF)</Button>
       </div>
       <div>
-        <p>All the work I have been paid for is listed here - see all my projects, paid or unpaid, on the <a href="/work">Work</a> page.</p>
+        <p>All the work I have been paid for is listed here - see all my projects, paid or unpaid, on the <Link to="/work">Work</Link> page.</p>
       </div>
       <div>
         {rows.map((r, i) => <ExperienceRow key={i} {...r} />)}

@@ -1,0 +1,149 @@
+/* ---- Reset & page ground ---------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0a0a0a;
+  overflow-x: hidden;
+  color: #f6f1e7;
+  font-family: var(--font-body), Inter, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #ff5a2e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e4ff3b;
+}
+
+::selection {
+  background: #ff5a2e;
+  color: #0a0a0a;
+}
+
+button {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid #ff5a2e;
+  outline-offset: 3px;
+}
+
+/* ---- Keyframes --------------------------------------------------------- */
+
+@keyframes sf-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes sf-marquee-rev {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sf-blink {
+  0%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@keyframes sf-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* ---- Site root --------------------------------------------------------- */
+
+.sf-root {
+  position: relative;
+  background: #0a0a0a;
+  color: #f6f1e7;
+  font-family: var(--font-body), Inter, sans-serif;
+  overflow: clip;
+}
+
+.sf-skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 300;
+  background: #ff5a2e;
+  color: #0a0a0a;
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  padding: 12px 16px;
+}
+
+.sf-skip:focus {
+  left: 0;
+  color: #0a0a0a;
+}
+
+/* ---- Reveal ------------------------------------------------------------ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(46px);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 1100ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1100ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---- Reduced motion ---------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  /* The prototype left these CSS animations running; they are paused here. */
+  .marquee__track,
+  .blink-dot,
+  .bob {
+    animation: none !important;
+  }
+}

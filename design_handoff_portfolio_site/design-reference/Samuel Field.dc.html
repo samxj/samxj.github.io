@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/sam-field-design-system-0559a7fb-3131-42ce-99ff-c875ae17dd02/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/sam-field-design-system-0559a7fb-3131-42ce-99ff-c875ae17dd02/tokens/colors.css">
+<link rel="stylesheet" href="_ds/sam-field-design-system-0559a7fb-3131-42ce-99ff-c875ae17dd02/tokens/typography.css">
+<link rel="stylesheet" href="_ds/sam-field-design-system-0559a7fb-3131-42ce-99ff-c875ae17dd02/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/sam-field-design-system-0559a7fb-3131-42ce-99ff-c875ae17dd02/tokens/effects.css">
+<link rel="stylesheet" href="_ds/sam-field-design-system-0559a7fb-3131-42ce-99ff-c875ae17dd02/styles.css">
+<script src="_ds/sam-field-design-system-0559a7fb-3131-42ce-99ff-c875ae17dd02/_ds_bundle.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #0A0A0A; overflow-x: hidden; }
+  a { color: #FF5A2E; text-decoration: none; }
+  a:hover { color: #E4FF3B; }
+  ::selection { background: #FF5A2E; color: #0A0A0A; }
+  @keyframes sf-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes sf-marquee-rev { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  @keyframes sf-blink { 0%, 60% { opacity: 1; } 61%, 100% { opacity: 0.15; } }
+  @keyframes sf-spin { to { transform: rotate(360deg); } }
+  @keyframes sf-bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
+</style>
+</helmet>
+
+<div style="position: relative; background: #0A0A0A; color: #F6F1E7; font-family: var(--font-body), Inter, sans-serif; overflow: clip;">
+
+  <div data-chrome="mark" style="position: fixed; top: 22px; left: 24px; z-index: 80; mix-blend-mode: difference; color: #FFFFFF; font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.03em; line-height: 1;">SF<span style="display: block; font-family: var(--font-mono), monospace; font-weight: 400; font-size: 9px; letter-spacing: 0.22em; margin-top: 5px;">EST. 2008</span></div>
+
+  <div data-rail="1" style="position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 80; display: flex; flex-direction: column; gap: 13px; align-items: flex-end; padding: 10px 0 10px 34px; mix-blend-mode: difference;">
+    <a href="#sec-0" data-nav="0" style="display: flex; align-items: center; gap: 9px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #FFFFFF; opacity: 0.45;"><span data-navlabel="1" style="max-width: 0; opacity: 0; overflow: hidden; white-space: nowrap; transition: max-width 420ms cubic-bezier(0.16,1,0.3,1), opacity 260ms ease;">HELLO</span><span data-navdot="1" style="width: 22px; height: 2px; background: #FFFFFF; display: block;"></span></a>
+    <a href="#sec-1" data-nav="1" style="display: flex; align-items: center; gap: 9px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #FFFFFF; opacity: 0.45;"><span data-navlabel="1" style="max-width: 0; opacity: 0; overflow: hidden; white-space: nowrap; transition: max-width 420ms cubic-bezier(0.16,1,0.3,1), opacity 260ms ease;">HABIT OF MIND</span><span data-navdot="1" style="width: 22px; height: 2px; background: #FFFFFF; display: block;"></span></a>
+    <a href="#sec-2" data-nav="2" style="display: flex; align-items: center; gap: 9px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #FFFFFF; opacity: 0.45;"><span data-navlabel="1" style="max-width: 0; opacity: 0; overflow: hidden; white-space: nowrap; transition: max-width 420ms cubic-bezier(0.16,1,0.3,1), opacity 260ms ease;">TECHNICAL</span><span data-navdot="1" style="width: 22px; height: 2px; background: #FFFFFF; display: block;"></span></a>
+    <a href="#sec-3" data-nav="3" style="display: flex; align-items: center; gap: 9px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #FFFFFF; opacity: 0.45;"><span data-navlabel="1" style="max-width: 0; opacity: 0; overflow: hidden; white-space: nowrap; transition: max-width 420ms cubic-bezier(0.16,1,0.3,1), opacity 260ms ease;">CAMERA</span><span data-navdot="1" style="width: 22px; height: 2px; background: #FFFFFF; display: block;"></span></a>
+    <a href="#sec-4" data-nav="4" style="display: flex; align-items: center; gap: 9px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #FFFFFF; opacity: 0.45;"><span data-navlabel="1" style="max-width: 0; opacity: 0; overflow: hidden; white-space: nowrap; transition: max-width 420ms cubic-bezier(0.16,1,0.3,1), opacity 260ms ease;">MUSIC</span><span data-navdot="1" style="width: 22px; height: 2px; background: #FFFFFF; display: block;"></span></a>
+    <a href="#sec-5" data-nav="5" style="display: flex; align-items: center; gap: 9px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #FFFFFF; opacity: 0.45;"><span data-navlabel="1" style="max-width: 0; opacity: 0; overflow: hidden; white-space: nowrap; transition: max-width 420ms cubic-bezier(0.16,1,0.3,1), opacity 260ms ease;">WORDS</span><span data-navdot="1" style="width: 22px; height: 2px; background: #FFFFFF; display: block;"></span></a>
+    <a href="#sec-6" data-nav="6" style="display: flex; align-items: center; gap: 9px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #FFFFFF; opacity: 0.45;"><span data-navlabel="1" style="max-width: 0; opacity: 0; overflow: hidden; white-space: nowrap; transition: max-width 420ms cubic-bezier(0.16,1,0.3,1), opacity 260ms ease;">WORK EXPERIENCE</span><span data-navdot="1" style="width: 22px; height: 2px; background: #FFFFFF; display: block;"></span></a>
+    <a href="#sec-7" data-nav="7" style="display: flex; align-items: center; gap: 9px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #FFFFFF; opacity: 0.45;"><span data-navlabel="1" style="max-width: 0; opacity: 0; overflow: hidden; white-space: nowrap; transition: max-width 420ms cubic-bezier(0.16,1,0.3,1), opacity 260ms ease;">RIGHT NOW</span><span data-navdot="1" style="width: 22px; height: 2px; background: #FFFFFF; display: block;"></span></a>
+    <a href="#sec-8" data-nav="8" style="display: flex; align-items: center; gap: 9px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #FFFFFF; opacity: 0.45;"><span data-navlabel="1" style="max-width: 0; opacity: 0; overflow: hidden; white-space: nowrap; transition: max-width 420ms cubic-bezier(0.16,1,0.3,1), opacity 260ms ease;">SAY HELLO</span><span data-navdot="1" style="width: 22px; height: 2px; background: #FFFFFF; display: block;"></span></a>
+  </div>
+
+  <div style="position: fixed; bottom: 22px; left: 24px; z-index: 80; mix-blend-mode: difference; color: #FFFFFF; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; display: flex; align-items: center; gap: 10px;">
+    <span data-readout="index">01</span>
+    <span style="width: 84px; height: 2px; background: rgba(255,255,255,0.28); display: block; position: relative;"><span data-readout="bar" style="position: absolute; inset: 0 auto 0 0; width: 0%; background: #FFFFFF;"></span></span>
+    <span data-readout="label">HELLO</span>
+  </div>
+
+  <section id="sec-0" data-sec="0" data-screen-label="Hero" style="position: relative; min-height: 100svh; padding: 96px 78px 60px 24px; display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: auto 1fr auto; gap: 18px; align-items: start;">
+    <div style="grid-column: 1 / 6; grid-row: 1; font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.2em; color: #8C877D; padding-top: 6px;">TEDDINGTON &middot; LONDON<br>A&#8209;LEVELS 2026&#8211;28</div>
+    <div style="grid-column: 7 / 13; grid-row: 1; padding-right: 165px; font-family: var(--font-body), Inter, sans-serif; font-size: 15px; line-height: 1.55; color: #E7DFCE; padding-top: 4px;">Engineering, code and computing on one side. Film, photography and music on the other. Both hands, always.</div>
+
+    <div style="grid-column: 1 / 13; grid-row: 2; position: relative; align-self: center;">
+      <div data-hero="line1" data-parx="0.34" style="position: relative; z-index: 3; font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(72px, 15.5vw, 260px); line-height: 0.82; letter-spacing: -0.05em; margin: 0;">SAMUEL</div>
+      <div data-hero="line2" data-parx="-0.34" style="position: relative; z-index: 3; font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(72px, 15.5vw, 260px); line-height: 0.82; letter-spacing: -0.05em; margin: 0; text-align: right; padding-right: 4%; color: #0A0A0A; -webkit-text-stroke: 2px #F6F1E7;">FIELD</div>
+      <div data-par="0.34" style="position: absolute; z-index: 1; right: 5%; bottom: -42%; width: clamp(150px, 22vw, 300px); aspect-ratio: 3 / 2; overflow: hidden; border-radius: 2px; transform: rotate(-3deg);"><img src="assets/wideisa.jpg" alt="Sunlit Italian wall, Tuscany" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+    </div>
+
+    <div style="grid-column: 1 / 13; grid-row: 3; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 12px; font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.2em; color: #F6F1E7;"><span style="animation: sf-bob 2.2s ease-in-out infinite; display: block;">&darr;</span> KEEP GOING</div>
+      <div style="font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.2em; color: #16C7C0;">9 SECTIONS &middot; ONE PERSON</div>
+    </div>
+  </section>
+
+  <div style="background: #FF5A2E; color: #0A0A0A; overflow: hidden; padding: 14px 0; border-top: 1px solid #0A0A0A;">
+    <div style="display: flex; width: max-content; animation: sf-marquee 34s linear infinite; font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(20px, 3vw, 40px); letter-spacing: -0.03em; white-space: nowrap;">
+      <span style="padding-right: 40px;">CAD&nbsp;&nbsp;/&nbsp;&nbsp;PYTHON&nbsp;&nbsp;/&nbsp;&nbsp;AUTOPILOT&nbsp;&nbsp;/&nbsp;&nbsp;PREMIERE PRO&nbsp;&nbsp;/&nbsp;&nbsp;AFTER EFFECTS&nbsp;&nbsp;/&nbsp;&nbsp;LIGHTROOM&nbsp;&nbsp;/&nbsp;&nbsp;GRADE 8 DRUMS&nbsp;&nbsp;/&nbsp;&nbsp;C1 ITALIANO&nbsp;&nbsp;/&nbsp;&nbsp;CONLANGS&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+      <span style="padding-right: 40px;">CAD&nbsp;&nbsp;/&nbsp;&nbsp;PYTHON&nbsp;&nbsp;/&nbsp;&nbsp;AUTOPILOT&nbsp;&nbsp;/&nbsp;&nbsp;PREMIERE PRO&nbsp;&nbsp;/&nbsp;&nbsp;AFTER EFFECTS&nbsp;&nbsp;/&nbsp;&nbsp;LIGHTROOM&nbsp;&nbsp;/&nbsp;&nbsp;GRADE 8 DRUMS&nbsp;&nbsp;/&nbsp;&nbsp;C1 ITALIANO&nbsp;&nbsp;/&nbsp;&nbsp;CONLANGS&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <section id="sec-1" data-sec="1" data-screen-label="Habit of mind" style="position: relative; background: #F6F1E7; color: #0A0A0A; padding: clamp(72px, 11vw, 150px) 78px clamp(72px, 11vw, 150px) 24px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px;">
+    <div style="grid-column: 1 / 3; display: flex; flex-direction: column; gap: 18px;">
+      <div style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(56px, 9vw, 130px); line-height: 0.8; letter-spacing: -0.05em; color: #FF5A2E;">01</div>
+      <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.24em; writing-mode: vertical-rl; text-orientation: mixed;">ONE HABIT OF MIND</div>
+    </div>
+    <div data-reveal="1" style="grid-column: 4 / 12; opacity: 0; transform: translateY(46px); font-family: var(--font-display), Archivo, sans-serif; font-weight: 700; font-size: clamp(21px, 2.5vw, 40px); line-height: 1.22; letter-spacing: -0.025em; text-wrap: pretty;">I split my time between technical work &mdash; code, engineering, computing &mdash; and creative work &mdash; film, photography, music. Both start with a plan, both live or die on the details, and both need someone willing to sit with a problem until it&rsquo;s actually solved. But most importantly, both need one another to thrive. Whichever one I&rsquo;m doing, I bring the other with me; this is one habit of mind.</div>
+    <div data-reveal="1" style="grid-column: 4 / 8; opacity: 0; transform: translateY(46px); margin-top: 26px; display: flex; gap: 26px; flex-wrap: wrap; font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.14em; color: #46433D;">
+      <span>HAMPTON SCHOOL, LONDON</span><span>STEM FAIR CATEGORY WINNER, 2026</span><span>HEADMASTER&rsquo;S AWARD</span>
+    </div>
+    <div data-par="0.1" style="grid-column: 9 / 13; margin-top: 26px; align-self: start;">
+      <div style="width: 100%; aspect-ratio: 4 / 5; overflow: hidden; transform: rotate(2deg); border-radius: 2px;"><img src="assets/torre.jpg" alt="Stone tower, low angle" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+      <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #46433D; margin-top: 10px; text-align: right;">SHOT ON A HILL IN TUSCANY</div>
+    </div>
+  </section>
+
+  <section id="sec-2" data-sec="2" data-screen-label="Technical" style="position: relative; background: #0A0A0A; padding: clamp(72px, 11vw, 150px) 78px clamp(60px, 9vw, 120px) 24px;">
+    <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; align-items: end; margin-bottom: clamp(40px, 6vw, 90px);">
+      <div style="grid-column: 1 / 9;">
+        <div style="font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.24em; color: #FF5A2E; margin-bottom: 18px;">02 &mdash; THINGS THAT HAD TO WORK</div>
+        <h2 data-hero="tech" data-slidex="220" style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(54px, 11vw, 190px); line-height: 0.84; letter-spacing: -0.05em; margin: 0;">TECHNICAL</h2>
+      </div>
+      <div style="grid-column: 10 / 13; font-size: 14px; line-height: 1.6; color: #8C877D;">Built, not just designed. Every one of these had a moment where it did not work and I had to find out why.</div>
+    </div>
+
+    <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; padding: 34px 0; border-top: 1px solid #211F1B;">
+      <div style="grid-column: 1 / 2; font-family: var(--font-mono), monospace; font-size: 11px; color: #FF5A2E;">/01</div>
+      <div style="grid-column: 2 / 7;">
+        <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(28px, 3.6vw, 56px); line-height: 0.95; letter-spacing: -0.035em; margin: 0 0 14px 0;">AI seed&#8209;dropping plane</h3>
+        <p style="margin: 0 0 18px 0; font-size: 15px; line-height: 1.62; color: #E7DFCE; max-width: 48ch;">Third consecutive year at the school STEM fair, and the year we won our category. A small plane, built from scratch apart from the base airframe, which we modified in CAD. An AI camera and autopilot fly it to fertile soil and drop seeds there. I was responsible for the dispenser&rsquo;s design, mechanism and code, for project management, and for the autopilot&rsquo;s auto&#8209;stabilisation.</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Tag" hint-size="auto,28px" variant="accent">CAD</x-import>
+          <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Tag" hint-size="auto,28px">Autopilot</x-import>
+          <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Tag" hint-size="auto,28px">Computer vision</x-import>
+          <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Tag" hint-size="auto,28px">Mechanism design</x-import>
+        </div>
+        <button type="button" data-open="plane" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 1px solid #FF5A2E; color: #FF5A2E; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; padding: 10px 15px; border-radius: 999px; cursor: pointer;" style-hover="background: #FF5A2E; color: #0A0A0A;"><span style="font-size: 15px; line-height: 1;">&#43;</span>FULL DETAIL</button>
+      </div>
+      <div style="grid-column: 8 / 13; display: flex; flex-direction: column; gap: 14px;">
+        <figure data-par="0.06" style="margin: 0;">
+          <div style="aspect-ratio: 16 / 10; overflow: hidden; background: #161513;"><img src="assets/castlemotif.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+          <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D; margin-top: 9px;">SLOT &middot; THE PLANE IN FLIGHT</figcaption>
+        </figure>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <figure style="margin: 0;">
+            <div style="aspect-ratio: 1 / 1; overflow: hidden; background: #161513;"><img src="assets/torre.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+            <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D; margin-top: 9px;">SLOT &middot; SEED DISPENSER, CAD</figcaption>
+          </figure>
+          <div style="display: flex; flex-direction: column; justify-content: flex-end; font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.16em; color: #8C877D; text-align: right; line-height: 2;">2026<br>SCHOOL STEM FAIR<br><span style="color: #E4FF3B;">CATEGORY WINNER</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; padding: 34px 0; border-top: 1px solid #211F1B; background: linear-gradient(90deg, rgba(22,199,192,0.07), transparent 60%);">
+      <div style="grid-column: 2 / 3; font-family: var(--font-mono), monospace; font-size: 11px; color: #16C7C0;">/02</div>
+      <div style="grid-column: 3 / 8;">
+        <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(28px, 3.6vw, 56px); line-height: 0.95; letter-spacing: -0.035em; margin: 0 0 14px 0;">Lexitecht</h3>
+        <p style="margin: 0 0 18px 0; font-size: 15px; line-height: 1.62; color: #E7DFCE; max-width: 48ch;">A conlang designing app: somewhere to hold a constructed language&rsquo;s sounds, grammar and lexicon so they stay consistent as it grows. Built because I wanted it while making Leuiraciu by hand.</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Tag" hint-size="auto,28px">App design</x-import>
+          <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Tag" hint-size="auto,28px">Data modelling</x-import>
+          <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Tag" hint-size="auto,28px">Linguistics</x-import>
+        </div>
+        <button type="button" data-open="lexitecht" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 1px solid #16C7C0; color: #16C7C0; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; padding: 10px 15px; border-radius: 999px; cursor: pointer;" style-hover="background: #16C7C0; color: #0A0A0A;"><span style="font-size: 15px; line-height: 1;">&#43;</span>FULL DETAIL</button>
+      </div>
+      <div style="grid-column: 9 / 13; display: flex; flex-direction: column; gap: 14px;">
+        <figure data-par="-0.05" style="margin: 0;">
+          <div style="aspect-ratio: 4 / 3; overflow: hidden; background: #161513;"><img src="assets/lampmoon.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+          <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D; margin-top: 9px;">SLOT &middot; LEXITECHT UI</figcaption>
+        </figure>
+        <div style="font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.16em; color: #8C877D; text-align: right;">IN PROGRESS</div>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; padding: 34px 0; border-top: 1px solid #211F1B;">
+      <div style="grid-column: 1 / 2; font-family: var(--font-mono), monospace; font-size: 11px; color: #FF5A2E;">/03</div>
+      <div style="grid-column: 2 / 6;">
+        <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(28px, 3.6vw, 56px); line-height: 0.95; letter-spacing: -0.035em; margin: 0 0 14px 0;">Pudding Trolley</h3>
+        <p style="margin: 0 0 18px 0; font-size: 15px; line-height: 1.62; color: #E7DFCE; max-width: 44ch;">An RC car built from scratch &mdash; chassis, drive, electronics and control.</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Tag" hint-size="auto,28px">Electronics</x-import>
+          <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Tag" hint-size="auto,28px">Fabrication</x-import>
+        </div>
+        <button type="button" data-open="pudding" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 1px solid #FF5A2E; color: #FF5A2E; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; padding: 10px 15px; border-radius: 999px; cursor: pointer;" style-hover="background: #FF5A2E; color: #0A0A0A;"><span style="font-size: 15px; line-height: 1;">&#43;</span>FULL DETAIL</button>
+      </div>
+      <div style="grid-column: 7 / 11;">
+        <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(28px, 3.6vw, 56px); line-height: 0.95; letter-spacing: -0.035em; margin: 0 0 14px 0;">Leuiraciu</h3>
+        <p style="margin: 0 0 18px 0; font-size: 15px; line-height: 1.62; color: #E7DFCE; max-width: 44ch;">A fully comprehensive constructed language, built as a school project. It won the Headmaster&rsquo;s award jointly with three others.</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Tag" hint-size="auto,28px">Phonology</x-import>
+          <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Tag" hint-size="auto,28px">Grammar</x-import>
+        </div>
+        <button type="button" data-open="leuiraciu" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 1px solid #FF5A2E; color: #FF5A2E; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; padding: 10px 15px; border-radius: 999px; cursor: pointer;" style-hover="background: #FF5A2E; color: #0A0A0A;"><span style="font-size: 15px; line-height: 1;">&#43;</span>FULL DETAIL</button>
+      </div>
+      <div style="grid-column: 11 / 13; font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.16em; color: #8C877D; text-align: right;">/04</div>
+    </div>
+    <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; border-top: 1px solid #211F1B; padding-top: 34px;">
+      <figure style="margin: 0;">
+        <div style="aspect-ratio: 3 / 2; overflow: hidden; background: #161513;"><img src="assets/wideisa.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D; margin-top: 9px;">SLOT &middot; PUDDING TROLLEY, CHASSIS</figcaption>
+      </figure>
+      <figure style="margin: 0; transform: translateY(28px);">
+        <div style="aspect-ratio: 3 / 2; overflow: hidden; background: #161513;"><img src="assets/auracat.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D; margin-top: 9px;">SLOT &middot; WIRING BENCH</figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <div style="aspect-ratio: 3 / 2; overflow: hidden; background: #161513;"><img src="assets/castlemotif.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D; margin-top: 9px;">SLOT &middot; LEUIRACIU SCRIPT SHEET</figcaption>
+      </figure>
+      <figure style="margin: 0; grid-column: 1 / 3;">
+        <div style="position: relative; aspect-ratio: 21 / 9; overflow: hidden; background: #161513; display: flex; align-items: center; justify-content: center;">
+          <img src="assets/torre.jpg" alt="Video placeholder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; display: block;">
+          <span style="position: relative; width: 62px; height: 62px; border-radius: 50%; border: 1px solid rgba(246,241,231,0.75); display: flex; align-items: center; justify-content: center; color: #F6F1E7; font-size: 17px; line-height: 1;">&#9654;</span>
+          <span style="position: absolute; bottom: 10px; right: 12px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #F6F1E7;">00:45</span>
+        </div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D; margin-top: 9px;">VIDEO SLOT &middot; PLANE TEST FLIGHT</figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <div style="position: relative; aspect-ratio: 3 / 2; overflow: hidden; background: #161513; display: flex; align-items: center; justify-content: center;">
+          <img src="assets/lampmoon.jpg" alt="Video placeholder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; display: block;">
+          <span style="position: relative; width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(246,241,231,0.75); display: flex; align-items: center; justify-content: center; color: #F6F1E7; font-size: 15px; line-height: 1;">&#9654;</span>
+        </div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D; margin-top: 9px;">VIDEO SLOT &middot; DISPENSER, BENCH TEST</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="sec-3" data-sec="3" data-screen-label="Camera" style="position: relative; background: #16C7C0; color: #0A0A0A; padding: clamp(72px, 11vw, 150px) 78px clamp(60px, 9vw, 120px) 24px; overflow: hidden;">
+    <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; margin-bottom: clamp(36px, 5vw, 70px);">
+      <div style="grid-column: 3 / 13;">
+        <div style="font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.24em; margin-bottom: 18px;">03 &mdash; BEHIND A CAMERA SINCE I COULD HOLD ONE</div>
+        <h2 data-hero="cam" data-slidex="260" style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(52px, 12vw, 210px); line-height: 0.82; letter-spacing: -0.055em; margin: 0;">FILM &amp;<br>PHOTO</h2>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; align-items: start;">
+      <div data-par="0.12" style="grid-column: 1 / 5;">
+        <div style="aspect-ratio: 3 / 4; overflow: hidden; transform: rotate(-2deg);"><img src="assets/lampmoon.jpg" alt="Moon over a wooded hill at dusk" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+      </div>
+      <div data-reveal="1" style="grid-column: 6 / 12; opacity: 0; transform: translateY(46px); font-family: var(--font-display), Archivo, sans-serif; font-weight: 700; font-size: clamp(19px, 2.1vw, 32px); line-height: 1.26; letter-spacing: -0.02em; text-wrap: pretty;">All of it produced alone: shot planning, shooting, editing, distribution. I started in visual effects and moved into paid promotional work.</div>
+      <div data-par="-0.08" style="grid-column: 8 / 13; margin-top: 26px;">
+        <div style="aspect-ratio: 16 / 9; overflow: hidden; transform: rotate(1.5deg);"><img src="assets/castlemotif.jpg" alt="Castle wall against a teal sky" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; margin-top: clamp(44px, 6vw, 90px);">
+      <div data-reveal="1" style="grid-column: 1 / 7; opacity: 0; transform: translateY(46px); border-top: 2px solid #0A0A0A; padding-top: 18px;">
+        <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; margin-bottom: 10px;">2025 &mdash; PRESENT &middot; ST JOHN&rsquo;S HAMPTON WICK</div>
+        <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(24px, 2.8vw, 42px); line-height: 0.98; letter-spacing: -0.035em; margin: 0 0 12px 0;">Thirty&#8209;odd films for one church</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; max-width: 46ch;">Three videos for the Youth, two for Love Local, two for our camp Focus, a seven&#8209;part series called Rise and Reflect, nineteen short sermon clips for social media, and a film of the church&rsquo;s Easter activities.</p>
+        <button type="button" data-open="stjohns" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 1px solid #0A0A0A; color: #0A0A0A; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; padding: 10px 15px; border-radius: 999px; cursor: pointer;" style-hover="background: #0A0A0A; color: #16C7C0;"><span style="font-size: 15px; line-height: 1;">&#43;</span>FULL DETAIL</button>
+      </div>
+      <div data-reveal="1" style="grid-column: 8 / 13; opacity: 0; transform: translateY(46px); border-top: 2px solid #0A0A0A; padding-top: 18px;">
+        <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; margin-bottom: 10px;">2025 &middot; CHINATOWN, LONDON</div>
+        <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(24px, 2.8vw, 42px); line-height: 0.98; letter-spacing: -0.035em; margin: 0 0 12px 0;">Imm&#8209;Aroy</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; max-width: 40ch;">Menu and social photography for my friend&rsquo;s restaurant &mdash; planning, setting up the shots, grading.</p>
+        <button type="button" data-open="immaroy" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 1px solid #0A0A0A; color: #0A0A0A; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; padding: 10px 15px; border-radius: 999px; cursor: pointer;" style-hover="background: #0A0A0A; color: #16C7C0;"><span style="font-size: 15px; line-height: 1;">&#43;</span>FULL DETAIL</button>
+      </div>
+      <div data-reveal="1" style="grid-column: 2 / 6; opacity: 0; transform: translateY(46px); border-top: 2px solid #0A0A0A; padding-top: 18px;">
+        <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; margin-bottom: 10px;">2026 &middot; RUNNER</div>
+        <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(22px, 2.4vw, 34px); line-height: 1; letter-spacing: -0.03em; margin: 0 0 12px 0;">RED&#8209;d awareness shoot</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; max-width: 40ch;">A professional shoot on how freelance dancers are treated. Rigging lights and cameras, prepping drinks and meals, some filming. I learnt how a shoot like this is structured. I loved it.</p>
+        <button type="button" data-open="redd" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 1px solid #0A0A0A; color: #0A0A0A; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; padding: 10px 15px; border-radius: 999px; cursor: pointer;" style-hover="background: #0A0A0A; color: #16C7C0;"><span style="font-size: 15px; line-height: 1;">&#43;</span>FULL DETAIL</button>
+      </div>
+      <div data-reveal="1" style="grid-column: 7 / 10; opacity: 0; transform: translateY(46px); border-top: 2px solid #0A0A0A; padding-top: 18px;">
+        <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; margin-bottom: 10px;">2023 &amp; 2022</div>
+        <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(22px, 2.4vw, 34px); line-height: 1; letter-spacing: -0.03em; margin: 0 0 12px 0;">Red Robin Art Studio<br>Chanctonbury Church</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; max-width: 36ch;">A promo film for a London art studio&rsquo;s site and socials, and a Mission Day film for a church.</p>
+        <button type="button" data-open="redrobin" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 1px solid #0A0A0A; color: #0A0A0A; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; padding: 10px 15px; border-radius: 999px; cursor: pointer;" style-hover="background: #0A0A0A; color: #16C7C0;"><span style="font-size: 15px; line-height: 1;">&#43;</span>FULL DETAIL</button>
+      </div>
+      <div data-reveal="1" style="grid-column: 11 / 13; opacity: 0; transform: translateY(46px); border-top: 2px solid #0A0A0A; padding-top: 18px;">
+        <div style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(34px, 4vw, 62px); line-height: 0.9; letter-spacing: -0.04em;">4M+</div>
+        <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; margin-top: 8px;">VIEWS ON UNSPLASH</div>
+        <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; margin-top: 18px; opacity: 0.7;">+ DRONE WORK FOR CLIENT SITES</div>
+        <button type="button" data-open="unsplash" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 1px solid #0A0A0A; color: #0A0A0A; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; padding: 10px 15px; border-radius: 999px; cursor: pointer;" style-hover="background: #0A0A0A; color: #16C7C0;"><span style="font-size: 15px; line-height: 1;">&#43;</span>FULL DETAIL</button>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: clamp(44px, 6vw, 90px);">
+      <figure style="margin: 0;">
+        <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #0A0A0A; display: flex; align-items: center; justify-content: center;">
+          <img src="assets/lampmoon.jpg" alt="Video placeholder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.45; display: block;">
+          <span style="position: relative; width: 62px; height: 62px; border-radius: 50%; border: 1px solid rgba(246,241,231,0.75); display: flex; align-items: center; justify-content: center; color: #F6F1E7; font-size: 17px; line-height: 1;">&#9654;</span>
+          <span style="position: absolute; bottom: 10px; right: 12px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #F6F1E7;">07 PARTS</span>
+        </div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; margin-top: 9px;">VIDEO SLOT &middot; RISE AND REFLECT</figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #0A0A0A; display: flex; align-items: center; justify-content: center;">
+          <img src="assets/castlemotif.jpg" alt="Video placeholder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.45; display: block;">
+          <span style="position: relative; width: 62px; height: 62px; border-radius: 50%; border: 1px solid rgba(246,241,231,0.75); display: flex; align-items: center; justify-content: center; color: #F6F1E7; font-size: 17px; line-height: 1;">&#9654;</span>
+          <span style="position: absolute; bottom: 10px; right: 12px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #F6F1E7;">01:30</span>
+        </div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; margin-top: 9px;">VIDEO SLOT &middot; RED ROBIN PROMO</figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #0A0A0A; display: flex; align-items: center; justify-content: center;">
+          <img src="assets/wideisa.jpg" alt="Video placeholder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.45; display: block;">
+          <span style="position: relative; width: 62px; height: 62px; border-radius: 50%; border: 1px solid rgba(246,241,231,0.75); display: flex; align-items: center; justify-content: center; color: #F6F1E7; font-size: 17px; line-height: 1;">&#9654;</span>
+          <span style="position: absolute; bottom: 10px; right: 12px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #F6F1E7;">REEL</span>
+        </div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; margin-top: 9px;">VIDEO SLOT &middot; DRONE WORK</figcaption>
+      </figure>
+    </div>
+
+    <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; margin-top: clamp(44px, 6vw, 90px);">
+      <figure style="margin: 0; grid-column: 1 / 5;">
+        <div style="aspect-ratio: 4 / 5; overflow: hidden;"><img src="assets/torre.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; margin-top: 9px;">SLOT &middot; IMM&#8209;AROY, PLATED DISH</figcaption>
+      </figure>
+      <figure style="margin: 0; grid-column: 5 / 9; align-self: end;">
+        <div style="aspect-ratio: 1 / 1; overflow: hidden;"><img src="assets/wideisa.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; margin-top: 9px;">SLOT &middot; RISE AND REFLECT, FRAME 01</figcaption>
+      </figure>
+      <figure style="margin: 0; grid-column: 9 / 13;">
+        <div style="aspect-ratio: 4 / 5; overflow: hidden;"><img src="assets/auracat.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; margin-top: 9px;">SLOT &middot; RED&#8209;d SHOOT, BEHIND CAMERA</figcaption>
+      </figure>
+      <figure style="margin: 0; grid-column: 1 / 8;">
+        <div style="aspect-ratio: 21 / 9; overflow: hidden;"><img src="assets/lampmoon.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; margin-top: 9px;">SLOT &middot; DRONE PASS, WIDE</figcaption>
+      </figure>
+      <figure style="margin: 0; grid-column: 8 / 13;">
+        <div style="aspect-ratio: 16 / 9; overflow: hidden;"><img src="assets/castlemotif.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; margin-top: 9px;">SLOT &middot; CHANCTONBURY MISSION DAY</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div style="background: #0A0A0A; color: #16C7C0; overflow: hidden; padding: 12px 0;">
+    <div style="display: flex; width: max-content; animation: sf-marquee-rev 28s linear infinite; font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.22em; white-space: nowrap;">
+      <span style="padding-right: 32px;">PREMIERE PRO &middot; AFTER EFFECTS &middot; PHOTOSHOP &middot; LIGHTROOM &middot; DRONE &middot; COLOUR GRADE &middot; SHOT PLANNING &middot; </span>
+      <span style="padding-right: 32px;">PREMIERE PRO &middot; AFTER EFFECTS &middot; PHOTOSHOP &middot; LIGHTROOM &middot; DRONE &middot; COLOUR GRADE &middot; SHOT PLANNING &middot; </span>
+    </div>
+  </div>
+
+  <section id="sec-4" data-sec="4" data-screen-label="Music" style="position: relative; background: #E4FF3B; color: #0A0A0A; padding: clamp(72px, 11vw, 150px) 78px clamp(72px, 11vw, 150px) 24px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; align-items: center; overflow: hidden;">
+    <div style="grid-column: 1 / 8;">
+      <div style="font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.24em; margin-bottom: 18px;">04 &mdash; SINCE BEFORE THE PANDEMIC</div>
+      <h2 data-hero="music" data-slidex="200" style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(56px, 13vw, 220px); line-height: 0.8; letter-spacing: -0.055em; margin: 0 0 24px 0;">DRUMS</h2>
+      <p data-reveal="1" style="opacity: 0; transform: translateY(46px); margin: 0; font-family: var(--font-display), Archivo, sans-serif; font-weight: 700; font-size: clamp(19px, 2.1vw, 32px); line-height: 1.26; letter-spacing: -0.02em; max-width: 30ch;">Grade&nbsp;8 drums, Grade&nbsp;4 piano. I have drummed for my local church every few Sundays since 2021 and played my school&rsquo;s Rock Concert this year, so I know both the band side and the theory side.</p>
+      <button type="button" data-open="drums" style="margin-top: 24px; display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 1px solid #0A0A0A; color: #0A0A0A; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; padding: 10px 15px; border-radius: 999px; cursor: pointer;" style-hover="background: #0A0A0A; color: #E4FF3B;"><span style="font-size: 15px; line-height: 1;">&#43;</span>FULL DETAIL</button>
+    </div>
+    <div style="grid-column: 9 / 13; display: flex; flex-direction: column; gap: 20px;">
+      <div style="border-top: 2px solid #0A0A0A; padding-top: 12px; display: flex; justify-content: space-between; font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.14em;"><span>DRUMS</span><span>GRADE 8</span></div>
+      <div style="border-top: 2px solid #0A0A0A; padding-top: 12px; display: flex; justify-content: space-between; font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.14em;"><span>PIANO</span><span>GRADE 4</span></div>
+      <div style="border-top: 2px solid #0A0A0A; padding-top: 12px; display: flex; justify-content: space-between; font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.14em;"><span>CHURCH BAND</span><span>SINCE 2021</span></div>
+      <div style="border-top: 2px solid #0A0A0A; padding-top: 12px; display: flex; justify-content: space-between; font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.14em;"><span>ROCK CONCERT</span><span>2026</span></div>
+      <figure data-par="0.14" style="margin: 12px 0 0 0; align-self: flex-end; width: 78%;">
+        <div style="aspect-ratio: 1 / 1; overflow: hidden; transform: rotate(3deg);"><img src="assets/auracat.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; margin-top: 14px; text-align: right;">SLOT &middot; KIT, ROCK CONCERT</figcaption>
+      </figure>
+    </div>
+    <div data-reveal="1" style="opacity: 0; transform: translateY(46px); grid-column: 1 / 13; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 34px;">
+      <figure style="margin: 0;">
+        <div style="aspect-ratio: 16 / 9; overflow: hidden;"><img src="assets/lampmoon.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; margin-top: 9px;">SLOT &middot; CHURCH BAND, SUNDAY</figcaption>
+      </figure>
+      <figure style="margin: 0; transform: translateY(24px);">
+        <div style="aspect-ratio: 16 / 9; overflow: hidden;"><img src="assets/wideisa.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; margin-top: 9px;">SLOT &middot; PIANO, PRACTICE ROOM</figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #0A0A0A; display: flex; align-items: center; justify-content: center;">
+          <img src="assets/torre.jpg" alt="Video placeholder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.45; display: block;">
+          <span style="position: relative; width: 62px; height: 62px; border-radius: 50%; border: 1px solid rgba(246,241,231,0.75); display: flex; align-items: center; justify-content: center; color: #F6F1E7; font-size: 17px; line-height: 1;">&#9654;</span>
+          <span style="position: absolute; bottom: 10px; right: 12px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #F6F1E7;">03:12</span>
+        </div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; margin-top: 9px;">VIDEO SLOT &middot; ROCK CONCERT SET</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="sec-5" data-sec="5" data-screen-label="Words" style="position: relative; background: #0A0A0A; padding: clamp(72px, 11vw, 150px) 78px clamp(72px, 11vw, 150px) 24px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px;">
+    <div style="grid-column: 2 / 7;">
+      <div style="font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.24em; color: #FF5A2E; margin-bottom: 18px;">05 &mdash; WORDS, AND THE LANGUAGES THEY SIT IN</div>
+      <h2 data-hero="words" data-slidex="200" style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(48px, 9vw, 150px); line-height: 0.84; letter-spacing: -0.05em; margin: 0; color: #0A0A0A; -webkit-text-stroke: 2px #F6F1E7;">WRITING</h2>
+    </div>
+    <div data-reveal="1" style="grid-column: 8 / 13; opacity: 0; transform: translateY(46px); align-self: end;">
+      <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; color: #16C7C0; margin-bottom: 12px;">NATIONAL SHORTLIST</div>
+      <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(28px, 3.4vw, 52px); line-height: 0.96; letter-spacing: -0.035em; margin: 0 0 12px 0;">Florentine Skies</h3>
+      <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #E7DFCE; max-width: 42ch;">Shortlisted in a national writing competition two years ago. My pieces also appear regularly in the Lion Print, my school&rsquo;s annual collection of its best writing and art.</p>
+      <button type="button" data-open="florentine" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 1px solid #16C7C0; color: #16C7C0; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; padding: 10px 15px; border-radius: 999px; cursor: pointer;" style-hover="background: #16C7C0; color: #0A0A0A;"><span style="font-size: 15px; line-height: 1;">&#43;</span>FULL DETAIL</button>
+    </div>
+    <div data-reveal="1" style="grid-column: 2 / 8; opacity: 0; transform: translateY(46px); margin-top: 46px; border-top: 1px solid #211F1B; padding-top: 20px;">
+      <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; color: #8C877D; margin-bottom: 12px;">2023&ndash;24 &middot; DESIGN, PRINT, SALE</div>
+      <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(24px, 2.8vw, 42px); line-height: 0.98; letter-spacing: -0.035em; margin: 0 0 12px 0;">Christian Youth Journals, from scratch</h3>
+      <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #E7DFCE; max-width: 46ch;">A set of journals for my church&rsquo;s youth group, taken from vision and planning through design, sale and distribution.</p>
+      <button type="button" data-open="journals" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 1px solid #FF5A2E; color: #FF5A2E; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; padding: 10px 15px; border-radius: 999px; cursor: pointer;" style-hover="background: #FF5A2E; color: #0A0A0A;"><span style="font-size: 15px; line-height: 1;">&#43;</span>FULL DETAIL</button>
+    </div>
+    <div data-reveal="1" style="grid-column: 9 / 13; opacity: 0; transform: translateY(46px); margin-top: 46px; border-top: 1px solid #211F1B; padding-top: 20px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; color: #8C877D;">LANGUAGES</div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-family: var(--font-display), Archivo, sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em;">
+        <div style="display: flex; justify-content: space-between; gap: 12px;"><span>Italian</span><span style="color: #FF5A2E;">C1</span></div>
+        <div style="display: flex; justify-content: space-between; gap: 12px;"><span>French</span><span style="color: #FF5A2E;">B2 &middot; DELF</span></div>
+        <div style="display: flex; justify-content: space-between; gap: 12px;"><span>Latin GCSE</span><span style="color: #E4FF3B;">Grade 9, a year early</span></div>
+        <div style="display: flex; justify-content: space-between; gap: 12px;"><span>Italian GCSE</span><span style="color: #E4FF3B;">Grade 9, a year early</span></div>
+        <div style="display: flex; justify-content: space-between; gap: 12px;"><span>Classical Greek</span><span style="color: #8C877D;">Predicted 9</span></div>
+      </div>
+    </div>
+    <div data-reveal="1" style="opacity: 0; transform: translateY(46px); grid-column: 2 / 13; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 16px; margin-top: 56px;">
+      <figure style="margin: 0;">
+        <div style="aspect-ratio: 3 / 2; overflow: hidden; background: #161513;"><img src="assets/castlemotif.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D; margin-top: 9px;">SLOT &middot; FLORENTINE SKIES, SPREAD</figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <div style="aspect-ratio: 3 / 4; overflow: hidden; background: #161513;"><img src="assets/torre.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D; margin-top: 9px;">SLOT &middot; YOUTH JOURNAL, COVER</figcaption>
+      </figure>
+      <figure style="margin: 0; align-self: end;">
+        <div style="aspect-ratio: 1 / 1; overflow: hidden; background: #161513;"><img src="assets/auracat.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <figcaption style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D; margin-top: 9px;">SLOT &middot; LION PRINT PAGE</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="sec-6" data-sec="6" data-screen-label="Work experience" style="position: relative; background: #F6F1E7; color: #0A0A0A; padding: clamp(72px, 11vw, 150px) 78px clamp(72px, 11vw, 150px) 24px;">
+    <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; margin-bottom: clamp(34px, 5vw, 64px); align-items: end;">
+      <div style="grid-column: 1 / 10;">
+        <div style="font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.24em; color: #C23F18; margin-bottom: 18px;">06 &mdash; WHAT I&rsquo;VE ACTUALLY DONE, IN ORDER</div>
+        <h2 data-slidex="180" style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(42px, 8.2vw, 136px); line-height: 0.84; letter-spacing: -0.05em; margin: 0;">WORK<br>EXPERIENCE</h2>
+      </div>
+      <div style="grid-column: 10 / 13; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; color: #7C776D; text-align: right; line-height: 1.9;">NINE ENTRIES<br>2021 &rarr; 2028</div>
+    </div>
+    <div style="display: flex; flex-direction: column; border-bottom: 1px solid rgba(10,10,10,0.16);">
+      <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: 112px minmax(0, 7fr) minmax(0, 5fr); gap: 22px; align-items: start; padding: clamp(22px, 2.6vw, 34px) 14px clamp(22px, 2.6vw, 34px) 6px; border-top: 1px solid rgba(10,10,10,0.16); transition: background 320ms cubic-bezier(0.16,1,0.3,1);" style-hover="background: rgba(10,10,10,0.045);">
+        <div style="font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.14em; color: #C23F18; padding-top: 5px;">2026&ndash;28</div>
+        <div>
+          <div style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 800; font-size: clamp(19px, 2.05vw, 29px); line-height: 1.06; letter-spacing: -0.032em; color: #0A0A0A; text-wrap: pretty;">A&#8209;Levels begin: Maths, Physics, Computer Science, French DELF</div>
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; color: #56524A; margin-top: 11px; text-transform: uppercase;">Hampton School, London</div>
+        </div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #55514A; max-width: 44ch; padding-top: 3px;">Four subjects chosen to keep both hands busy.</p>
+      </div>
+      <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: 112px minmax(0, 7fr) minmax(0, 5fr); gap: 22px; align-items: start; padding: clamp(22px, 2.6vw, 34px) 14px clamp(22px, 2.6vw, 34px) 6px; border-top: 1px solid rgba(10,10,10,0.16); transition: background 320ms cubic-bezier(0.16,1,0.3,1);" style-hover="background: rgba(10,10,10,0.045);">
+        <div style="font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.14em; color: #C23F18; padding-top: 5px;">2026</div>
+        <div>
+          <div style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 800; font-size: clamp(19px, 2.05vw, 29px); line-height: 1.06; letter-spacing: -0.032em; color: #0A0A0A; text-wrap: pretty;">Runner on the RED&#8209;d awareness film shoot</div>
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; color: #56524A; margin-top: 11px; text-transform: uppercase;">Professional shoot, London</div>
+        </div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #55514A; max-width: 44ch; padding-top: 3px;">Rigging, prep, and some filming on a shoot about how freelance dancers are treated.</p>
+      </div>
+      <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: 112px minmax(0, 7fr) minmax(0, 5fr); gap: 22px; align-items: start; padding: clamp(22px, 2.6vw, 34px) 14px clamp(22px, 2.6vw, 34px) 6px; border-top: 1px solid rgba(10,10,10,0.16); transition: background 320ms cubic-bezier(0.16,1,0.3,1);" style-hover="background: rgba(10,10,10,0.045);">
+        <div style="font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.14em; color: #C23F18; padding-top: 5px;">2026</div>
+        <div>
+          <div style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 800; font-size: clamp(19px, 2.05vw, 29px); line-height: 1.06; letter-spacing: -0.032em; color: #0A0A0A; text-wrap: pretty;">STEM fair category win with the AI seed&#8209;dropping plane</div>
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; color: #56524A; margin-top: 11px; text-transform: uppercase;">School STEM fair, third consecutive year</div>
+        </div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #55514A; max-width: 44ch; padding-top: 3px;">Dispenser design, mechanism and code, project management, auto&#8209;stabilisation.</p>
+      </div>
+      <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: 112px minmax(0, 7fr) minmax(0, 5fr); gap: 22px; align-items: start; padding: clamp(22px, 2.6vw, 34px) 14px clamp(22px, 2.6vw, 34px) 6px; border-top: 1px solid rgba(10,10,10,0.16); transition: background 320ms cubic-bezier(0.16,1,0.3,1);" style-hover="background: rgba(10,10,10,0.045);">
+        <div style="font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.14em; color: #C23F18; padding-top: 5px;">2025&ndash;</div>
+        <div>
+          <div style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 800; font-size: clamp(19px, 2.05vw, 29px); line-height: 1.06; letter-spacing: -0.032em; color: #0A0A0A; text-wrap: pretty;">Photography and film for St John&rsquo;s Hampton Wick and Imm&#8209;Aroy</div>
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; color: #56524A; margin-top: 11px; text-transform: uppercase;">Freelance</div>
+        </div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #55514A; max-width: 44ch; padding-top: 3px;">Youth films, Love Local, Focus camp, Rise and Reflect, sermon clips, restaurant menu photography.</p>
+      </div>
+      <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: 112px minmax(0, 7fr) minmax(0, 5fr); gap: 22px; align-items: start; padding: clamp(22px, 2.6vw, 34px) 14px clamp(22px, 2.6vw, 34px) 6px; border-top: 1px solid rgba(10,10,10,0.16); transition: background 320ms cubic-bezier(0.16,1,0.3,1);" style-hover="background: rgba(10,10,10,0.045);">
+        <div style="font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.14em; color: #C23F18; padding-top: 5px;">2025</div>
+        <div>
+          <div style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 800; font-size: clamp(19px, 2.05vw, 29px); line-height: 1.06; letter-spacing: -0.032em; color: #0A0A0A; text-wrap: pretty;">Headmaster&rsquo;s award for Leuiraciu, a constructed language</div>
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; color: #56524A; margin-top: 11px; text-transform: uppercase;">School project, joint award with three others</div>
+        </div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #55514A; max-width: 44ch; padding-top: 3px;">A fully comprehensive language: sounds, grammar and lexicon.</p>
+      </div>
+      <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: 112px minmax(0, 7fr) minmax(0, 5fr); gap: 22px; align-items: start; padding: clamp(22px, 2.6vw, 34px) 14px clamp(22px, 2.6vw, 34px) 6px; border-top: 1px solid rgba(10,10,10,0.16); transition: background 320ms cubic-bezier(0.16,1,0.3,1);" style-hover="background: rgba(10,10,10,0.045);">
+        <div style="font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.14em; color: #C23F18; padding-top: 5px;">2024&ndash;25</div>
+        <div>
+          <div style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 800; font-size: clamp(19px, 2.05vw, 29px); line-height: 1.06; letter-spacing: -0.032em; color: #0A0A0A; text-wrap: pretty;">Grade 9 in Latin and Italian GCSE, a year early</div>
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; color: #56524A; margin-top: 11px; text-transform: uppercase;">Hampton School</div>
+        </div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #55514A; max-width: 44ch; padding-top: 3px;">Classical Greek GCSE predicted a 9. C1 Italian, B2 French.</p>
+      </div>
+      <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: 112px minmax(0, 7fr) minmax(0, 5fr); gap: 22px; align-items: start; padding: clamp(22px, 2.6vw, 34px) 14px clamp(22px, 2.6vw, 34px) 6px; border-top: 1px solid rgba(10,10,10,0.16); transition: background 320ms cubic-bezier(0.16,1,0.3,1);" style-hover="background: rgba(10,10,10,0.045);">
+        <div style="font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.14em; color: #C23F18; padding-top: 5px;">2023&ndash;24</div>
+        <div>
+          <div style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 800; font-size: clamp(19px, 2.05vw, 29px); line-height: 1.06; letter-spacing: -0.032em; color: #0A0A0A; text-wrap: pretty;">Christian Youth Journals designed, sold and distributed</div>
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; color: #56524A; margin-top: 11px; text-transform: uppercase;">Church youth group</div>
+        </div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #55514A; max-width: 44ch; padding-top: 3px;">From vision and planning to design, sale and distribution.</p>
+      </div>
+      <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: 112px minmax(0, 7fr) minmax(0, 5fr); gap: 22px; align-items: start; padding: clamp(22px, 2.6vw, 34px) 14px clamp(22px, 2.6vw, 34px) 6px; border-top: 1px solid rgba(10,10,10,0.16); transition: background 320ms cubic-bezier(0.16,1,0.3,1);" style-hover="background: rgba(10,10,10,0.045);">
+        <div style="font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.14em; color: #C23F18; padding-top: 5px;">2022&ndash;23</div>
+        <div>
+          <div style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 800; font-size: clamp(19px, 2.05vw, 29px); line-height: 1.06; letter-spacing: -0.032em; color: #0A0A0A; text-wrap: pretty;">Promotional films for Red Robin Art Studio and Chanctonbury Church</div>
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; color: #56524A; margin-top: 11px; text-transform: uppercase;">London and West Sussex</div>
+        </div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #55514A; max-width: 44ch; padding-top: 3px;">My first paid and commissioned film work.</p>
+      </div>
+      <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: 112px minmax(0, 7fr) minmax(0, 5fr); gap: 22px; align-items: start; padding: clamp(22px, 2.6vw, 34px) 14px clamp(22px, 2.6vw, 34px) 6px; border-top: 1px solid rgba(10,10,10,0.16); transition: background 320ms cubic-bezier(0.16,1,0.3,1);" style-hover="background: rgba(10,10,10,0.045);">
+        <div style="font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.14em; color: #C23F18; padding-top: 5px;">2021</div>
+        <div>
+          <div style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 800; font-size: clamp(19px, 2.05vw, 29px); line-height: 1.06; letter-spacing: -0.032em; color: #0A0A0A; text-wrap: pretty;">Started drumming for the local church</div>
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; color: #56524A; margin-top: 11px; text-transform: uppercase;">Every few Sundays since</div>
+        </div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #55514A; max-width: 44ch; padding-top: 3px;">Began before the pandemic; Grade 8 now.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-7" data-sec="7" data-screen-label="Right now" style="position: relative; background: #FF5A2E; color: #0A0A0A; padding: clamp(72px, 11vw, 150px) 78px clamp(72px, 11vw, 150px) 24px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px;">
+    <div style="grid-column: 1 / 5;">
+      <div style="font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.24em; margin-bottom: 18px; display: flex; gap: 8px; align-items: center;"><span style="width: 8px; height: 8px; background: #0A0A0A; border-radius: 50%; animation: sf-blink 1.6s steps(1) infinite; display: block;"></span>07 &mdash; RIGHT NOW</div>
+      <h2 data-slidex="160" style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(46px, 8vw, 130px); line-height: 0.82; letter-spacing: -0.05em; margin: 0;">THIS<br>TERM</h2>
+    </div>
+    <div data-reveal="1" style="grid-column: 6 / 13; opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px 26px; align-content: center;">
+      <div><div style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 24px; letter-spacing: -0.03em; margin-bottom: 8px;">Starting A&#8209;Levels</div><p style="margin: 0; font-size: 15px; line-height: 1.6;">Maths, Physics, Computer Science, and French through the DELF programme.</p></div>
+      <div><div style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 24px; letter-spacing: -0.03em; margin-bottom: 8px;">Filming for St John&rsquo;s</div><p style="margin: 0; font-size: 15px; line-height: 1.6;">More youth and Sunday work, plus whatever the church needs next.</p></div>
+      <div><div style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 24px; letter-spacing: -0.03em; margin-bottom: 8px;">Building Lexitecht</div><p style="margin: 0; font-size: 15px; line-height: 1.6;">Turning the conlang app from a sketch into something usable.</p></div>
+      <div><div style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 24px; letter-spacing: -0.03em; margin-bottom: 8px;">Open to freelance</div><p style="margin: 0; font-size: 15px; line-height: 1.6;">Photography, video and drone work around London.</p></div>
+    </div>
+    <div data-reveal="1" style="opacity: 0; transform: translateY(46px); grid-column: 1 / 13; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 56px;">
+      <div style="aspect-ratio: 1 / 1; overflow: hidden;"><img src="assets/wideisa.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+      <div style="aspect-ratio: 1 / 1; overflow: hidden;"><img src="assets/lampmoon.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+      <div style="aspect-ratio: 1 / 1; overflow: hidden;"><img src="assets/castlemotif.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+      <div style="aspect-ratio: 1 / 1; overflow: hidden;"><img src="assets/auracat.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+      <div style="grid-column: 1 / 5; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em;">FOUR SLOTS &middot; RECENT FRAMES, UPDATED EACH TERM</div>
+    </div>
+  </section>
+
+  <section id="sec-8" data-sec="8" data-screen-label="Say hello" style="position: relative; background: #0A0A0A; padding: clamp(80px, 12vw, 170px) 78px 60px 24px; min-height: 92svh; display: flex; flex-direction: column; justify-content: space-between; gap: 60px;">
+    <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px;">
+      <div style="grid-column: 1 / 10;">
+        <div style="font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.24em; color: #16C7C0; margin-bottom: 22px;">08 &mdash; SAY HELLO</div>
+        <a href="mailto:hello@samfield.co" style="display: block; font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(34px, 7.4vw, 130px); line-height: 0.86; letter-spacing: -0.05em; color: #F6F1E7; word-break: break-word;" style-hover="color: #FF5A2E;">hello@<br>samfield.co</a>
+      </div>
+      <div style="grid-column: 10 / 13; display: flex; flex-direction: column; gap: 14px; justify-content: flex-end; font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.14em; color: #8C877D;">
+        <a href="tel:+447460102466" style="color: #F6F1E7;">+44 7460 102 466</a>
+        <a href="https://samfield.co" style="color: #F6F1E7;">samfield.co</a>
+        <span>TEDDINGTON, TW11</span>
+      </div>
+    </div>
+    <div data-reveal="1" style="opacity: 0; transform: translateY(46px); display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;">
+      <div style="aspect-ratio: 4 / 3; overflow: hidden;"><img src="assets/torre.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+      <div style="aspect-ratio: 4 / 3; overflow: hidden;"><img src="assets/castlemotif.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+      <div style="aspect-ratio: 4 / 3; overflow: hidden;"><img src="assets/wideisa.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+      <div style="aspect-ratio: 4 / 3; overflow: hidden;"><img src="assets/lampmoon.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+      <div style="aspect-ratio: 4 / 3; overflow: hidden;"><img src="assets/auracat.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+    </div>
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 26px; flex-wrap: wrap; border-top: 1px solid #211F1B; padding-top: 26px;">
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Button" hint-size="auto,52px" href="assets/Samuel-Field-CV.pdf" size="lg" icon="arrow">Download the CV</x-import>
+        <x-import component-from-global-scope="SamFieldDesignSystem_0559a7.Button" hint-size="auto,52px" href="mailto:hello@samfield.co" variant="secondary" size="lg">Email me</x-import>
+      </div>
+      <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.18em; color: #46433D; text-align: right;">MUCH MORE DETAIL IS AVAILABLE ON REQUEST<br>SAMUEL FIELD &middot; 2026</div>
+    </div>
+  </section>
+
+  <div data-overlay="1" style="display: none; position: fixed; inset: 0; z-index: 200; align-items: center; justify-content: center; padding: clamp(0px, calc((100vw - 720px) * 1000), 40px);">
+    <div data-close="1" style="position: absolute; inset: 0; background: rgba(10,10,10,0.62); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);"></div>
+    <div data-sheet="1" style="position: relative; width: min(940px, 100vw); max-height: 100svh; min-height: clamp(0px, calc((720px - 100vw) * 1000), 100svh); overflow-y: auto; background: #0A0A0A; color: #F6F1E7; border: 1px solid #211F1B; box-shadow: 0 40px 120px rgba(0,0,0,0.6); opacity: 0; transform: translateY(22px) scale(0.985); transition: opacity 320ms cubic-bezier(0.16,1,0.3,1), transform 320ms cubic-bezier(0.16,1,0.3,1);">
+      <button type="button" data-close="1" aria-label="Close" style="position: sticky; float: right; top: 14px; right: 14px; margin: 14px 14px 0 0; z-index: 3; width: 46px; height: 46px; border-radius: 50%; background: #0A0A0A; border: 1px solid #46433D; color: #F6F1E7; font-family: var(--font-mono), monospace; font-size: 16px; line-height: 1; cursor: pointer;" style-hover="background: #FF5A2E; border-color: #FF5A2E; color: #0A0A0A;">&#215;</button>
+      <div style="padding: clamp(28px, 4vw, 54px);">
+
+        <article data-panel="plane" style="display: none;">
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.2em; color: #FF5A2E; margin-bottom: 14px;">TECHNICAL &middot; 2026</div>
+          <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(30px, 4.4vw, 54px); line-height: 0.94; letter-spacing: -0.04em; margin: 0 0 22px 0;">AI seed&#8209;dropping plane</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 18px; padding: 18px 0; border-top: 1px solid #211F1B; border-bottom: 1px solid #211F1B; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D;">
+            <div>YEAR<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">2026</span></div>
+            <div>MY ROLE<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Seed dispenser, stabilisation, project management</span></div>
+            <div>TOOLS<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">SolidWorks, Kalman filter, FrSKY, 3D printing</span></div>
+            <div>OUTCOME<span style="display: block; color: #E4FF3B; margin-top: 7px; letter-spacing: 0.1em;">First prize, all Year 11&ndash;13 projects</span></div>
+          </div>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Not exactly a flying start</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">A friend of mine wanted to try making an RC plane fully from scratch for the first time three years ago for the school&rsquo;s annual STEM Fair. Many local primary schools pay a visit to it, and it&rsquo;s judged by the school&rsquo;s SLT. Spending many gruelling hours in SolidWorks, that year we succeeded in making a plane model from scratch; laser&#8209;cutting parts, assembling it, wiring it up with fully operational electronics (the prop, control surfaces, buzzer etc), and establishing a remote connection with the widely used FrSKY controller set. Having even run a virtual wind tunnel test on the wing&rsquo;s CAD model to obtain its lift constant, all looked good to fly. It was a disaster; it was flying for about a second before banking violently leftward and crashing. We realised this may have been exacerbated by the lack of a dihedral angle in the wing design, but eventually we figured the two main reasons for the crash:</p>
+          <ul style="margin: 0 0 14px 0; padding-left: 20px; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">
+            <li style="margin-bottom: 7px;">A component came loose in the plane and caused the precisely calculated centre of gravity to shift</li>
+            <li>Some control surfaces may not have been accurately enough installed, so a bank input caused asymmetric lift.</li>
+          </ul>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Take Two</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">The next year, we wanted to try a different focus &ndash; autopilot. Due to the complexity of designing an autopilot system from scratch we opted for a ready built foam plane we knew could fly. My role in this was the stabilisation system &ndash; using a Kalman filter to process instrument data, this kept the plane level when flying straight by compensating for bank and pitch movement not inputted by the user manually or by the flight computer. (Yaw movement was also adjusted but to a smaller extent due to high rudder sensitivity). Ground tests of the control system proved successful. Unfortunately a strong, untimely gust of wind knocked it off course about three seconds into the flight, causing a steep bank which my friend could not manually pilot back on course in time.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Third Time Lucky</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">We now had two crashed planes &ndash; this year we were determined to not only make one that would fly, but a project with real&#8209;world applications, to finally win the STEM Fair. This is where the AI seed&#8209;dropping part comes in: the design was for a plane that could fly around a field on its own, taking photos of the ground below. Then it could, upon landing, send these images to an app on the ground (to minimise processing electronics onboard), which would then generate a flight plan over fertile locations. This flight plan would be sent back to the plane, and last year&rsquo;s autopilot system would fly it.</p>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">This was a significant step up in terms of complexity &ndash; but, with the experience we&rsquo;d gained and technology we&rsquo;d built over the previous years, we felt our ability had stepped up enough to match.</p>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">Nevertheless, I decided we needed a more rigorous delegation plan, so I took up the task of project management. Preparing a 10&#8209;page document on the details of what had to be done, by what time, in what order, and by whom, I appointed each member of the 4&#8209;strong team with their tasks. When setbacks occurred, we updated the plan accordingly, and eventually everything was done. Last&#8209;minute a member of our team even developed an iOS app to showcase the design on an iPad; we had it on our stall for passers&#8209;by at the fair to learn more. Later on, we decided to try having a ground station processing while the plane was flying &ndash; the plane would be streaming image data to a computer station on the ground, where it would be processed, and the flight plan sent back in due course.</p>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">We all had something to do in everything, so I helped with some of the AI route&#8209;planning app development by helping mount the onboard camera. Predominantly, however, I was in charge of the seed dispenser &ndash; a small box in the back of the plane, with a single servo to minimise complexity, it featured a mechanism to adjust the rate of flow of seeds, and was designed to make use of as much free space as we had in the fuselage. Of course, due to the centre of mass shifting as seeds are dispersed, we ensured the other components were arranged in such a way that the COG would remain within the wingspan at all times.</p>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">To make the planes repairable quickly, we used a publicly&#8209;available 3D&#8209;printed design, mounting new autopilot electronics we had spent time wiring and programming based off the previous year&rsquo;s algorithms. Finally testing it in flight, we recorded its maiden voyage with a drone to better observe any faults. And it flew! Unfortunately only for about five seconds &ndash; when we tried to manually steer it from a tree, the rudder locked out at 90 degrees, and it all came crashing down again. However, having re&#8209;printed and re&#8209;assembled the parts, it was ready for the fair, where we showcased the whole system. And (to our surprise!) it won first prize for all Year 11, 12 and 13 projects!</p>
+          <p style="margin: 0; font-family: var(--font-display), Archivo, sans-serif; font-weight: 700; font-size: 19px; line-height: 1.4; letter-spacing: -0.02em; color: #FF5A2E; max-width: 40ch;">All in all, I think it was a case of &lsquo;mission failed successfully.&rsquo;</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px;">
+            <div style="aspect-ratio: 4 / 3; overflow: hidden; background: #161513;"><img src="assets/castlemotif.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+            <div style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #161513; display: flex; align-items: center; justify-content: center;"><img src="assets/torre.jpg" alt="Video placeholder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; display: block;"><span style="position: relative; width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(246,241,231,0.75); display: flex; align-items: center; justify-content: center; color: #F6F1E7; font-size: 15px; line-height: 1;">&#9654;</span></div>
+          </div>
+        </article>
+
+        <article data-panel="lexitecht" style="display: none;">
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.2em; color: #16C7C0; margin-bottom: 14px;">TECHNICAL &middot; IN PROGRESS</div>
+          <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(30px, 4.4vw, 54px); line-height: 0.94; letter-spacing: -0.04em; margin: 0 0 22px 0;">Lexitecht</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 18px; padding: 18px 0; border-top: 1px solid #211F1B; border-bottom: 1px solid #211F1B; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D;">
+            <div>STATUS<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Building</span></div>
+            <div>MY ROLE<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Everything</span></div>
+            <div>BUILT WITH<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Python 3, PyQt5, NLTK &middot; 3,000 lines</span></div>
+          </div>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Fed up with spreadsheets</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">After Le&uacute;raciu, I made a few other, smaller languages &ndash; and kept having the problem of needing to navigate an ugly&#8209;looking spreadsheet, or trawl through pages of textbook to find the grammar I needed to translate something. I wanted an app that could:</p>
+          <ul style="margin: 0 0 14px 0; padding-left: 20px; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">
+            <li style="margin-bottom: 7px;">Keep track of my lexicon &mdash; principal parts, and pronunciation with sound recording; spaces for notes and etymology; the option to select a font I made to visualise the script on a computer</li>
+            <li style="margin-bottom: 7px;">Generate new words &mdash; a system which generates batches of new words according to a provided phonemic inventory, phonotactical constraints and other phonological rules</li>
+            <li style="margin-bottom: 7px;">Apply sound changes to simulate language evolution &mdash; given a set of words and a system for sounds to change, the app should be able to batch apply changes</li>
+            <li style="margin-bottom: 7px;">Keep track of grammar with a space to store conjugations and declensions</li>
+            <li>Be able to translate basic sentences between English and any conlang loaded into it</li>
+          </ul>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">I could find no app capable of these, so I decided to make it myself, applying those features in that order. It was like being a lexicon &lsquo;architect&rsquo; &ndash; and so Lexitecht was born.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Cutie Pie? No, PyQt.</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">This was when AI was not widely used &ndash; I programmed every line of the program, using w3schools or YouTube videos to help. The only language I knew well enough to make such a complex task was Python 3, so I used the PyQt5 library for the GUI. Slowly but surely, each of the features was fairly straightforward to implement. Each language had its own custom .lxl language file.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">The Translation System</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">Then it became time to flesh out a system which can translate English to the conlang. To do this, I decided to make an &lsquo;intermediate language&rsquo; &ndash; a way of encoding English text to their grammatical values. For example, &lsquo;you&rsquo; is a 2nd person singular pronoun, so is encoded to PRN2S. Similarly, &lsquo;eating&rsquo; is a participle, so is encoded to PTCP. This was done using the NLTK toolkit to identify individual words like this.</p>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">However, the complication arose when looking at more than one word at a time &ndash; &lsquo;am eating&rsquo; and &lsquo;was eating&rsquo; are both two words, but they correspond to one unit of grammar: one compound tense. Therefore I had to create a whole set of systems encompassing all the English language&rsquo;s tenses to decipher this &ndash; a present verb &lsquo;am&rsquo; (encoded as VB1SPAI, PAI being present active indicative) followed by a PTCP &lsquo;eating&rsquo;, for example, makes VB1SCAI, where the &lsquo;C&rsquo; is continuous present. This of course is a simplification of the algorithm, which is 500 lines of the 3,000&#8209;line program.</p>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">However, somehow it was successful with simple sentences, and proved to be a huge help &ndash; it gave me an instant starting point for longer paragraphs rather than going through masses of spreadsheet. <a href="#" style="color: #16C7C0; border-bottom: 1px solid rgba(22,199,192,0.4);">You can see the app on GitHub</a>.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px;">
+            <div style="aspect-ratio: 4 / 3; overflow: hidden; background: #161513;"><img src="assets/lampmoon.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+            <div style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #161513; display: flex; align-items: center; justify-content: center;"><img src="assets/wideisa.jpg" alt="Video placeholder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; display: block;"><span style="position: relative; width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(246,241,231,0.75); display: flex; align-items: center; justify-content: center; color: #F6F1E7; font-size: 15px; line-height: 1;">&#9654;</span></div>
+          </div>
+        </article>
+
+        <article data-panel="pudding" style="display: none;">
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.2em; color: #FF5A2E; margin-bottom: 14px;">TECHNICAL &middot; BUILT FROM SCRATCH</div>
+          <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(30px, 4.4vw, 54px); line-height: 0.94; letter-spacing: -0.04em; margin: 0 0 22px 0;">Pudding Trolley</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 18px; padding: 18px 0; border-top: 1px solid #211F1B; border-bottom: 1px solid #211F1B; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D;">
+            <div>TYPE<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">RC vehicle that tows a pudding trolley</span></div>
+            <div>BRAINS<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">2&times; Arduino Nano, NRF24L01 link</span></div>
+            <div>DRIVE<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">4 DC gearbox motors, 2&times; DRV8871, 11.1V li&#8209;ion</span></div>
+            <div>EXTRAS<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Gyroscope, ultrasound stop, God Save The King</span></div>
+          </div>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">What the&hellip;?</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">As a result of a long&#8209;running family joke, we bought my mum a small second&#8209;hand pudding trolley, to wheel puddings (usually yoghurt or overripe grapes) the 92 centimetres from the kitchen counter to dining table. However, this pudding trolley had one problem; it could not drive itself! So I decided to fix that, and thus ensued the Pudding Trolley Project.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Design</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">I went through a number of design iterations, trying to figure out the simplest, most efficient design to move the pudding trolley. It would be powered by an Arduino Nano (from AliExpress) with 4 small brushed gearbox DC motors (also from AliExpress). Having all this mounted on the trolley itself was the original plan, but it was difficult to find large enough wheels with a small enough bore, so I opted for a standalone RC vehicle that would somehow pull/drag the trolley along with some mounting system. Pulling from the front would be simple, but have reduced mobility; a pivot directly underneath would maximise mobility but would need to be very strong; so finally, this is the design I went for. Each of the four holes slot into screws dangling through the mesh of the bottom rack of the trolley, reducing the load on each of them and providing a firm connection while allowing the vehicle to potentially spin on the spot.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Electronics</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">After some torque &amp; desired speed calculations with weight and wheel diameter factored in, I settled on motors and completed the electrical engineering. It used two DRV8871 motor drivers connected to two motors each, so two motors for the left side and another two for the right. A gyroscope was built in to allow for future speed calculation, but I haven&rsquo;t made that part yet. A small speaker amp was included to play tones sounding like God Save The King (I originally planned to play it from an SD card to have the full song, but I ran into problems with other components on the I2C interfering with it.) I even put a small ultrasound distancing sensor to automatically stop if about to run into an obstacle. All ran from an 11.1V li&#8209;ion battery connected with an XT30 connector, fed through a voltage sensor to estimate capacity. The controller was just another Arduino Nano on a breadboard, communicating to the vehicle with an NRF24L01 module.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Construction</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">Used sticky&#8209;backed breadboards for wiring and placed it into the frame. The motor holders went several iterations to ensure the perfect click&#8209;in fit, and then I placed on the wheels. To mount it on to the trolley I used four bolts and washers, as shown in the images. And it drove!</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px;">
+            <div style="aspect-ratio: 4 / 3; overflow: hidden; background: #161513;"><img src="assets/wideisa.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+            <div style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #161513; display: flex; align-items: center; justify-content: center;"><img src="assets/auracat.jpg" alt="Video placeholder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; display: block;"><span style="position: relative; width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(246,241,231,0.75); display: flex; align-items: center; justify-content: center; color: #F6F1E7; font-size: 15px; line-height: 1;">&#9654;</span></div>
+          </div>
+        </article>
+
+        <article data-panel="leuiraciu" style="display: none;">
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.2em; color: #FF5A2E; margin-bottom: 14px;">TECHNICAL &middot; 2025</div>
+          <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(30px, 4.4vw, 54px); line-height: 0.94; letter-spacing: -0.04em; margin: 0 0 22px 0;">Leuiraciu</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 18px; padding: 18px 0; border-top: 1px solid #211F1B; border-bottom: 1px solid #211F1B; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D;">
+            <div>YEAR<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">2025</span></div>
+            <div>CONTEXT<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Extended Learning Project &middot; 35&#8209;page textbook</span></div>
+            <div>OUTCOME<span style="display: block; color: #E4FF3B; margin-top: 7px; letter-spacing: 0.1em;">Headmaster&rsquo;s award, jointly with three others</span></div>
+          </div>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Okra&auml;nian beginnings</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">Exacerbated by studying Latin since Year 5, and having an Italian bilingual mother, I have always loved languages and grammar systems &ndash; especially ancient ones as they tend to be more interesting. As a result I made my first conlang at 11 years old &ndash; entitled Okra&auml;n. Having spent months working on it, I eventually finished two Excel spreadsheets &ndash; one being the language&rsquo;s dictionary, but the other, larger, far more complicated one containing the language&rsquo;s entire grammar structure. I had done research on other languages such as Turkish and even Elvish, and got to grips with grammar features such as evidentiality that I hadn&rsquo;t seen before. I learnt the basics of the International Phonetic Alphabet too, in order to craft a small phonemic inventory. This language, however, was only the start.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Guy Deutscher&rsquo;s mesmerising book</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">Over the next year I continued to become more interested in languages &ndash; starting to learn Ancient Greek in Year 8 (which I continued to GCSE), I read The Unfolding of Language by Guy Deutscher over the summer, covering not only how sounds from apes began to transform into functional linguistics, but also how and why languages evolve in more recent times, from 3000 BC or so to now. I found it utterly fascinating! That year, I then decided to do an Extended Learning Project (HELP) with the school studying the evolution of languages. And the way I decided to showcase their evolution was with the production of my second conlang, Le&uacute;raciu.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">The birth of Le&uacute;raciu</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">Le&uacute;raciu, in concept, was a language designed to replicate the language that may have been spoken in Corsica if it had not been invaded nor populated by the French, Italians, or anyone for that matter. It aimed to show how linguistic features can arise simply from socioeconomic factors of its speakers, and more significantly the geography of where it is spoken. Nevertheless, it was also an opportunity for me to display my language&#8209;making skills, which I loved &ndash; admittedly the mere creation of a language was a large proportion of the project rather than its evolution.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Leuir&aacute;ciu itself</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">Leuir&aacute;ciu is too much of a complex language to simply be a spreadsheet, so I made a 35&#8209;page textbook with all of its grammar systems. Due to its complexity, which is higher than that of Okra&auml;n&rsquo;s, I can&rsquo;t explain it here, so please read the textbook to find out! Throughout, each feature has been thought through with respect to Corsica&rsquo;s real geography and hypothetical society. Explaining these connections is a short Realism Summary at the end of the textbook.</p>
+          <p style="margin: 0; font-family: var(--font-mono), monospace; font-size: 11px; line-height: 1.9; letter-spacing: 0.06em; color: #8C877D; border-left: 1px solid #211F1B; padding-left: 12px;">Note: Le&uacute;iraciu does indeed have its own simple script system, which I made a font for in Adobe Illustrator. You can download the font below.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px;">
+            <div style="aspect-ratio: 4 / 3; overflow: hidden; background: #161513;"><img src="assets/castlemotif.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+            <div style="aspect-ratio: 4 / 3; overflow: hidden; background: #161513;"><img src="assets/torre.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+          </div>
+        </article>
+
+        <article data-panel="stjohns" style="display: none;">
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.2em; color: #16C7C0; margin-bottom: 14px;">FILM &middot; 2025 TO PRESENT</div>
+          <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(30px, 4.4vw, 54px); line-height: 0.94; letter-spacing: -0.04em; margin: 0 0 22px 0;">Thirty&#8209;odd films for St John&rsquo;s Hampton Wick</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 18px; padding: 18px 0; border-top: 1px solid #211F1B; border-bottom: 1px solid #211F1B; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D;">
+            <div>PERIOD<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">2025 &mdash; present</span></div>
+            <div>MY ROLE<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Planning, shooting, editing, delivery &mdash; alone</span></div>
+            <div>TOOLS<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Premiere Pro, After Effects</span></div>
+          </div>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Gather Youth taster videos</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">As St John&rsquo;s has also taken over the neighbouring church St Mark&rsquo;s, a new name was needed to merge the two &ndash; Gather Church. As a result, I was asked to make two videos &ndash; one to show teenagers in the congregation what happens at Gather Youth, and one to encourage adults to volunteer there &ndash; both from the same shoot.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Love Local 2025 &amp; 2026</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">Each year my church has a week of events to support the local community in practical ways &ndash; gardening, visiting the care home, and cleaning schools to name a few &ndash; called Love Local. I have been asked for two years in a row to make a film to showcase this on social media, and encourage the congregation to join next year. I planned, shot, and edited it all solo.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Focus at St John&rsquo;s</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">HTB Focus is a huge church camp that our church attends among many others each year. The congregation already know what happens at Focus &ndash; but to encourage even more to come, and to increase our church&rsquo;s social media presence I was asked to make a video specifically on what St John&rsquo;s get up to at Focus.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Older work</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">My largest older works were the Easter Highlights video in 2024, showcasing all the church&rsquo;s Easter events, and one about the Youth Summer Party. I have many others, however; the video for the old website&rsquo;s background, a seven&#8209;piece series of short videos called Rise and Reflect (though I only edited these), nineteen short sermon clips for social media, and editing a video on how to teach at the kids&rsquo; church, SJC.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px;">
+            <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #161513; display: flex; align-items: center; justify-content: center;"><img src="assets/lampmoon.jpg" alt="Video placeholder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; display: block;"><span style="position: relative; width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(246,241,231,0.75); display: flex; align-items: center; justify-content: center; color: #F6F1E7; font-size: 15px; line-height: 1;">&#9654;</span></div>
+            <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #161513; display: flex; align-items: center; justify-content: center;"><img src="assets/wideisa.jpg" alt="Video placeholder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; display: block;"><span style="position: relative; width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(246,241,231,0.75); display: flex; align-items: center; justify-content: center; color: #F6F1E7; font-size: 15px; line-height: 1;">&#9654;</span></div>
+          </div>
+        </article>
+
+        <article data-panel="immaroy" style="display: none;">
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.2em; color: #16C7C0; margin-bottom: 14px;">PHOTOGRAPHY &middot; 2025</div>
+          <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(30px, 4.4vw, 54px); line-height: 0.94; letter-spacing: -0.04em; margin: 0 0 22px 0;">Imm&#8209;Aroy, Chinatown</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 18px; padding: 18px 0; border-top: 1px solid #211F1B; border-bottom: 1px solid #211F1B; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D;">
+            <div>YEAR<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">2025</span></div>
+            <div>USED FOR<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Menu and social</span></div>
+            <div>MY ROLE<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Planning, shooting, grading</span></div>
+          </div>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Imm&#8209;Aroy</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">My friend&rsquo;s family had recently opened a restaurant in Chinatown, serving Chai Ice Lattes, Mango Sticky Rice, various Thai ice creams, and spicy pork skewers to name a few. As they had not properly photographed their food or shop for better online presence, marketing, and making a menu, I offered to do some photography for them which they gladly accepted.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">The shoot</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">For each item on their menu, I took various photos setting up a photogenic scene for it. I then thoroughly edited the images in Adobe Lightroom Classic to ensure they were spotless and ready for social media or the menu, both of which they were used for. You can see the photos alongside.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 26px;">
+            <div style="aspect-ratio: 1 / 1; overflow: hidden; background: #161513;"><img src="assets/torre.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+            <div style="aspect-ratio: 1 / 1; overflow: hidden; background: #161513;"><img src="assets/auracat.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+            <div style="aspect-ratio: 1 / 1; overflow: hidden; background: #161513;"><img src="assets/castlemotif.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+          </div>
+        </article>
+
+        <article data-panel="redd" style="display: none;">
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.2em; color: #16C7C0; margin-bottom: 14px;">FILM &middot; 2026</div>
+          <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(30px, 4.4vw, 54px); line-height: 0.94; letter-spacing: -0.04em; margin: 0 0 22px 0;">RED&#8209;d awareness shoot</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 18px; padding: 18px 0; border-top: 1px solid #211F1B; border-bottom: 1px solid #211F1B; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D;">
+            <div>YEAR<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">2026</span></div>
+            <div>MY ROLE<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Runner</span></div>
+            <div>SUBJECT<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">How freelance dancers are treated</span></div>
+          </div>
+          <p style="margin: 22px 0 0 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 62ch;">A professional shoot on how freelance dancers are treated. Rigging lights and cameras, prepping drinks and meals, some filming. I learnt how a shoot like this is structured. I loved it.</p>
+          <div style="margin-top: 22px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #46433D; border-left: 1px solid #211F1B; padding-left: 12px; line-height: 1.9;">ROOM FOR MORE HERE &mdash; WHO RAN IT, WHAT YOU TOOK AWAY</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px;">
+            <div style="aspect-ratio: 4 / 3; overflow: hidden; background: #161513;"><img src="assets/auracat.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+            <div style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #161513; display: flex; align-items: center; justify-content: center;"><img src="assets/lampmoon.jpg" alt="Video placeholder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; display: block;"><span style="position: relative; width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(246,241,231,0.75); display: flex; align-items: center; justify-content: center; color: #F6F1E7; font-size: 15px; line-height: 1;">&#9654;</span></div>
+          </div>
+        </article>
+
+        <article data-panel="redrobin" style="display: none;">
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.2em; color: #16C7C0; margin-bottom: 14px;">FILM &middot; 2022 AND 2023</div>
+          <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(30px, 4.4vw, 54px); line-height: 0.94; letter-spacing: -0.04em; margin: 0 0 22px 0;">Red Robin Art Studio &amp; Chanctonbury Church</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 18px; padding: 18px 0; border-top: 1px solid #211F1B; border-bottom: 1px solid #211F1B; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D;">
+            <div>YEARS<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">2022, 2023</span></div>
+            <div>MY ROLE<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Shot, edited and delivered both</span></div>
+            <div>USED FOR<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Studio site and socials; church Mission Day</span></div>
+          </div>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">What Red Robin Art was</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">In 2023, I left my prep school to join secondary; in the same year, my Art teacher left to start her own studio, about a 10 minute walk from my house, called Red Robin Art. As she was trying to build a social media presence, she asked me if I could make her a video to post on social media, and I gladly accepted. As always, I planned, shot and edited it all on my own &ndash; it is still on her website to this day.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Chanctonbury Church: sabbatical</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">As my father is a vicar, he gets a two&#8209;month leave every seven years both to rest and to visit churches &ndash; one of those we visited for a few days as a family was Chanctonbury Church in Ashington. They happened to have a Mission Day event happening then &ndash; a day of events to support the local community in ways such as gardening and litter picking. I asked if I could make them a video to showcase this, which they agreed to; so I made the video solo, filming all the day&rsquo;s events and compiling them to music. They liked it enough to play it in church the following Sunday!</p>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68;"><a href="https://www.youtube.com/watch?v=BVbf1DHqSKo" style="color: #16C7C0; border-bottom: 1px solid rgba(22,199,192,0.4);">Watch the Mission Day film on YouTube</a></p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px;">
+            <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #161513; display: flex; align-items: center; justify-content: center;"><img src="assets/castlemotif.jpg" alt="Video placeholder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; display: block;"><span style="position: relative; width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(246,241,231,0.75); display: flex; align-items: center; justify-content: center; color: #F6F1E7; font-size: 15px; line-height: 1;">&#9654;</span></div>
+            <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #161513; display: flex; align-items: center; justify-content: center;"><img src="assets/torre.jpg" alt="Video placeholder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; display: block;"><span style="position: relative; width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(246,241,231,0.75); display: flex; align-items: center; justify-content: center; color: #F6F1E7; font-size: 15px; line-height: 1;">&#9654;</span></div>
+          </div>
+        </article>
+
+        <article data-panel="unsplash" style="display: none;">
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.2em; color: #16C7C0; margin-bottom: 14px;">PHOTOGRAPHY &middot; ONGOING</div>
+          <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(30px, 4.4vw, 54px); line-height: 0.94; letter-spacing: -0.04em; margin: 0 0 22px 0;">4M+ views on Unsplash</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 18px; padding: 18px 0; border-top: 1px solid #211F1B; border-bottom: 1px solid #211F1B; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D;">
+            <div>ACCOUNT<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">@sgfphotography</span></div>
+            <div>VIEWS<span style="display: block; color: #E4FF3B; margin-top: 7px; letter-spacing: 0.1em;">3.6M &middot; 35,000 downloads</span></div>
+            <div>KIT<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">iPhone XR &rarr; EOS 400D &rarr; 200D &rarr; Lumix G9</span></div>
+            <div>ALSO<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Drone work, torredisopra.com</span></div>
+          </div>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">The alternative to Instagram</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">I started photography at nine years old on my mum&rsquo;s iPhone XR having done a photography course with one of her friends just before the Covid lockdown. I kept going and soon had an entry&#8209;level DSLR, a Canon EOS 400D, which was a game&#8209;changer for me. Wanting a place to publish these photos so I could show others, and not being allowed Instagram at that age, I turned to Unsplash, where I have published personal hobbyist photography ever since.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Growing in photography</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">I then sold the 400D (albeit not for much at all!) and bought a 200D, which again felt like an entirely new experience, using this camera for many years. Then in June 2025, I sold that, along with the other lenses I had bought, for a Panasonic Lumix G9. Being a M43 sensor rather than an APS&#8209;C one, it was arguably lower specs for photography &ndash; but by this stage I was doing lots of videography too, so I was after its budget&#8209;friendly 4K60 and 10&#8209;bit 4:2:2 video capabilities. The set had a Leica f/2.8 lens, the fastest of any lens I had owned prior, which again had a significant impact on my images.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Unsplash grows along too</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">Now my account &ndash; @sgfphotography &ndash; has 3.6M views, with 35,000 downloads. Below you will find a selection of my favourite images.</p>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">La Torre di Sopra: drone work</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">My grandfather, Bruno Sacchi, was a renowned architect in Italy in the 50s until the 80s &ndash; in the 70s he bought and redeveloped La Torre di Sopra, a watchtower dating to c. 950 AD. My family now rent it out, and to help with the website and social media, I took some drone shots, and did some photography around the garden. Some of what you see on torredisopra.com is my work.</p>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 26px;">
+            <div style="aspect-ratio: 1 / 1; overflow: hidden; background: #161513;"><img src="assets/wideisa.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+            <div style="aspect-ratio: 1 / 1; overflow: hidden; background: #161513;"><img src="assets/lampmoon.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+            <div style="aspect-ratio: 1 / 1; overflow: hidden; background: #161513;"><img src="assets/castlemotif.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+            <div style="aspect-ratio: 1 / 1; overflow: hidden; background: #161513;"><img src="assets/auracat.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+          </div>
+        </article>
+
+        <article data-panel="drums" style="display: none;">
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.2em; color: #E4FF3B; margin-bottom: 14px;">MUSIC &middot; SINCE 2021</div>
+          <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(30px, 4.4vw, 54px); line-height: 0.94; letter-spacing: -0.04em; margin: 0 0 22px 0;">Drums, and the band around them</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 18px; padding: 18px 0; border-top: 1px solid #211F1B; border-bottom: 1px solid #211F1B; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D;">
+            <div>DRUMS<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Grade 8</span></div>
+            <div>PIANO<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Grade 4</span></div>
+            <div>CHURCH BAND<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Every few Sundays since 2021</span></div>
+            <div>ROCK CONCERT<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">2026</span></div>
+          </div>
+          <p style="margin: 22px 0 0 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 62ch;">Grade 8 drums, Grade 4 piano. I have drummed for my local church every few Sundays since 2021 and played my school&rsquo;s Rock Concert this year, so I know both the band side and the theory side.</p>
+          <div style="margin-top: 22px; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #46433D; border-left: 1px solid #211F1B; padding-left: 12px; line-height: 1.9;">ROOM FOR MORE HERE &mdash; SET LIST, KIT, WHO YOU PLAY WITH</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px;">
+            <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #161513; display: flex; align-items: center; justify-content: center;"><img src="assets/torre.jpg" alt="Video placeholder" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; display: block;"><span style="position: relative; width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(246,241,231,0.75); display: flex; align-items: center; justify-content: center; color: #F6F1E7; font-size: 15px; line-height: 1;">&#9654;</span></div>
+            <div style="aspect-ratio: 16 / 9; overflow: hidden; background: #161513;"><img src="assets/auracat.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+          </div>
+        </article>
+
+        <article data-panel="florentine" style="display: none;">
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.2em; color: #16C7C0; margin-bottom: 14px;">WRITING &middot; NATIONAL SHORTLIST</div>
+          <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(30px, 4.4vw, 54px); line-height: 0.94; letter-spacing: -0.04em; margin: 0 0 22px 0;">Florentine Skies</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 18px; padding: 18px 0; border-top: 1px solid #211F1B; border-bottom: 1px solid #211F1B; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D;">
+            <div>COMPETITION<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Walter Scott Young Writer&rsquo;s Award 2025</span></div>
+            <div>OUTCOME<span style="display: block; color: #E4FF3B; margin-top: 7px; letter-spacing: 0.1em;">Shortlisted, around 10 in my age group</span></div>
+            <div>ALSO PUBLISHED<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">The Lion Print</span></div>
+          </div>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">Writer&rsquo;s Room</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">Since I joined my school I have been participating weekly in the Writer&rsquo;s Room club, which I have loved &ndash; a chance to refine and maintain creative writing skills, which were all too rarely taught in our classrooms in my view. Having entered the Walter Scott Young Writer&rsquo;s Award for 2025 with the piece Florentine Skies, a few months later I found myself shortlisted for my age group in a list of around 10 from a national competition. As a result, it was also published in our school&rsquo;s annual Lion Print magazine, and there is to this day a poster in the English corridor bearing my achievement. You can read it below if you wish.</p>
+          <div style="margin-top: 30px; padding: clamp(20px, 3vw, 34px); background: #F6F1E7; color: #0A0A0A;">
+            <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.2em; color: #E1481F; margin-bottom: 14px;">THE PIECE, IN FULL</div>
+            <h5 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(24px, 3vw, 38px); letter-spacing: -0.035em; line-height: 1; margin: 0 0 22px 0;">Florentine Skies</h5>
+            <p style="margin: 0 0 16px 0; font-size: 16px; line-height: 1.72; max-width: 62ch;">I wonder what the sky tastes like. The morning sky is a soupy concoction of froth and fluff and cauliflower patches, glistening with the eggy blood spilled from the sun, swimming in a turquoise bowl. Birds, like pepper, dot the sky as they flutter along their perpetual pilgrimage, their destination lost in their journey. An airy mist dances in the valleys, choreographed by the planet&rsquo;s gentle breath, before the day heats up and burns it all away.</p>
+            <p style="margin: 0 0 16px 0; font-size: 16px; line-height: 1.72; max-width: 62ch;">Florence, from up here, is a beautifully uneven array of crimson tiles, shattered into hundreds of homes, dwellings, and churches. Cobblestone alleyways wind their way among the rooftops, like stone&#8209;cold blood vessels in some dormant creature. In my mind, those vessels really do carry Florence&rsquo;s blood, as age&#8209;old traditions and trade flow through its veins, radiating life and culture.</p>
+            <p style="margin: 0 0 16px 0; font-size: 16px; line-height: 1.72; max-width: 62ch;">The mountainous outskirts of the city are where the other half of Tuscan culture lies. Rolling, green hills, made of olives trees and built on tradition, make up the landscape. The odd hut pierces the verdant view, usually a farmer&rsquo;s residence, and sometimes an olive press. Back here, in the fields surrounding the tower, we have our own olive grove. Every year, in the picking season, we go and hand&#8209;pick each olive and let them drop onto nets we&rsquo;ve used for generations. After tipping the contents of the nets into massive wooden crates, we take them by cart to our local press. This is my favourite part &#8209; the cogs and wheels and machinery, all operated by hand. Each of the parts working for one purpose and one purpose only, and if one of them failed, nothing would work. It is an ingeniously complex marvel of engineering.</p>
+            <p style="margin: 0 0 16px 0; font-size: 16px; line-height: 1.72; max-width: 62ch;">It is that machine, and the wonders of nature in innovation, that planted a seed in my mind &#8209; a seed that I&rsquo;m sure will stick with me for life. That seed is already growing in my brain, sprouting its vivid roots of creativity &#8209; and its fruits have become physical. Down in the Cantina, deep below the tower&rsquo;s courtyard, I have been working on my most complex, adventurous, and wonderfully absurd project yet &#8209; a flying machine. It is made to represent nature&rsquo;s ingenuity, to replicate a bird &#8209; specifically an Upupa, a uniquely crested bird that resides in one of the tower&rsquo;s arrow&#8209;slits. These birds have been supernaturally encoded for flight, and my plan has been to replicate that design with my creation, using wood and silk. And finally, after a year of glue and wood and sweat and toil, the main frame is complete. All that remains now is to install the membrane and implement the mechanisms.</p>
+            <p style="margin: 0 0 16px 0; font-size: 16px; line-height: 1.72; max-width: 62ch;">I hop off my windowsill, my bare feet making contact with the rough wooden flooring and my mind frantically vibrating with joyous anticipation. Today would be the day I&rsquo;d finish the entire project, and I could prove to the world that nature held all the answers. I bound down the flights of stairs, the odd slit in the thick stone walls letting the sun fall inside as a sharp beam of orange. I race excitedly out onto the courtyard, and then down the final steps to the Cantina door. As I open it, its wise, wooden smell evoked a host of memories. It is the door I have opened every day, rain or shine. It is the door I have opened to reveal the work I love, and it is the final barrier to unleash the innovative glow of the flying machine.</p>
+            <p style="margin: 0 0 16px 0; font-size: 16px; line-height: 1.72; max-width: 62ch;">I step inside, walk over to the silk, and begin lacing it between the slats of wood on the wings, stitching it up when the piece runs out. For the entire afternoon, all that fills my mind is silk and stitching, the scent of glue and silk hanging in the air.</p>
+            <p style="margin: 0 0 16px 0; font-size: 16px; line-height: 1.72; max-width: 62ch;">By the time I stitch the final round of silk, it is evening. Anticipation flutters about in my stomach, coaxing me to end this journey. It is really happening. It feel as if my machine has been building itself a personality, coming alive, and beckoning me to flight. It is calling me to swim in the sky among the Upupas, and I daren&rsquo;t refuse.</p>
+            <p style="margin: 0 0 16px 0; font-size: 16px; line-height: 1.72; max-width: 62ch;">Now it is all ready. I fold up the wings, and open the double doors from the Cantina. It barely makes it through, and after pulling it up the stairs with its wheels, I drag it to the field, my heart threatening to thump out of my chest. I chose this field as it was clear, and gently sloping down towards the city beyond.</p>
+            <p style="margin: 0 0 16px 0; font-size: 16px; line-height: 1.72; max-width: 62ch;">I line up years of effort on to the field, and unfold the wings.</p>
+            <p style="margin: 0 0 16px 0; font-size: 16px; line-height: 1.72; max-width: 62ch;">The horizon is glowing, like a fire encapsulating the earth. The sun is sinking into it, and as it melts into the night, it suddenly becomes my life. This could all fail. Are these my last moments? My very existence is melting into the horizon, sinking into the night, where it could cease to exist. I could die tonight; my duty here is done.</p>
+            <p style="margin: 0; font-size: 16px; line-height: 1.72; max-width: 62ch;">Tentatively, with my stomach wrung tight like a muslin cloth, I enter my machine. My hands and feet find their way to the controls. I flap, and flap, and use all that remains of my might to power the initial lift. I feel the whole structure gently rise off the ground, and with my mind frozen in wonder, I cannot tell if I am about to leave home forever or return to where I belonged.</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px;">
+            <div style="aspect-ratio: 3 / 2; overflow: hidden; background: #161513;"><img src="assets/castlemotif.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+            <div style="aspect-ratio: 3 / 2; overflow: hidden; background: #161513;"><img src="assets/wideisa.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+          </div>
+        </article>
+
+        <article data-panel="journals" style="display: none;">
+          <div style="font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.2em; color: #FF5A2E; margin-bottom: 14px;">DESIGN &middot; 2023&ndash;24</div>
+          <h3 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: clamp(30px, 4.4vw, 54px); line-height: 0.94; letter-spacing: -0.04em; margin: 0 0 22px 0;">Christian Youth Journals, from scratch</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 18px; padding: 18px 0; border-top: 1px solid #211F1B; border-bottom: 1px solid #211F1B; font-family: var(--font-mono), monospace; font-size: 10px; letter-spacing: 0.16em; color: #8C877D;">
+            <div>YEARS<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">2023&ndash;24</span></div>
+            <div>MY ROLE<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Design, print, sale, distribution</span></div>
+            <div>TOOLS<span style="display: block; color: #F6F1E7; margin-top: 7px; letter-spacing: 0.1em;">Illustrator, then InDesign</span></div>
+            <div>RESULT<span style="display: block; color: #E4FF3B; margin-top: 7px; letter-spacing: 0.1em;">Two editions sold out &middot; almost &pound;1k profit</span></div>
+          </div>
+          <h4 style="font-family: var(--font-display), Archivo, sans-serif; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; margin: 30px 0 10px 0;">The gap in the market</h4>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">Journals exist for adults and teens alike in the secular industry. Journals for Christian adults exist too, but journals for Christian teens, after looking for one myself, are few and far between &ndash; leaving a variety far too small to ensure all Christian teens who want a journal have one. Already having experience in Adobe Illustrator as I helped my mum design greeting cards, I decided to make some myself with all the features I wanted.</p>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">Before fleshing out the design I spent a while figuring out what I was looking for in a youth journal, and what I thought my friends would also like. Eventually, the design was as per the images shown across the page; QR codes for music, links for those without a Bible, accessible book and app recommendations, daily verses with space to memorise them, places to keep track of prayers and life in general, blank pages to draw and listen to God, a unisex design theme and more.</p>
+          <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.68; color: #E7DFCE; max-width: 66ch;">These journals were selling well on my mum&rsquo;s website for her business &ndash; I ordered 200 copies, breaking even having sold only 80 or so. Just before they ran out, I then created a revised second edition. Much of the content was similar, but it was made in Adobe InDesign instead of Illustrator &ndash; an app much more suitable for tasks such as these, resulting in a much more polished, coherent design. Then both versions sold out, in total resulting in almost &pound;1k in profit.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px;">
+            <div style="aspect-ratio: 3 / 4; overflow: hidden; background: #161513;"><img src="assets/torre.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+            <div style="aspect-ratio: 3 / 4; overflow: hidden; background: #161513;"><img src="assets/lampmoon.jpg" alt="Placeholder image" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;cursorTrail&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Cursor&quot;},&quot;cursorSize&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:180,&quot;min&quot;:80,&quot;max&quot;:320,&quot;step&quot;:10,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Cursor&quot;},&quot;motionAmount&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0,&quot;max&quot;:1.6,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = this.el || document.body;
+    this.root = root;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.amount = reduce ? 0 : (this.props.motionAmount ?? 1);
+
+    // ---- reveals ----
+    const reveals = Array.from(root.querySelectorAll('[data-reveal]'));
+    const show = (el) => {
+      el.style.transition = 'opacity 1100ms cubic-bezier(0.16,1,0.3,1), transform 1100ms cubic-bezier(0.16,1,0.3,1)';
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    };
+    if (this.amount === 0) {
+      reveals.forEach(show);
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e, i) => {
+          if (e.isIntersecting) {
+            const el = e.target;
+            setTimeout(() => show(el), i * 90);
+            io.unobserve(el);
+          }
+        });
+      }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+      reveals.forEach((el) => io.observe(el));
+      this.io = io;
+      this.fallback = setTimeout(() => reveals.forEach(show), 4000);
+    }
+
+    // ---- scroll-linked parallax + rail state ----
+    const pars = Array.from(root.querySelectorAll('[data-par]'));
+    const parxs = Array.from(root.querySelectorAll('[data-parx]'));
+    const slidexs = Array.from(root.querySelectorAll('[data-slidex]'));
+    slidexs.forEach((el) => { el.style.willChange = 'transform'; });
+    this.baseScrollY = window.scrollY;
+    pars.forEach((el) => { el.dataset.baseTransform = (el.style.transform || 'none') === 'none' ? '' : el.style.transform; });
+    const secs = Array.from(root.querySelectorAll('[data-sec]'));
+    const navs = Array.from(root.querySelectorAll('[data-nav]'));
+    const labels = ['HELLO','HABIT OF MIND','TECHNICAL','CAMERA','MUSIC','WORDS','WORK EXPERIENCE','RIGHT NOW','SAY HELLO'];
+    const readIdx = root.querySelector('[data-readout="index"]');
+    const readLbl = root.querySelector('[data-readout="label"]');
+    const bar = root.querySelector('[data-readout="bar"]');
+    let active = -1;
+
+    const onScroll = () => {
+      const vh = window.innerHeight;
+      const y = window.scrollY;
+      const max = document.documentElement.scrollHeight - vh;
+      if (bar) bar.style.width = Math.min(100, Math.max(0, (y / (max || 1)) * 100)).toFixed(1) + '%';
+
+      if (this.amount > 0) {
+        const hero = Math.min(y, vh * 1.35);
+        parxs.forEach((el) => {
+          const k = parseFloat(el.dataset.parx) * this.amount;
+          el.style.transform = 'translate3d(' + (hero * k).toFixed(1) + 'px,0,0)';
+        });
+        slidexs.forEach((el) => {
+          const r = el.getBoundingClientRect();
+          const p = Math.max(0, Math.min(1, (vh - r.top) / (vh * 0.62)));
+          const eased = 1 - Math.pow(1 - p, 3);
+          const dist = parseFloat(el.dataset.slidex) * this.amount;
+          el.style.transform = 'translate3d(' + (-dist * (1 - eased)).toFixed(1) + 'px,0,0)';
+          el.style.opacity = (0.25 + 0.75 * eased).toFixed(3);
+        });
+        pars.forEach((el) => {
+          const k = parseFloat(el.dataset.par) * this.amount;
+          const base = el.dataset.baseTransform;
+          const r = el.getBoundingClientRect();
+          const prev = parseFloat(el.dataset.applied || '0');
+          const mid = (r.top - prev) + r.height / 2 - vh / 2;
+          const raw = -mid * k;
+          const off = Math.max(-110, Math.min(110, raw));
+          el.dataset.applied = String(off);
+          el.style.transform = 'translate3d(0,' + off.toFixed(1) + 'px,0)' + (base ? ' ' + base : '');
+        });
+      }
+
+      let cur = 0;
+      secs.forEach((s, i) => { if (s.getBoundingClientRect().top <= vh * 0.42) cur = i; });
+      if (cur !== active) {
+        active = cur;
+        navs.forEach((n, i) => {
+          const on = i === cur;
+          n.style.opacity = on ? '1' : '0.4';
+          const dot = n.querySelector('[data-navdot]');
+          if (dot) { dot.style.width = on ? '44px' : '18px'; dot.style.transition = 'width 500ms cubic-bezier(0.16,1,0.3,1)'; }
+        });
+        if (readIdx) readIdx.textContent = String(cur + 1).padStart(2, '0');
+        if (readLbl) readLbl.textContent = labels[cur] || '';
+      }
+    };
+    const rail = root.querySelector('[data-rail]');
+    if (rail) {
+      const labs = Array.from(rail.querySelectorAll('[data-navlabel]'));
+      const setLabs = (open) => labs.forEach((l) => { l.style.maxWidth = open ? '220px' : '0px'; l.style.opacity = open ? '1' : '0'; });
+      rail.addEventListener('mouseenter', () => setLabs(true));
+      rail.addEventListener('mouseleave', () => setLabs(false));
+      rail.addEventListener('focusin', () => setLabs(true));
+      rail.addEventListener('focusout', () => setLabs(false));
+    }
+
+    // ---- detail popups ----
+    const overlay = root.querySelector('[data-overlay]');
+    const sheet = overlay && overlay.querySelector('[data-sheet]');
+    const panels = overlay ? Array.from(overlay.querySelectorAll('[data-panel]')) : [];
+    const openPanel = (key) => {
+      const target = panels.find((p) => p.dataset.panel === key);
+      if (!target || !overlay) return;
+      panels.forEach((p) => { p.style.display = p === target ? 'block' : 'none'; });
+      overlay.style.display = 'flex';
+      if (sheet) sheet.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(() => {
+        if (sheet) { sheet.style.opacity = '1'; sheet.style.transform = 'translateY(0) scale(1)'; }
+      });
+      const btn = overlay.querySelector('button[data-close]');
+      if (btn) btn.focus();
+    };
+    const closePanel = () => {
+      if (!overlay) return;
+      if (sheet) { sheet.style.opacity = '0'; sheet.style.transform = 'translateY(22px) scale(0.985)'; }
+      document.body.style.overflow = '';
+      setTimeout(() => { overlay.style.display = 'none'; }, 260);
+    };
+    this.closePanel = closePanel;
+    const onClick = (e) => {
+      const opener = e.target.closest && e.target.closest('[data-open]');
+      if (opener) { openPanel(opener.dataset.open); return; }
+      const closer = e.target.closest && e.target.closest('[data-close]');
+      if (closer) closePanel();
+    };
+    root.addEventListener('click', onClick);
+    this.onClick = onClick;
+    const onKey = (e) => { if (e.key === 'Escape') closePanel(); };
+    window.addEventListener('keydown', onKey);
+    this.onKey = onKey;
+
+    this.onScroll = onScroll;
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    onScroll();
+
+    // ---- cursor: trailing smear / lens ----
+    if (!reduce && (this.props.cursorTrail ?? true) && window.matchMedia('(pointer: fine)').matches) {
+      const layer = document.createElement('div');
+      layer.style.cssText = 'position:fixed;inset:0;z-index:90;pointer-events:none;';
+      const nodes = [];
+      const size = this.props.cursorSize ?? 180;
+      const d = document.createElement('div');
+      d.style.cssText = 'position:absolute;left:0;top:0;border-radius:50%;will-change:transform;' +
+        'width:' + size + 'px;height:' + size + 'px;margin:' + (-size / 2) + 'px 0 0 ' + (-size / 2) + 'px;' +
+        'backdrop-filter:invert(1);-webkit-backdrop-filter:invert(1);';
+      layer.appendChild(d);
+      nodes.push({ el: d, x: 0, y: 0, lag: 1 });
+      document.body.appendChild(layer);
+      this.cursorLayer = layer;
+      let mx = -400, my = -400, seen = false;
+      const move = (e) => { mx = e.clientX; my = e.clientY; if (!seen) { seen = true; nodes.forEach(n => { n.x = mx; n.y = my; }); } };
+      window.addEventListener('pointermove', move, { passive: true });
+      this.move = move;
+      const tick = () => {
+        let px = mx, py = my;
+        nodes.forEach((n) => {
+          n.x += (px - n.x) * n.lag;
+          n.y += (py - n.y) * n.lag;
+          n.el.style.transform = 'translate3d(' + n.x.toFixed(1) + 'px,' + n.y.toFixed(1) + 'px,0)';
+          px = n.x; py = n.y;
+        });
+        this.raf = requestAnimationFrame(tick);
+      };
+      tick();
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('resize', this.onScroll);
+    if (this.move) window.removeEventListener('pointermove', this.move);
+    if (this.raf) cancelAnimationFrame(this.raf);
+    if (this.onKey) window.removeEventListener('keydown', this.onKey);
+    if (this.root && this.onClick) this.root.removeEventListener('click', this.onClick);
+    document.body.style.overflow = '';
+    if (this.io) this.io.disconnect();
+    if (this.fallback) clearTimeout(this.fallback);
+    if (this.cursorLayer && this.cursorLayer.parentNode) this.cursorLayer.parentNode.removeChild(this.cursorLayer);
+  }
+
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

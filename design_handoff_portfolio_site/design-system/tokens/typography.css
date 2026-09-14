@@ -1,0 +1,29 @@
+:root {
+  --font-display: 'Archivo', 'Arial Black', sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'Space Mono', 'SF Mono', monospace;
+
+  /* Display — bold grotesk, used tight and heavy */
+  --text-display-1: 900 clamp(3.5rem, 9vw, 8.5rem)/0.92 var(--font-display);
+  --text-display-2: 900 clamp(2.5rem, 6vw, 5rem)/0.95 var(--font-display);
+  --text-display-3: 800 clamp(1.75rem, 3.4vw, 2.75rem)/1.05 var(--font-display);
+
+  /* Body — clean, human, readable */
+  --text-body-lg: 400 1.25rem/1.55 var(--font-body);
+  --text-body: 400 1.0625rem/1.6 var(--font-body);
+  --text-body-sm: 400 0.9375rem/1.5 var(--font-body);
+  --text-label: 600 0.8125rem/1.2 var(--font-body);
+  --text-eyebrow: 600 0.75rem/1 var(--font-body);
+
+  /* Mono — used for meta, dates, tags, code-like flourishes */
+  --text-mono: 400 0.875rem/1.4 var(--font-mono);
+
+  /* Expressive accent faces — for one-off emphasis (hero word-cycle), never body/UI type */
+  --font-scribble: 'Caveat', cursive;
+  --font-serif-display: 'Playfair Display', serif;
+
+  --tracking-tight: -0.03em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.08em;
+  --tracking-widest: 0.16em;
+}

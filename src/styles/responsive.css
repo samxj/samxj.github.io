@@ -1,0 +1,167 @@
+/* Below ~900px every 12-column grid collapses to a single column in source order,
+   the deliberate offsets are dropped, and the padding loses its asymmetry because
+   there is no longer a rail on the right to clear.
+
+   The prototype was desktop-only below this width; this is the gap the rebuild
+   closes. */
+
+@media (max-width: 899.98px) {
+  .section {
+    padding: 56px 20px;
+  }
+
+  /* Collapse every grid, and drop every offset and row placement with it. */
+  .grid12,
+  .hero,
+  .habit,
+  .music,
+  .writing,
+  .right-now,
+  .technical__media-pair,
+  .technical__grid,
+  .camera__videos,
+  .music__grid,
+  .writing__media,
+  .right-now__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section [class] {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  /* The staggered offsets only read as deliberate in two dimensions. */
+  .technical__grid-offset,
+  .music__grid-offset {
+    transform: none;
+  }
+
+  /* No rail to clear, and no room for it either. */
+  .rail {
+    display: none;
+  }
+
+  .readout {
+    left: 20px;
+    bottom: 16px;
+  }
+
+  .mark {
+    left: 20px;
+    top: 16px;
+  }
+
+  .hero {
+    padding: 84px 20px 44px;
+    grid-template-rows: auto;
+    gap: 28px;
+  }
+
+  .hero__intro {
+    padding-right: 0;
+  }
+
+  .hero__stage {
+    align-self: start;
+  }
+
+  /* Tucking the photograph behind the name needs width the phone does not have. */
+  .hero__image {
+    position: static;
+    width: 62%;
+    margin-top: 26px;
+  }
+
+  .habit__index {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 16px;
+  }
+
+  .habit__vertical {
+    writing-mode: horizontal-tb;
+    padding-bottom: 10px;
+  }
+
+  .habit__lead,
+  .habit__credentials,
+  .habit__media,
+  .writing__journals,
+  .writing__languages,
+  .writing__media,
+  .camera__collage-right,
+  .music__grid,
+  .right-now__frames,
+  .technical__grid,
+  .camera__videos,
+  .camera__grid,
+  .camera__blocks {
+    margin-top: 28px;
+  }
+
+  .habit__media .slot__caption,
+  .music__portrait .slot__caption {
+    text-align: left;
+  }
+
+  .music__portrait {
+    width: 100%;
+    align-self: stretch;
+  }
+
+  .technical__note {
+    margin-top: 18px;
+  }
+
+  .technical__idx--trailing {
+    text-align: left;
+  }
+
+  /* Year, then title, then note. */
+  .work__row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 22px 0;
+  }
+
+  .work__note {
+    max-width: none;
+  }
+
+  .work__readout {
+    text-align: left;
+    margin-top: 16px;
+  }
+
+  .right-now__frames,
+  .contact__strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact {
+    padding: 64px 20px 44px;
+    gap: 44px;
+  }
+
+  .contact__colophon {
+    text-align: left;
+  }
+
+  .overlay__body .panel__media {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* The inverting cursor is already suppressed on coarse pointers; on narrow screens
+   the marquees are the only motion worth keeping. */
+@media (max-width: 599.98px) {
+  .right-now__frames,
+  .contact__strip {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .overlay__body .panel__media {
+    grid-template-columns: 1fr;
+  }
+}

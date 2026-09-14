@@ -1,0 +1,260 @@
+/* The detail overlay: one sheet, twelve panels, one at a time.
+
+   Below 720px the sheet is full-screen with no padding; at 720px and above it floats
+   as a centred card with 40px of breathing room and the coloured section still
+   visible behind the blurred scrim. */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.overlay__scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.62);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.overlay__sheet {
+  position: relative;
+  width: min(940px, 100vw);
+  max-height: 100svh;
+  overflow-y: auto;
+  background: #0a0a0a;
+  color: #f6f1e7;
+  border: 1px solid #211f1b;
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(22px) scale(0.985);
+  transition:
+    opacity 320ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.overlay--shown .overlay__sheet {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@media (max-width: 719.98px) {
+  .overlay {
+    padding: 0;
+  }
+
+  .overlay__sheet {
+    min-height: 100svh;
+  }
+}
+
+.overlay__close {
+  position: sticky;
+  float: right;
+  top: 14px;
+  right: 14px;
+  margin: 14px 14px 0 0;
+  z-index: 3;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #0a0a0a;
+  border: 1px solid #46433d;
+  color: #f6f1e7;
+  font-family: var(--font-mono), monospace;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 320ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 320ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.overlay__close:hover {
+  background: #ff5a2e;
+  border-color: #ff5a2e;
+  color: #0a0a0a;
+}
+
+.overlay__body {
+  padding: clamp(28px, 4vw, 54px);
+}
+
+/* ---- Panel anatomy ---------------------------------------------------- */
+
+.panel__eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  margin-bottom: 14px;
+}
+
+.panel__eyebrow--flame {
+  color: #ff5a2e;
+}
+
+.panel__eyebrow--teal {
+  color: #16c7c0;
+}
+
+.panel__eyebrow--acid {
+  color: #e4ff3b;
+}
+
+.panel__title {
+  font-family: var(--font-display), Archivo, sans-serif;
+  font-weight: 900;
+  font-size: clamp(30px, 4.4vw, 54px);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+  margin: 0 0 22px 0;
+}
+
+.panel__facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 18px;
+  padding: 18px 0;
+  border-top: 1px solid #211f1b;
+  border-bottom: 1px solid #211f1b;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: #8c877d;
+}
+
+.panel__fact-value {
+  display: block;
+  color: #f6f1e7;
+  margin-top: 7px;
+  letter-spacing: 0.1em;
+}
+
+.panel__fact-value.acid {
+  color: #e4ff3b;
+}
+
+.panel__h4 {
+  font-family: var(--font-display), Archivo, sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  margin: 30px 0 10px 0;
+}
+
+.panel__p {
+  margin: 0 0 14px 0;
+  font-size: 15px;
+  line-height: 1.68;
+  color: #e7dfce;
+  max-width: 66ch;
+}
+
+.panel__list {
+  margin: 0 0 14px 0;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.68;
+  color: #e7dfce;
+  max-width: 66ch;
+}
+
+.panel__list li + li {
+  margin-top: 7px;
+}
+
+.panel__link,
+.panel__link:hover {
+  color: #16c7c0;
+  border-bottom: 1px solid rgba(22, 199, 192, 0.4);
+}
+
+.panel__pullquote {
+  margin: 0;
+  font-family: var(--font-display), Archivo, sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: #ff5a2e;
+  max-width: 40ch;
+}
+
+.panel__note {
+  font-family: var(--font-mono), monospace;
+  border-left: 1px solid #211f1b;
+  padding-left: 12px;
+  line-height: 1.9;
+}
+
+.panel__note--default {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #8c877d;
+}
+
+/* Editorial placeholders: these panels are still short. */
+.panel__note--muted {
+  margin-top: 22px;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: #46433d;
+}
+
+/* Where a panel leads with a paragraph rather than a heading. */
+.panel__eyebrow + .panel__title + .panel__facts + .panel__p {
+  margin-top: 22px;
+  max-width: 62ch;
+}
+
+.panel__excerpt {
+  margin-top: 30px;
+  padding: clamp(20px, 3vw, 34px);
+  background: #f6f1e7;
+  color: #0a0a0a;
+}
+
+.panel__excerpt-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: #e1481f;
+  margin-bottom: 14px;
+}
+
+.panel__excerpt-title {
+  font-family: var(--font-display), Archivo, sans-serif;
+  font-weight: 900;
+  font-size: clamp(24px, 3vw, 38px);
+  letter-spacing: -0.035em;
+  line-height: 1;
+  margin: 0 0 22px 0;
+}
+
+.panel__excerpt-p {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  line-height: 1.72;
+  max-width: 62ch;
+}
+
+.panel__excerpt-p:last-child {
+  margin-bottom: 0;
+}
+
+.panel__media {
+  display: grid;
+  grid-template-columns: var(--panel-media-columns, 1fr 1fr);
+  margin-top: 26px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay__sheet,
+  .overlay__close {
+    transition: none;
+  }
+}

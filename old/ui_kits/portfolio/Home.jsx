@@ -54,7 +54,7 @@ function UnfinishedBanner() {
         color: '#FFFFFF',
       }}>
         <p style={{ font: 'var(--text-body-sm)', margin: 0, textAlign: 'center' }}>
-          This site is still under construction — but we're almost there! Full version coming by 4th September.
+          This site is still under construction — but we're almost there! Full version coming by 14th September.
         </p>
         <button
           onClick={dismiss}

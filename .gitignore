@@ -4,3 +4,5 @@ dist
 
 Work Content.docx
 ~$*.docx
+*.tsbuildinfo
+old

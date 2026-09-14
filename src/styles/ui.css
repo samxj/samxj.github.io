@@ -1,0 +1,387 @@
+/* Shared type helpers and the small components: tags, buttons, media slots, marquees. */
+
+.mono {
+  font-family: var(--font-mono), monospace;
+}
+
+.acid {
+  color: #e4ff3b;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.eyebrow {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  margin-bottom: 18px;
+}
+
+.eyebrow--flame {
+  color: #ff5a2e;
+}
+
+.eyebrow--teal {
+  color: #16c7c0;
+}
+
+.eyebrow--rust {
+  color: #c23f18;
+}
+
+.eyebrow--dot {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.h2 {
+  font-family: var(--font-display), Archivo, sans-serif;
+  font-weight: 900;
+  margin: 0;
+}
+
+.h3 {
+  font-family: var(--font-display), Archivo, sans-serif;
+  font-weight: 900;
+  font-size: clamp(28px, 3.6vw, 56px);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  margin: 0 0 14px 0;
+}
+
+.h3--camera,
+.h3--sub {
+  font-size: clamp(24px, 2.8vw, 42px);
+  line-height: 0.98;
+  margin: 0 0 12px 0;
+}
+
+.h3--writing {
+  font-size: clamp(28px, 3.4vw, 52px);
+  line-height: 0.96;
+  margin: 0 0 12px 0;
+}
+
+.body {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.body--40 {
+  max-width: 40ch;
+}
+.body--42 {
+  max-width: 42ch;
+}
+.body--44 {
+  max-width: 44ch;
+}
+.body--46 {
+  max-width: 46ch;
+}
+.body--48 {
+  max-width: 48ch;
+}
+
+/* ---- Tag -------------------------------------------------------------- */
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 7px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid;
+  background: transparent;
+}
+
+.tag--default {
+  color: var(--text-secondary);
+  border-color: var(--border-strong);
+}
+
+.tag--accent {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---- Button ----------------------------------------------------------- */
+
+.button,
+.button:hover {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body), Inter, sans-serif;
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.button--md {
+  padding: 13px 22px;
+  font-size: 0.9375rem;
+}
+
+.button--lg {
+  padding: 18px 30px;
+  font-size: 1.0625rem;
+}
+
+.button--primary,
+.button--primary:hover {
+  background: var(--accent);
+  color: var(--text-on-accent);
+  border-color: var(--accent);
+}
+
+.button--primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.button--secondary,
+.button--secondary:hover {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.button--secondary:hover {
+  background: var(--bg-surface-raised);
+  border-color: var(--text-primary);
+}
+
+.button__icon {
+  display: inline-flex;
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.button:hover .button__icon {
+  transform: translateX(3px);
+}
+
+/* ---- FULL DETAIL ------------------------------------------------------ */
+
+.detail-button {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: 1px solid;
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  padding: 10px 15px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background 320ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.detail-button__plus {
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* The control takes its colour from the block it sits on. */
+.detail-button--dark {
+  border-color: #ff5a2e;
+  color: #ff5a2e;
+}
+
+.detail-button--dark:hover {
+  background: #ff5a2e;
+  color: #0a0a0a;
+}
+
+.detail-button--dark-teal {
+  border-color: #16c7c0;
+  color: #16c7c0;
+}
+
+.detail-button--dark-teal:hover {
+  background: #16c7c0;
+  color: #0a0a0a;
+}
+
+.detail-button--teal {
+  border-color: #0a0a0a;
+  color: #0a0a0a;
+}
+
+.detail-button--teal:hover {
+  background: #0a0a0a;
+  color: #16c7c0;
+}
+
+.detail-button--yellow {
+  border-color: #0a0a0a;
+  color: #0a0a0a;
+}
+
+.detail-button--yellow:hover {
+  background: #0a0a0a;
+  color: #e4ff3b;
+}
+
+/* ---- Media slots ------------------------------------------------------ */
+
+.slot {
+  margin: 0;
+}
+
+.slot__frame {
+  overflow: hidden;
+  position: relative;
+}
+
+.slot__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slot__caption {
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  margin-top: 9px;
+}
+
+.slot__caption--dark {
+  color: #8c877d;
+}
+
+.slot__caption--ink {
+  color: inherit;
+}
+
+.videoslot__frame {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoslot__poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.videoslot__play {
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid rgba(246, 241, 231, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f6f1e7;
+  line-height: 1;
+}
+
+.videoslot__play--lg {
+  width: 62px;
+  height: 62px;
+  font-size: 17px;
+}
+
+.videoslot__play--sm {
+  width: 54px;
+  height: 54px;
+  font-size: 15px;
+}
+
+.videoslot__label {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: #f6f1e7;
+}
+
+/* ---- Marquees --------------------------------------------------------- */
+
+.marquee {
+  overflow: hidden;
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.marquee--a {
+  background: #ff5a2e;
+  color: #0a0a0a;
+  padding: 14px 0;
+  border-top: 1px solid #0a0a0a;
+}
+
+.marquee--a .marquee__track {
+  font-family: var(--font-display), Archivo, sans-serif;
+  font-weight: 900;
+  font-size: clamp(20px, 3vw, 40px);
+  letter-spacing: -0.03em;
+}
+
+.marquee--a .marquee__track span {
+  padding-right: 40px;
+}
+
+/* Runs the opposite way to marquee A. */
+.marquee--b {
+  background: #0a0a0a;
+  color: #16c7c0;
+  padding: 12px 0;
+}
+
+.marquee--b .marquee__track {
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+}
+
+.marquee--b .marquee__track span {
+  padding-right: 32px;
+}

@@ -1,0 +1,36 @@
+:root {
+  /* ---- Base palette ---- */
+  --black-1: #0A0A0A;      /* near-black, primary bg */
+  --black-2: #161513;      /* raised surface on black */
+  --black-3: #211F1B;      /* border/hairline on black */
+  --cream-1: #F6F1E7;      /* primary text on black / primary bg in light contexts */
+  --cream-2: #E7DFCE;      /* secondary text on black */
+  --grey-1: #8C877D;       /* muted text, both modes */
+  --grey-2: #46433D;       /* muted borders */
+  --white: #FFFFFF;
+
+  --flame-1: #FF5A2E;      /* the one bold accent — signal / CTA / highlight */
+  --flame-2: #E1481F;      /* accent hover/active (darker) */
+  --flame-tint: #FFE3D6;   /* accent tint for light chips */
+
+  /* ---- Semantic aliases ---- */
+  --bg-page: var(--black-1);
+  --bg-surface: var(--black-2);
+  --bg-surface-raised: #1D1B17;
+  --border-hairline: var(--black-3);
+  --border-strong: var(--grey-2);
+
+  --text-primary: var(--cream-1);
+  --text-secondary: var(--cream-2);
+  --text-muted: var(--grey-1);
+  --text-on-accent: var(--black-1);
+  --text-inverse: var(--black-1);
+
+  --accent: var(--flame-1);
+  --accent-hover: #FF7248;
+  --accent-active: var(--flame-2);
+  --accent-tint: var(--flame-tint);
+
+  --bg-inverse: var(--cream-1);
+  --surface-inverse: var(--white);
+}

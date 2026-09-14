@@ -1,0 +1,14 @@
+/** The nine sections, in scroll order. These labels drive the rail and the readout. */
+export const sectionIndex = [
+  { id: 'sec-0', label: 'HELLO' },
+  { id: 'sec-1', label: 'HABIT OF MIND' },
+  { id: 'sec-2', label: 'TECHNICAL' },
+  { id: 'sec-3', label: 'CAMERA' },
+  { id: 'sec-4', label: 'MUSIC' },
+  { id: 'sec-5', label: 'WORDS' },
+  { id: 'sec-6', label: 'WORK EXPERIENCE' },
+  { id: 'sec-7', label: 'RIGHT NOW' },
+  { id: 'sec-8', label: 'SAY HELLO' },
+] as const;
+
+export type SectionIndexEntry = (typeof sectionIndex)[number];
