@@ -11,16 +11,13 @@ export function HabitOfMind() {
       </div>
 
       <Reveal as="p" className="habit__lead">
-        I split my time between technical work — code, engineering, computing — and creative work —
-        film, photography, music. Both start with a plan, both live or die on the details, and both
-        need someone willing to sit with a problem until it’s actually solved. But most importantly,
-        both need one another to thrive. Whichever one I’m doing, I bring the other with me; this is
+        Hi, I'm Sam. I split my time between technical work — code, engineering, computing — and creative work —
+        film, photography, music. They both need one another to thrive. Techincal problems need creative solutions and creative problems need technical ones. Whichever one I’m doing, I bring the other with me; this is
         one habit of mind.
       </Reveal>
 
       <Reveal className="habit__credentials mono">
         <span>HAMPTON SCHOOL, LONDON</span>
-        <span>STEM FAIR CATEGORY WINNER, 2026</span>
         <span>HEADMASTER’S AWARD</span>
       </Reveal>
 

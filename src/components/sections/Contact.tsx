@@ -23,9 +23,8 @@ export function Contact() {
           </a>
         </div>
         <div className="contact__details mono">
-          <a href="tel:+447460102466">+44 7460 102 466</a>
           <a href="https://samfield.co">samfield.co</a>
-          <span>TEDDINGTON, TW11</span>
+          <span>TEDDINGTON</span>
         </div>
       </div>
 

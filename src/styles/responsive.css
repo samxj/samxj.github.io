@@ -134,6 +134,10 @@
     margin-top: 16px;
   }
 
+  .gcse {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .right-now__frames,
   .contact__strip {
     grid-template-columns: repeat(2, 1fr);

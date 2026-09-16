@@ -452,7 +452,8 @@ Background `#0A0A0A`, `min-height: 92svh`, flex column, `justify-content: space-
 - Cols 1–10: teal eyebrow `08 — SAY HELLO`; then the email as a giant link,
   `mailto:hello@samfield.co`, Archivo 900 `clamp(34px,7.4vw,130px)`, two lines
   (`hello@` / `samfield.co`), `word-break: break-word`, `#F6F1E7` → `#FF5A2E` on hover.
-- Cols 10–13, bottom-aligned: `+44 7460 102 466` (`tel:`), `samfield.co`, `TEDDINGTON, TW11`.
+- Cols 10–13, bottom-aligned: `samfield.co`, `TEDDINGTON`. (The original spec also listed a
+  phone number and postcode here; both removed at Sam's request.)
 - A 5-up strip of `4/3` image slots.
 - Footer bar, `border-top: 1px solid #211F1B`, `padding-top: 26px`: two buttons — primary
   "Download the CV" with trailing arrow linking `assets/Samuel-Field-CV.pdf`, secondary

@@ -12,14 +12,13 @@ export function Technical({ onOpen }: { onOpen: OpenProject }) {
     <Section index={2} className="section section--dark technical" aria-labelledby="technical-title">
       <div className="technical__header grid12">
         <div className="technical__header-left">
-          <div className="eyebrow eyebrow--flame mono">02 — THINGS THAT HAD TO WORK</div>
+          <div className="eyebrow eyebrow--flame mono">02 — ENGINEERING</div>
           <SlideHeading id="technical-title" distance={220} className="h2--technical">
             TECHNICAL
           </SlideHeading>
         </div>
         <p className="technical__note">
-          Built, not just designed. Every one of these had a moment where it did not work and I had
-          to find out why.
+          "If debugging is the process of removing bugs from code, then programming must be the process of putting them in" - Sam Redwine
         </p>
       </div>
 
@@ -31,11 +30,11 @@ export function Technical({ onOpen }: { onOpen: OpenProject }) {
             Third consecutive year at the school STEM fair, and the year we won our category. A small
             plane, built from scratch apart from the base airframe, which we modified in CAD. An AI
             camera and autopilot fly it to fertile soil and drop seeds there. I was responsible for
-            the dispenser’s design, mechanism and code, for project management, and for the
-            autopilot’s auto‑stabilisation.
+            the dispenser’s design, mechanism and code, for the
+            autopilot’s auto‑stabilisation, and project management.
           </p>
           <div className="tags">
-            <Tag variant="accent">CAD</Tag>
+            <Tag>CAD</Tag>
             <Tag>Autopilot</Tag>
             <Tag>Computer vision</Tag>
             <Tag>Mechanism design</Tag>
@@ -76,8 +75,8 @@ export function Technical({ onOpen }: { onOpen: OpenProject }) {
           <h3 className="h3">Lexitecht</h3>
           <p className="body body--48">
             A conlang designing app: somewhere to hold a constructed language’s sounds, grammar and
-            lexicon so they stay consistent as it grows. Built because I wanted it while making
-            Leuiráciu by hand.
+            lexicon so they stay consistent as it grows. Built because I wanted it while making one of my conlangs,
+            Leuiráciu - see further down for the conlang itself.
           </p>
           <div className="tags">
             <Tag>App design</Tag>
@@ -108,7 +107,7 @@ export function Technical({ onOpen }: { onOpen: OpenProject }) {
           </p>
           <div className="tags">
             <Tag>Electronics</Tag>
-            <Tag>Fabrication</Tag>
+            <Tag>CAD</Tag>
           </div>
           <DetailButton project="pudding" onOpen={onOpen} label="Pudding Trolley" />
         </div>

@@ -8,7 +8,7 @@ import type { OpenProject } from '../../types';
 
 const specs = [
   ['DRUMS', 'GRADE 8'],
-  ['PIANO', 'GRADE 4'],
+  ['PIANO', 'eq. GRADE 3'],
   ['CHURCH BAND', 'SINCE 2021'],
   ['ROCK CONCERT', '2026'],
 ];
@@ -22,10 +22,10 @@ export function Music({ onOpen }: { onOpen: OpenProject }) {
           DRUMS
         </SlideHeading>
         <Reveal as="p" className="music__lead">
-          Grade 8 drums, Grade 4 piano. I have drummed for my local church every few Sundays
+          Grade 8 drums, 8 years' experiene. I have drummed for my local church every few Sundays
           since 2021 and played my school’s Rock Concert this year, so I know both the band side and
-          the theory side.
-        </Reveal>
+          the theory side. Some piano as of the last few years too. 
+        </Reveal>I have not sat grades for either (though I plan to for drums soon) but have played songs frequently at the levels indicated.
         <DetailButton project="drums" onOpen={onOpen} on="yellow" label="Drums" />
       </div>
 

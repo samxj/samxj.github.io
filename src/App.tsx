@@ -9,7 +9,7 @@ import { Technical } from './components/sections/Technical';
 import { FilmPhoto } from './components/sections/FilmPhoto';
 import { Music } from './components/sections/Music';
 import { Writing } from './components/sections/Writing';
-import { WorkExperience } from './components/sections/WorkExperience';
+import { WorkAndEducation } from './components/sections/WorkAndEducation';
 import { RightNow } from './components/sections/RightNow';
 import { Contact } from './components/sections/Contact';
 import { Marquee } from './components/ui/Marquee';
@@ -19,18 +19,21 @@ import { usePrefersReducedMotion } from './hooks/usePrefersReducedMotion';
 import { setMotionAmount } from './hooks/scrollMotion';
 import type { ProjectKey } from './content/projects';
 
-const NBSP = ' ';
+const NBSP = ' ';
 const SLASH = `${NBSP}${NBSP}/${NBSP}${NBSP}`;
 
 const MARQUEE_A = [
   'CAD',
   'PYTHON',
+  'C#',
   'AUTOPILOT',
   'PREMIERE PRO',
   'AFTER EFFECTS',
   'LIGHTROOM',
   'GRADE 8 DRUMS',
-  'C1 ITALIANO',
+  'C1 ITALIAN',
+  'A-LEVEL FRENCH',
+  'GRADE 9 CLASSICAL GREEK',
   'CONLANGS',
 ].join(SLASH) + SLASH;
 
@@ -78,7 +81,7 @@ export default function App() {
       <Marquee className="marquee--b" text={MARQUEE_B} direction="reverse" duration="28s" />
       <Music onOpen={open} />
       <Writing onOpen={open} />
-      <WorkExperience />
+      <WorkAndEducation />
       <RightNow />
       <Contact />
 

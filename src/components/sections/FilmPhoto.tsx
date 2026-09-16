@@ -95,7 +95,7 @@ export function FilmPhoto({ onOpen }: { onOpen: OpenProject }) {
           className="camera__block--redd"
           meta="2026 · RUNNER"
           title="RED‑d awareness shoot"
-          body="A professional shoot on how freelance dancers are treated. Rigging lights and cameras, prepping drinks and meals, some filming. I learnt how a shoot like this is structured. I loved it."
+          body="Helping on a professional shoot on how freelance dancers are treated. Rigging lights and cameras, prepping drinks and meals, some filming. I learnt how a shoot like this is structured, and I loved it."
           bodyWidth="40ch"
           project="redd"
           label="RED‑d awareness shoot"
@@ -127,7 +127,7 @@ export function FilmPhoto({ onOpen }: { onOpen: OpenProject }) {
 
       <Reveal className="camera__videos">
         <VideoSlot
-          src="/assets/lampmoon.jpg"
+          src="/assets/auracat.jpg"
           aspect="16 / 9"
           label="07 PARTS"
           caption="VIDEO SLOT · RISE AND REFLECT"

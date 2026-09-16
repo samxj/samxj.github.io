@@ -5,19 +5,19 @@ import { SlideHeading } from '../ui/SlideHeading';
 const now = [
   {
     title: 'Starting A‑Levels',
-    body: 'Maths, Physics, Computer Science, and French through the DELF programme.',
+    body: 'Maths, Physics, French and Further Maths. My favourite subjects - French in there to keep me linguistically sharp and communicate with clarity.',
   },
   {
-    title: 'Filming for St John’s',
-    body: 'More youth and Sunday work, plus whatever the church needs next.',
+    title: 'Running 2 Clubs',
+    body: 'Starting an extended physics club with some friends to learn more about the extra-curricular fun stuff. Joint-running the Coding Ninjas club for Y7-8.',
   },
   {
-    title: 'Building Lexitecht',
-    body: 'Turning the conlang app from a sketch into something usable.',
+    title: 'French Debating',
+    body: 'Attending the French Debating club to eventually compete in the national Joutes Oratoires.',
   },
   {
     title: 'Open to freelance',
-    body: 'Photography, video and drone work around London.',
+    body: 'Photography, video and drone work around London - contact me below.',
   },
 ];
 

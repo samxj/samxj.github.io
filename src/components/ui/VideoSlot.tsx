@@ -1,8 +1,12 @@
-import type { CSSProperties } from 'react';
+import { useRef, useState, type CSSProperties } from 'react';
+
+const VIDEO_FILE = /\.(mp4|webm|mov|m4v)(\?.*)?$/i;
 
 export interface VideoSlotProps {
-  /** Poster frame today; swap for a real file or an embed and this becomes the player. */
+  /** An image shows as a poster placeholder; a video file (.mp4, .webm, .mov) becomes the player. */
   src: string;
+  /** Optional still shown before a video file plays. */
+  poster?: string;
   alt?: string;
   caption?: string;
   aspect: string;
@@ -18,6 +22,7 @@ export interface VideoSlotProps {
 
 export function VideoSlot({
   src,
+  poster,
   alt = 'Video placeholder',
   caption,
   aspect,
@@ -29,7 +34,38 @@ export function VideoSlot({
   className,
   style,
 }: VideoSlotProps) {
-  const frame = (
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(false);
+  const isVideo = VIDEO_FILE.test(src);
+
+  const frame = isVideo ? (
+    <div className="videoslot__frame" style={{ aspectRatio: aspect, background }}>
+      <video
+        ref={videoRef}
+        src={src}
+        poster={poster}
+        className="videoslot__video"
+        preload="metadata"
+        playsInline
+        controls={playing}
+        aria-label={alt}
+        onPlay={() => setPlaying(true)}
+      />
+      {playing ? null : (
+        <>
+          <button
+            type="button"
+            className={`videoslot__play videoslot__play--${size} videoslot__play--button`}
+            aria-label={`Play ${caption ?? 'video'}`}
+            onClick={() => void videoRef.current?.play()}
+          >
+            &#9654;
+          </button>
+          {label ? <span className="videoslot__label">{label}</span> : null}
+        </>
+      )}
+    </div>
+  ) : (
     <div className="videoslot__frame" style={{ aspectRatio: aspect, background }}>
       <img src={src} alt={alt} className="videoslot__poster" style={{ opacity: posterOpacity }} loading="lazy" />
       <span className={`videoslot__play videoslot__play--${size}`} aria-hidden="true">

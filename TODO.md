@@ -2,6 +2,21 @@
 
 Open items on the site. Grouped roughly by how much they block launch.
 
+## Personal details
+
+The phone number and postcode are out of the site, the design handoff files and the build.
+Two places still carry the number:
+
+- [ ] **The downloadable CV still has it.** `public/assets/Samuel-Field-CV.pdf` prints
+      "+44 7460 102 466" next to the email address, and the footer offers it as a one-click
+      download from a public site. Re-export the CV without the number, or drop the
+      download button, or swap it for a version you hand out on request.
+- [ ] **Git history still has it.** Commit `eca711b` is pushed to
+      `github.com/samxj/samxj.github.io`, which is public, and the CV blob goes back further
+      (`19e0886`, `89db117`). Removing the files now does not remove them from history.
+      Either accept that, or rewrite history and force-push — and note GitHub keeps
+      unreachable commits reachable by SHA until asked to garbage-collect them.
+
 ## Broken or missing links
 
 - [ ] **Lexitecht GitHub link goes nowhere.** The panel ends "You can see the app on

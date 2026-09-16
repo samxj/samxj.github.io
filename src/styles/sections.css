@@ -666,7 +666,7 @@
   align-self: end;
 }
 
-/* ---- §06 Work experience ---------------------------------------------- */
+/* ---- §06 Work and education ------------------------------------------- */
 
 .work__header {
   margin-bottom: clamp(34px, 5vw, 64px);
@@ -752,6 +752,96 @@
   color: #55514a;
   max-width: 44ch;
   padding-top: 3px;
+}
+
+/* Three stacked groups: education now, GCSE grid, paid work. */
+.work__group + .work__group {
+  margin-top: clamp(48px, 6vw, 88px);
+}
+
+.work__subhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.work__subhead-label {
+  margin: 0;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: #c23f18;
+}
+
+.work__subhead-aside {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: #7c776d;
+}
+
+.gcse {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  border-top: 1px solid rgba(10, 10, 10, 0.16);
+  border-left: 1px solid rgba(10, 10, 10, 0.16);
+}
+
+.gcse__cell {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 16px 16px;
+  border-right: 1px solid rgba(10, 10, 10, 0.16);
+  border-bottom: 1px solid rgba(10, 10, 10, 0.16);
+  transition: background 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gcse__cell:hover {
+  background: rgba(10, 10, 10, 0.045);
+}
+
+.gcse__subject {
+  font-family: var(--font-display), Archivo, sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #0a0a0a;
+}
+
+.gcse__scores {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.gcse__grade {
+  font-family: var(--font-display), Archivo, sans-serif;
+  font-weight: 900;
+  font-size: clamp(44px, 4.6vw, 64px);
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+  color: #0a0a0a;
+}
+
+.gcse__percent {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #56524a;
+}
+
+.gcse__note {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: #c23f18;
 }
 
 /* ---- §07 This term ---------------------------------------------------- */

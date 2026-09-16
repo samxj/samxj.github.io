@@ -15,8 +15,7 @@ export function Hero() {
       </div>
 
       <p className="hero__intro">
-        Engineering, code and computing on one side. Film, photography and music on the other. Both
-        hands, always.
+        Technical problems need creative solutions.
       </p>
 
       <div className="hero__stage">
@@ -43,9 +42,9 @@ export function Hero() {
           <span className="bob" aria-hidden="true">
             ↓
           </span>{' '}
-          KEEP GOING
+          
         </div>
-        <div className="hero__count mono">9 SECTIONS · ONE PERSON</div>
+        <div className="hero__count mono"></div>
       </div>
     </Section>
   );

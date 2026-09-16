@@ -7,17 +7,18 @@ import type { OpenProject } from '../../types';
 
 const languages: Array<{ name: string; level: string; tone: 'flame' | 'acid' | 'grey' }> = [
   { name: 'Italian', level: 'C1', tone: 'flame' },
-  { name: 'French', level: 'B2 · DELF', tone: 'flame' },
-  { name: 'Latin GCSE', level: 'Grade 9, a year early', tone: 'acid' },
-  { name: 'Italian GCSE', level: 'Grade 9, a year early', tone: 'acid' },
-  { name: 'Classical Greek', level: 'Predicted 9', tone: 'grey' },
+  { name: 'French', level: 'A-Level', tone: 'flame' },
+  { name: 'Classical Greek', level: 'Grade 9', tone: 'acid' },
+  { name: 'Latin GCSE', level: 'Grade 9 (a year early)', tone: 'acid' },
+  { name: 'Italian GCSE', level: 'Grade 9 (a year early)', tone: 'acid' },
+  
 ];
 
 export function Writing({ onOpen }: { onOpen: OpenProject }) {
   return (
     <Section index={5} className="section section--dark writing" aria-labelledby="writing-title">
       <div className="writing__head">
-        <div className="eyebrow eyebrow--flame mono">05 — WORDS, AND THE LANGUAGES THEY SIT IN</div>
+        <div className="eyebrow eyebrow--flame mono">05 — WORDS AND LANGUAGE</div>
         <SlideHeading id="writing-title" distance={200} className="h2--writing">
           WRITING
         </SlideHeading>
@@ -37,7 +38,7 @@ export function Writing({ onOpen }: { onOpen: OpenProject }) {
         <div className="writing__meta mono">2023–24 · DESIGN, PRINT, SALE</div>
         <h3 className="h3 h3--sub">Christian Youth Journals, from scratch</h3>
         <p className="body body--46">
-          A set of journals for my church’s youth group, taken from vision and planning through
+          A set of youth journals, taken from vision and planning through
           design, sale and distribution.
         </p>
         <DetailButton project="journals" onOpen={onOpen} label="Christian Youth Journals" />
