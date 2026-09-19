@@ -2,7 +2,7 @@
 export function Mark() {
   return (
     <div className="mark" aria-hidden="true">
-      SF<span className="mark__est">EST. 2008</span>
+      SF<span className="mark__est">EST. 2009</span>
     </div>
   );
 }

@@ -67,10 +67,9 @@ export const projects: Project[] = [
     accent: "flame",
     title: "AI seed‑dropping plane",
     facts: [
-      { label: "YEAR", value: "2026" },
-      { label: "MY ROLE", value: "Seed dispenser, stabilisation, project management" },
-      { label: "TOOLS", value: "SolidWorks, Kalman filter, FrSKY, 3D printing" },
-      { label: "OUTCOME", value: "First prize, all Year 11–13 projects", highlight: true },
+      { label: "WHAT", value: "An autonomous plane that drops tree seeds — I built the dispenser and the auto‑stabilisation, and ran the project" },
+      { label: "WHEN", value: "2026 · school STEM fair, third year running" },
+      { label: "WHY", value: "To plant ground people cannot easily reach. First prize, all Year 11–13 projects.", highlight: true },
     ],
     blocks: [
     { kind: 'heading', text: "Not exactly a flying start" },
@@ -143,9 +142,9 @@ export const projects: Project[] = [
     accent: "teal",
     title: "Lexitecht",
     facts: [
-      { label: "STATUS", value: "Building" },
-      { label: "MY ROLE", value: "Everything" },
-      { label: "BUILT WITH", value: "Python 3, PyQt5, NLTK · 3,000 lines" },
+      { label: "WHAT", value: "A desktop app for building constructed languages — Python 3, PyQt5, NLTK, 3,000 lines, all mine" },
+      { label: "WHEN", value: "In progress" },
+      { label: "WHY", value: "The tools I wanted while making Leuiráciu did not exist, so I am writing them" },
     ],
     blocks: [
     { kind: 'heading', text: "Fed up with spreadsheets" },
@@ -216,10 +215,9 @@ export const projects: Project[] = [
     accent: "flame",
     title: "Pudding Trolley",
     facts: [
-      { label: "TYPE", value: "RC vehicle that tows a pudding trolley" },
-      { label: "BRAINS", value: "2× Arduino Nano, NRF24L01 link" },
-      { label: "DRIVE", value: "4 DC gearbox motors, 2× DRV8871, 11.1V li‑ion" },
-      { label: "EXTRAS", value: "Gyroscope, ultrasound stop, God Save The King" },
+      { label: "WHAT", value: "A radio‑controlled vehicle that tows a pudding trolley — 2× Arduino Nano, four gearbox motors, gyroscope, ultrasound stop" },
+      { label: "WHEN", value: "YEAR TO ADD" },
+      { label: "WHY", value: "A family joke about wheeling puddings the 92 centimetres to the table, taken seriously" },
     ],
     blocks: [
     { kind: 'heading', text: "What the…?" },
@@ -267,9 +265,9 @@ export const projects: Project[] = [
     accent: "flame",
     title: "Leuiráciu",
     facts: [
-      { label: "YEAR", value: "2025" },
-      { label: "CONTEXT", value: "Extended Learning Project · 35‑page textbook" },
-      { label: "OUTCOME", value: "Headmaster’s award, jointly with three others", highlight: true },
+      { label: "WHAT", value: "Leuiráciu, a constructed language — sounds, grammar and lexicon, in a 35‑page textbook" },
+      { label: "WHEN", value: "2025 · Extended Learning Project" },
+      { label: "WHY", value: "To show how languages evolve. Headmaster’s award, jointly with three others.", highlight: true },
     ],
     blocks: [
     { kind: 'heading', text: "Okraänian beginnings" },
@@ -318,9 +316,9 @@ export const projects: Project[] = [
     accent: "teal",
     title: "Thirty‑odd films for St John’s Hampton Wick",
     facts: [
-      { label: "PERIOD", value: "2025 — present" },
-      { label: "MY ROLE", value: "Planning, shooting, editing, delivery — alone" },
-      { label: "TOOLS", value: "Premiere Pro, After Effects" },
+      { label: "WHAT", value: "Thirty‑odd films — planned, shot, edited and delivered alone, in Premiere Pro and After Effects" },
+      { label: "WHEN", value: "2025 — present" },
+      { label: "WHY", value: "Freelance work for the church: youth films, Love Local, Focus camp, sermon clips" },
     ],
     blocks: [
     { kind: 'heading', text: "Gather Youth taster videos" },
@@ -368,9 +366,9 @@ export const projects: Project[] = [
     accent: "teal",
     title: "Imm‑Aroy, Chinatown",
     facts: [
-      { label: "YEAR", value: "2025" },
-      { label: "USED FOR", value: "Menu and social" },
-      { label: "MY ROLE", value: "Planning, shooting, grading" },
+      { label: "WHAT", value: "Menu and social photography for a Chinatown restaurant — planning, shooting, grading" },
+      { label: "WHEN", value: "2025" },
+      { label: "WHY", value: "The restaurant needed real photographs of its dishes for the menu and its socials" },
     ],
     blocks: [
     { kind: 'heading', text: "Imm‑Aroy" },
@@ -405,9 +403,9 @@ export const projects: Project[] = [
     accent: "teal",
     title: "RED‑d awareness shoot",
     facts: [
-      { label: "YEAR", value: "2026" },
-      { label: "MY ROLE", value: "Runner" },
-      { label: "SUBJECT", value: "How freelance dancers are treated" },
+      { label: "WHAT", value: "Runner on a professional shoot — rigging lights and cameras, prep, some filming" },
+      { label: "WHEN", value: "2026" },
+      { label: "WHY", value: "A film about how freelance dancers are treated, and my first look at a professional set" },
     ],
     blocks: [
     {
@@ -434,9 +432,9 @@ export const projects: Project[] = [
     accent: "teal",
     title: "Red Robin Art Studio & Chanctonbury Church",
     facts: [
-      { label: "YEARS", value: "2022, 2023" },
-      { label: "MY ROLE", value: "Shot, edited and delivered both" },
-      { label: "USED FOR", value: "Studio site and socials; church Mission Day" },
+      { label: "WHAT", value: "Two promotional films, shot, edited and delivered by me" },
+      { label: "WHEN", value: "2022 and 2023" },
+      { label: "WHY", value: "For the studio’s site and socials, and the church’s Mission Day — my first paid film work" },
     ],
     blocks: [
     { kind: 'heading', text: "What Red Robin Art was" },
@@ -476,10 +474,9 @@ export const projects: Project[] = [
     accent: "teal",
     title: "3.5M+ views on Unsplash",
     facts: [
-      { label: "ACCOUNT", value: "@sgfphotography" },
-      { label: "VIEWS", value: "3.5M+ · 35,000 downloads", highlight: true },
-      { label: "KIT", value: "iPhone XR → EOS 400D → 200D → Lumix G9" },
-      { label: "ALSO", value: "Drone work, torredisopra.com" },
+      { label: "WHAT", value: "Photographs on @sgfphotography — iPhone XR → EOS 400D → 200D → Lumix G9, plus drone work" },
+      { label: "WHEN", value: "Ongoing" },
+      { label: "WHY", value: "To put my photographs where people would actually use them. 3.5M+ views, 35,000 downloads.", highlight: true },
     ],
     blocks: [
     { kind: 'heading', text: "The alternative to Instagram" },
@@ -529,10 +526,9 @@ export const projects: Project[] = [
     accent: "acid",
     title: "Drums, and the band around them",
     facts: [
-      { label: "DRUMS", value: "Grade 8" },
-      { label: "PIANO", value: "Grade 4" },
-      { label: "CHURCH BAND", value: "Every few Sundays since 2021" },
-      { label: "ROCK CONCERT", value: "2026" },
+      { label: "WHAT", value: "Drums to Grade 8 and piano to Grade 4, and the band around them" },
+      { label: "WHEN", value: "Since 2021 · rock concert in 2026" },
+      { label: "WHY", value: "Playing for the church band every few Sundays is what keeps it regular" },
     ],
     blocks: [
     {
@@ -559,9 +555,9 @@ export const projects: Project[] = [
     accent: "teal",
     title: "Florentine Skies",
     facts: [
-      { label: "COMPETITION", value: "Walter Scott Young Writer’s Award 2025" },
-      { label: "OUTCOME", value: "Shortlisted, around 10 in my age group", highlight: true },
-      { label: "ALSO PUBLISHED", value: "The Lion Print" },
+      { label: "WHAT", value: "Florentine Skies, a short story" },
+      { label: "WHEN", value: "2025" },
+      { label: "WHY", value: "Entered for the Walter Scott Young Writer’s Award — shortlisted, around 10 in my age group. Also published in The Lion Print.", highlight: true },
     ],
     blocks: [
     { kind: 'heading', text: "Writer’s Room" },
@@ -606,10 +602,9 @@ export const projects: Project[] = [
     accent: "flame",
     title: "Christian Youth Journals, from scratch",
     facts: [
-      { label: "YEARS", value: "2023–24" },
-      { label: "MY ROLE", value: "Design, print, sale, distribution" },
-      { label: "TOOLS", value: "Illustrator, then InDesign" },
-      { label: "RESULT", value: "Two editions sold out · almost £1k profit", highlight: true },
+      { label: "WHAT", value: "Christian youth journals — designed in Illustrator then InDesign, printed, sold and distributed" },
+      { label: "WHEN", value: "2023–24" },
+      { label: "WHY", value: "Two editions sold out · almost £1k profit", highlight: true },
     ],
     blocks: [
     { kind: 'heading', text: "The gap in the market" },

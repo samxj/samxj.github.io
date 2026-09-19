@@ -117,8 +117,8 @@
 
 .panel__facts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px 26px;
   padding: 18px 0;
   border-top: 1px solid #211f1b;
   border-bottom: 1px solid #211f1b;
@@ -131,7 +131,9 @@
   display: block;
   color: #f6f1e7;
   margin-top: 7px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
+  line-height: 1.7;
+  text-wrap: pretty;
 }
 
 .panel__fact-value.acid {

@@ -9,8 +9,8 @@ const languages: Array<{ name: string; level: string; tone: 'flame' | 'acid' | '
   { name: 'Italian', level: 'C1', tone: 'flame' },
   { name: 'French', level: 'A-Level', tone: 'flame' },
   { name: 'Classical Greek', level: 'Grade 9', tone: 'acid' },
-  { name: 'Latin GCSE', level: 'Grade 9 (a year early)', tone: 'acid' },
-  { name: 'Italian GCSE', level: 'Grade 9 (a year early)', tone: 'acid' },
+  { name: 'Latin GCSE', level: 'Grade 9', tone: 'acid' },
+  { name: 'Italian GCSE', level: 'Grade 9', tone: 'acid' },
   
 ];
 
@@ -25,21 +25,20 @@ export function Writing({ onOpen }: { onOpen: OpenProject }) {
       </div>
 
       <Reveal className="writing__florentine">
-        <div className="writing__label mono">NATIONAL SHORTLIST</div>
         <h3 className="h3 h3--writing">Florentine Skies</h3>
         <p className="body body--42">
-          Shortlisted in a national writing competition two years ago. My pieces also appear
-          regularly in the Lion Print, my school’s annual collection of its best writing and art.
+          Shortlisted in a national writing competition two years ago, the Young Walter Scott Prize. My pieces haved also appeared
+          in the Lion Print, my school’s annual collection of its best writing and art.
         </p>
         <DetailButton project="florentine" onOpen={onOpen} on="dark-teal" label="Florentine Skies" />
       </Reveal>
 
       <Reveal className="writing__journals">
         <div className="writing__meta mono">2023–24 · DESIGN, PRINT, SALE</div>
-        <h3 className="h3 h3--sub">Christian Youth Journals, from scratch</h3>
+        <h3 className="h3 h3--sub">Christian Youth Journals</h3>
         <p className="body body--46">
-          A set of youth journals, taken from vision and planning through
-          design, sale and distribution.
+          A set of youth journals, from vision and planning to
+          design, sale and distribution, using proffesional tools such as Adobe InDesign and Illustrator.
         </p>
         <DetailButton project="journals" onOpen={onOpen} label="Christian Youth Journals" />
       </Reveal>

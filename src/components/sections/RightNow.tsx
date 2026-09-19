@@ -16,8 +16,8 @@ const now = [
     body: 'Attending the French Debating club to eventually compete in the national Joutes Oratoires.',
   },
   {
-    title: 'Open to freelance',
-    body: 'Photography, video and drone work around London - contact me below.',
+    title: 'Teaching drums',
+    body: 'Weekly paid drum tutoring for a complete beginner, so they can play at church too.',
   },
 ];
 

@@ -38,7 +38,7 @@ export function FilmPhoto({ onOpen }: { onOpen: OpenProject }) {
     <Section index={3} className="section section--teal camera" aria-labelledby="camera-title">
       <div className="camera__header grid12">
         <div className="camera__header-inner">
-          <div className="eyebrow mono">03 — BEHIND A CAMERA SINCE I COULD HOLD ONE</div>
+          <div className="eyebrow mono">03 — ART</div>
           <SlideHeading id="camera-title" distance={260} className="h2--camera">
             FILM &amp;
             <br />
@@ -57,8 +57,7 @@ export function FilmPhoto({ onOpen }: { onOpen: OpenProject }) {
           parallax={0.12}
         />
         <Reveal as="p" className="camera__lead">
-          All of it produced alone: shot planning, shooting, editing, distribution. I started in
-          visual effects and moved into paid promotional work.
+          I've been behind a camera one way or another for almost a decade. Starting in photography and visual effects, I've moved to paid shoots and videography work. Somehow the logic of a digital camera, the structure and reasoning behind shot organisation compound to something conveying concepts otherwise inexpressable.
         </Reveal>
         <MediaSlot
           className="camera__collage-right"
@@ -120,7 +119,7 @@ export function FilmPhoto({ onOpen }: { onOpen: OpenProject }) {
         <Reveal className="camera__block camera__block--unsplash">
           <div className="camera__stat">3.5M+</div>
           <div className="camera__stat-label mono">VIEWS ON UNSPLASH</div>
-          <div className="camera__stat-note mono">+ DRONE WORK FOR CLIENT SITES</div>
+          <div className="camera__stat-note mono">+ DRONE WORK</div>
           <DetailButton project="unsplash" onOpen={onOpen} on="teal" label="Views on Unsplash" />
         </Reveal>
       </div>

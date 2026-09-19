@@ -4,21 +4,31 @@ import { MediaSlot } from '../ui/MediaSlot';
 
 export function HabitOfMind() {
   return (
-    <Section index={1} className="section section--cream habit" aria-label="Habit of mind">
+    <Section index={1} className="section section--cream habit" aria-labelledby="habit-title">
       <div className="habit__index">
         <div className="habit__number">01</div>
         <div className="habit__vertical mono">ONE HABIT OF MIND</div>
       </div>
 
+      <Reveal as="h2" className="habit__title" id="habit-title">
+        Hi, I&rsquo;m Sam!
+      </Reveal>
+
       <Reveal as="p" className="habit__lead">
-        Hi, I'm Sam. I split my time between technical work — code, engineering, computing — and creative work —
-        film, photography, music. They both need one another to thrive. Techincal problems need creative solutions and creative problems need technical ones. Whichever one I’m doing, I bring the other with me; this is
-        one habit of mind.
+        This is where I put everything I do. At heart, I&rsquo;m an engineer; CAD and coding and
+        caffeine are among my favourite things. But that is not all. We don&rsquo;t need human
+        computers anymore; AI means almost anyone can build code, iterate designs, make a tech
+        project, do the maths, assemble an app &mdash; the list goes on. What we need are people who
+        are truly skilled at being people. Leadership. Eloquency. Creativity. Yet, those traits
+        are empty without that nitty&#8209;gritty understanding of the tech stuff, without good old
+        experience of doing it all yourself.
+        <br />
+        And I believe that&rsquo;s where I come in.
       </Reveal>
 
       <Reveal className="habit__credentials mono">
-        <span>HAMPTON SCHOOL, LONDON</span>
-        <span>HEADMASTER’S AWARD</span>
+        <span>SAMUEL GIOVANNI FIELD</span>
+        <span>LONDON</span>
       </Reveal>
 
       <MediaSlot

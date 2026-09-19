@@ -85,6 +85,6 @@ export const paidWork: LedgerRow[] = [
     year: "2022–23",
     title: "Promotional film for Red Robin Art Studio",
     org: "London",
-    note: "My first paid and commissioned film work.",
+    note: "My first paid freelance work, for a small art studio in London.",
   },
 ];

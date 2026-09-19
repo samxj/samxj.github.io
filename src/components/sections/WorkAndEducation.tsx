@@ -60,7 +60,7 @@ export function WorkAndEducation() {
       </div>
 
       <div className="work__group" aria-labelledby="work-now">
-        <SubHead id="work-now" label="EDUCATION · RIGHT NOW" />
+        <SubHead id="work-now" label="CURRENT EDUCATION" />
         <Ledger rows={education} />
       </div>
 

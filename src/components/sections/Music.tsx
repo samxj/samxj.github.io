@@ -7,8 +7,8 @@ import { DetailButton } from '../ui/DetailButton';
 import type { OpenProject } from '../../types';
 
 const specs = [
-  ['DRUMS', 'GRADE 8'],
-  ['PIANO', 'eq. GRADE 3'],
+  ['DRUMS', 'GRADE 8', 'note'],
+  ['PIANO', 'eq. GRADE 3', 'note'],
   ['CHURCH BAND', 'SINCE 2021'],
   ['ROCK CONCERT', '2026'],
 ];
@@ -24,18 +24,29 @@ export function Music({ onOpen }: { onOpen: OpenProject }) {
         <Reveal as="p" className="music__lead">
           Grade 8 drums, 8 years' experiene. I have drummed for my local church every few Sundays
           since 2021 and played my school’s Rock Concert this year, so I know both the band side and
-          the theory side. Some piano as of the last few years too. 
-        </Reveal>I have not sat grades for either (though I plan to for drums soon) but have played songs frequently at the levels indicated.
+          the theory side. Some piano as of the last few years too.
+        </Reveal>
         <DetailButton project="drums" onOpen={onOpen} on="yellow" label="Drums" />
       </div>
 
       <div className="music__right">
-        {specs.map(([name, value]) => (
+        {specs.map(([name, value, note]) => (
           <div key={name} className="music__spec mono">
             <span>{name}</span>
-            <span>{value}</span>
+            <span>
+              {value}
+              {note ? <sup className="music__marker">*</sup> : null}
+            </span>
           </div>
         ))}
+
+        <p className="music__footnote mono">
+          <span className="music__marker" aria-hidden="true">
+            *
+          </span>
+          I have not sat grades for either (though I plan to for drums soon) but regularly play songs
+          at the levels indicated.
+        </p>
         <MediaSlot
           className="music__portrait"
           src="/assets/auracat.jpg"
