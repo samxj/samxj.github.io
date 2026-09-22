@@ -22,8 +22,8 @@ export function Music({ onOpen }: { onOpen: OpenProject }) {
           DRUMS
         </SlideHeading>
         <Reveal as="p" className="music__lead">
-          Grade 8 drums, 8 years' experiene. I have drummed for my local church every few Sundays
-          since 2021 and played my school’s Rock Concert this year, so I know both the band side and
+          Grade 8 drums, 8 years&rsquo; experience. I have drummed for my local church every few Sundays
+          since 2021 and played my school&rsquo;s Rock Concert this year, so I know both the band side and
           the theory side. Some piano as of the last few years too.
         </Reveal>
         <DetailButton project="drums" onOpen={onOpen} on="yellow" label="Drums" />

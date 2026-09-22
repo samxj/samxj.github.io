@@ -38,6 +38,7 @@ export function Contact() {
 
       <div className="contact__footer">
         <div className="contact__actions">
+          {/* Temporarily disabled
           <Button
             href="/assets/Samuel-Field-CV.pdf"
             download="Samuel Field - CV.pdf"
@@ -46,6 +47,7 @@ export function Contact() {
           >
             Download the CV
           </Button>
+          */}
           <Button href="mailto:hello@samfield.co" variant="secondary" size="lg">
             Email me
           </Button>
