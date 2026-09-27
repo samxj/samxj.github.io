@@ -43,19 +43,19 @@ export function Technical({ onOpen }: { onOpen: OpenProject }) {
         </div>
         <div className="technical__media technical__media--plane">
           <MediaSlot
-            src="/assets/castlemotif.jpg"
-            alt="Placeholder image"
+            src="/assets/stemplane.jpeg"
+            alt="The plane itself"
             aspect="16 / 10"
             parallax={0.06}
-            caption="SLOT · THE PLANE IN FLIGHT"
+            caption="THE FINISHED PLANE"
             background="#161513"
           />
           <div className="technical__media-pair">
             <MediaSlot
-              src="/assets/torre.jpg"
-              alt="Placeholder image"
+              src="/assets/seeddisp.png"
+              alt="Seed dispenser 3D model"
               aspect="1 / 1"
-              caption="SLOT · SEED DISPENSER, CAD"
+              caption="SEED DISPENSER, CAD"
               background="#161513"
             />
             <div className="technical__stat mono">
@@ -87,11 +87,11 @@ export function Technical({ onOpen }: { onOpen: OpenProject }) {
         </div>
         <div className="technical__media technical__media--lexitecht">
           <MediaSlot
-            src="/assets/lampmoon.jpg"
-            alt="Placeholder image"
+            src="/assets/lexitecht-main.png"
+            alt="Lexitecht UI"
             aspect="4 / 3"
             parallax={-0.05}
-            caption="SLOT · LEXITECHT UI"
+            caption="LEXITECHT UI"
             background="#161513"
           />
           <div className="technical__status mono">IN PROGRESS</div>

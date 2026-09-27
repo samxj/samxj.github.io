@@ -70,17 +70,17 @@ export function Music({ onOpen }: { onOpen: OpenProject }) {
         />
         <MediaSlot
           className="music__grid-offset"
-          src="/assets/wideisa.jpg"
+          src="/assets/Drumming.jpg"
           alt="Placeholder image"
           aspect="16 / 9"
-          caption="SLOT · PIANO, PRACTICE ROOM"
+          caption="ROCK CONCERT"
           tone="ink"
         />
         <VideoSlot
-          src="/assets/torre.jpg"
+          src="/assets/lampmoon.jpg"
           aspect="16 / 9"
           label="03:12"
-          caption="VIDEO SLOT · ROCK CONCERT SET"
+          caption="ROCK CONCERT"
           tone="ink"
           background="#0A0A0A"
           posterOpacity={0.45}

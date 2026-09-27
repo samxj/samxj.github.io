@@ -72,12 +72,12 @@ export function FilmPhoto({ onOpen }: { onOpen: OpenProject }) {
       <div className="camera__blocks grid12">
         <CameraBlock
           className="camera__block--stjohns"
-          meta="2025 — PRESENT · ST JOHN’S HAMPTON WICK"
-          title="Thirty‑odd films for one church"
-          body="Three videos for the Youth, two for Love Local, two for our camp Focus, a seven‑part series called Rise and Reflect, nineteen short sermon clips for social media, and a film of the church’s Easter activities."
+          meta="2025 — PRESENT · GATHER CHURCH"
+          title="30+ films for one church"
+          body="I've done lots of videography at Gather Church - it's given me broad experience practically making diverse videos, and working for a real organisation under deadlines. Three videos for the Youth, two for Love Local, two for our camp Focus, a seven‑part series called Rise and Reflect, nineteen short sermon clips for social media, and a film of the church’s Easter activities."
           bodyWidth="46ch"
           project="stjohns"
-          label="Thirty‑odd films for one church"
+          label="30+ films for one church"
           onOpen={onOpen}
         />
         <CameraBlock
@@ -117,9 +117,9 @@ export function FilmPhoto({ onOpen }: { onOpen: OpenProject }) {
           onOpen={onOpen}
         />
         <Reveal className="camera__block camera__block--unsplash">
-          <div className="camera__stat">3.5M+</div>
-          <div className="camera__stat-label mono">VIEWS ON UNSPLASH</div>
-          <div className="camera__stat-note mono">+ DRONE WORK</div>
+          <div className="camera__stat">4M+</div>
+          <div className="camera__stat-label mono">VIEWS ON UNSPLASH, AS WELL AS 30K+ DOWNLOADS</div>
+          <div className="camera__stat-note mono">+ DRONE WORK WITH DJI MAVIC PRO, MINI 2 AND 4, AVATA</div>
           <DetailButton project="unsplash" onOpen={onOpen} on="teal" label="Views on Unsplash" />
         </Reveal>
       </div>

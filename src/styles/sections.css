@@ -883,6 +883,11 @@
   color: #c23f18;
 }
 
+.work__media {
+  margin-top: clamp(22px, 3vw, 40px);
+  max-width: 760px;
+}
+
 /* ---- §07 This term ---------------------------------------------------- */
 
 .right-now {

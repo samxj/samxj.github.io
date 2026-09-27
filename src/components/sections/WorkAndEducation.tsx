@@ -1,6 +1,7 @@
 import { Section } from './Section';
 import { Reveal } from '../ui/Reveal';
 import { SlideHeading } from '../ui/SlideHeading';
+import { MediaSlot } from '../ui/MediaSlot';
 import {
   education,
   gcseMeta,
@@ -77,6 +78,15 @@ export function WorkAndEducation() {
               {g.note ? <div className="gcse__note mono">{g.note}</div> : null}
             </li>
           ))}
+        </Reveal>
+        <Reveal className="work__media">
+          <MediaSlot
+            src="/assets/gcsejumping.jpg"
+            alt="Celebrating on GCSE results day"
+            aspect="3 / 2"
+            caption="GCSE RESULTS DAY - I'M THE ONE ON THE RIGHT!"
+            tone="dark"
+          />
         </Reveal>
       </div>
 
