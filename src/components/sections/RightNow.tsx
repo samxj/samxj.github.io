@@ -1,6 +1,7 @@
 import { Section } from './Section';
 import { Reveal } from '../ui/Reveal';
 import { SlideHeading } from '../ui/SlideHeading';
+import { MediaSlot } from '../ui/MediaSlot';
 
 const now = [
   {
@@ -16,12 +17,15 @@ const now = [
     body: 'Attending the French Debating club to eventually compete in the national Joutes Oratoires.',
   },
   {
-    title: 'Teaching drums',
-    body: 'Weekly paid drum tutoring for a complete beginner, so they can play at church too.',
+    title: 'Teaching drums, french mentoring',
+    body: 'Weekly paid drum tutoring for a complete beginner and a more experienced drummer, so they can both play at church. Mentoring a Y11 student for GCSE French.',
   },
 ];
 
-const frames = ['/assets/wideisa.jpg', '/assets/lampmoon.jpg', '/assets/castlemotif.jpg', '/assets/auracat.jpg'];
+const frames = [
+  { src: '/assets/codeninjas.png', alt: 'Placeholder image', aspect: '4 / 3', caption: 'CODE NINJAS CLUB LESSON' },
+  { src: '/assets/frenchbooklet.png', alt: 'Placeholder image', aspect: '4 / 3', caption: 'FRENCH SPEAKING PRACTICE' },
+];
 
 export function RightNow() {
   return (
@@ -48,12 +52,9 @@ export function RightNow() {
       </Reveal>
 
       <Reveal className="right-now__frames">
-        {frames.map((src) => (
-          <div key={src} className="right-now__frame">
-            <img src={src} alt="Placeholder image" loading="lazy" />
-          </div>
+        {frames.map((frame) => (
+          <MediaSlot key={frame.src} {...frame} tone="ink" />
         ))}
-        <div className="right-now__caption mono">FOUR SLOTS · RECENT FRAMES, UPDATED EACH TERM</div>
       </Reveal>
     </Section>
   );

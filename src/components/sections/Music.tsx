@@ -7,10 +7,10 @@ import { DetailButton } from '../ui/DetailButton';
 import type { OpenProject } from '../../types';
 
 const specs = [
-  ['DRUMS', 'GRADE 8', 'note'],
-  ['PIANO', 'eq. GRADE 3', 'note'],
+  ['DRUMS', 'ABOUT TO SIT GRADE 8'],
+  ['PIANO', 'GRADE 3', 'note'],
   ['CHURCH BAND', 'SINCE 2021'],
-  ['ROCK CONCERT', '2026'],
+  ['ROCK CONCERT', 'JUL & DEC 2026'],
 ];
 
 export function Music({ onOpen }: { onOpen: OpenProject }) {
@@ -44,17 +44,16 @@ export function Music({ onOpen }: { onOpen: OpenProject }) {
           <span className="music__marker" aria-hidden="true">
             *
           </span>
-          I have not sat grades for either (though I plan to for drums soon) but regularly play songs
-          at the levels indicated.
+          I have not sat the grade but play songs between grades 3 and 5.
         </p>
         <MediaSlot
           className="music__portrait"
-          src="/assets/auracat.jpg"
+          src="/assets/Drumming.jpg"
           alt="Placeholder image"
           aspect="1 / 1"
           rotate="rotate(3deg)"
           parallax={0.14}
-          caption="SLOT · KIT, ROCK CONCERT"
+          caption="JULY 2026 · ROCK CONCERT"
           captionAlign="right"
           tone="ink"
         />
@@ -62,28 +61,11 @@ export function Music({ onOpen }: { onOpen: OpenProject }) {
 
       <Reveal className="music__grid">
         <MediaSlot
-          src="/assets/lampmoon.jpg"
-          alt="Placeholder image"
-          aspect="16 / 9"
-          caption="SLOT · CHURCH BAND, SUNDAY"
+          src="/assets/carols.jpeg"
+          alt="Church youth band"
+          aspect="16 / 11"
+          caption="CHURCH YOUTH BAND · CONTEMPORARY CAROLS"
           tone="ink"
-        />
-        <MediaSlot
-          className="music__grid-offset"
-          src="/assets/Drumming.jpg"
-          alt="Placeholder image"
-          aspect="16 / 9"
-          caption="ROCK CONCERT"
-          tone="ink"
-        />
-        <VideoSlot
-          src="/assets/lampmoon.jpg"
-          aspect="16 / 9"
-          label="03:12"
-          caption="ROCK CONCERT"
-          tone="ink"
-          background="#0A0A0A"
-          posterOpacity={0.45}
         />
       </Reveal>
     </Section>

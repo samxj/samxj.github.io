@@ -53,7 +53,7 @@ export function Contact() {
           </Button>
         </div>
         <div className="contact__colophon mono">
-          MUCH MORE DETAIL IS AVAILABLE ON REQUEST
+          MORE DETAIL IS AVAILABLE ON REQUEST
           <br />
           SAMUEL FIELD · 2026
         </div>

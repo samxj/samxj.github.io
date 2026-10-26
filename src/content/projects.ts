@@ -472,11 +472,11 @@ export const projects: Project[] = [
     key: "unsplash",
     eyebrow: "PHOTOGRAPHY · ONGOING",
     accent: "teal",
-    title: "3.5M+ views on Unsplash",
+    title: "4M+ views on Unsplash",
     facts: [
-      { label: "WHAT", value: "Photographs on @sgfphotography — iPhone XR → EOS 400D → 200D → Lumix G9, plus drone work" },
+      { label: "WHAT", value: "Photographs on @s_giovanni — iPhone XR → EOS 400D → 200D → Lumix G9, plus drone work" },
       { label: "WHEN", value: "Ongoing" },
-      { label: "WHY", value: "To put my photographs where people would actually use them. 3.5M+ views, 35,000 downloads.", highlight: true },
+      { label: "WHY", value: "To put my photographs where people would actually use them. 4M+ views, 35,000 downloads.", highlight: true },
     ],
     blocks: [
     { kind: 'heading', text: "The alternative to Instagram" },
@@ -497,7 +497,7 @@ export const projects: Project[] = [
     {
       kind: 'paragraph',
       content: [
-        "Now my account – @sgfphotography – has 3.5M+ views, with 35,000 downloads. Below you will find a selection of my favourite images.",
+        "Now my account – @s_giovanni – has 4M+ views, with 35,000 downloads. Below you will find a selection of my favourite images.",
       ],
     },
     { kind: 'heading', text: "La Torre di Sopra: drone work" },
@@ -524,9 +524,9 @@ export const projects: Project[] = [
     key: "drums",
     eyebrow: "MUSIC · SINCE 2021",
     accent: "acid",
-    title: "Drums, and the band around them",
+    title: "Drumming at church and the rock concert",
     facts: [
-      { label: "WHAT", value: "Drums to Grade 8 and piano to Grade 4, and the band around them" },
+      { label: "WHAT", value: "Drums to Grade 8 and piano to Grade 3-ish, and the band around them" },
       { label: "WHEN", value: "Since 2021 · rock concert in 2026" },
       { label: "WHY", value: "Playing for the church band every few Sundays is what keeps it regular" },
     ],
@@ -534,7 +534,7 @@ export const projects: Project[] = [
     {
       kind: 'paragraph',
       content: [
-        "Grade 8 drums, Grade 4 piano. I have drummed for my local church every few Sundays since 2021 and played my school’s Rock Concert this year, so I know both the band side and the theory side.",
+        "Grade 8 drums, Grade 3-ish piano. I have drummed for my local church every few Sundays since 2021 and played my school’s Rock Concert this year, so I know both the band side and the theory side.",
       ],
     },
     { kind: 'note', tone: "muted", text: "ROOM FOR MORE HERE — SET LIST, KIT, WHO YOU PLAY WITH" },

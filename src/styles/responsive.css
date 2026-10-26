@@ -161,9 +161,12 @@
 /* The inverting cursor is already suppressed on coarse pointers; on narrow screens
    the marquees are the only motion worth keeping. */
 @media (max-width: 599.98px) {
-  .right-now__frames,
   .contact__strip {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .right-now__frames {
+    grid-template-columns: 1fr;
   }
 
   .overlay__body .panel__media {

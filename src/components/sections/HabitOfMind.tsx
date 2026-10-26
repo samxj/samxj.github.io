@@ -18,7 +18,7 @@ export function HabitOfMind() {
         This is where I put everything I do. At heart, I&rsquo;m an engineer; CAD and coding and
         caffeine are among my favourite things. But that is not all. We don&rsquo;t need human
         computers anymore; AI means almost anyone can build code, iterate designs, make a tech
-        project, do the maths, assemble an app &mdash; the list goes on. What we need are people - Leadership, eloquency, and creativity. Yet, those traits
+        project, do the maths, assemble an app &mdash; the list goes on. Among other things, what we need is good leadership, communication, and creativity. Yet, those traits
         are empty without that nitty&#8209;gritty understanding of the tech stuff, without good old
         experience of doing it all yourself.
         
