@@ -84,6 +84,12 @@
     padding-bottom: 10px;
   }
 
+  .habit__avatar {
+    justify-self: start;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
   .habit__title,
   .habit__lead,
   .habit__credentials,

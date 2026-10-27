@@ -234,6 +234,16 @@
   color: #0a0a0a;
 }
 
+.detail-button--dark-acid {
+  border-color: #e4ff3b;
+  color: #e4ff3b;
+}
+
+.detail-button--dark-acid:hover {
+  background: #e4ff3b;
+  color: #0a0a0a;
+}
+
 .detail-button--teal {
   border-color: #0a0a0a;
   color: #0a0a0a;

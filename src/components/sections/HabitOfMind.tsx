@@ -14,6 +14,17 @@ export function HabitOfMind() {
         Hi, I&rsquo;m Sam!
       </Reveal>
 
+      {/* Swap the placeholder for the real profile picture. */}
+      <MediaSlot
+        className="habit__avatar"
+        src="/assets/pfp.png"
+        alt="Sam Field"
+        aspect="1 / 1"
+        rotate="rotate(4deg)"
+        parallax={0.08}
+        background="#e2d9c6"
+      />
+
       <Reveal as="p" className="habit__lead">
         This is where I put everything I do. At heart, I&rsquo;m an engineer; CAD and coding and
         caffeine are among my favourite things. But that is not all. We don&rsquo;t need human
@@ -23,8 +34,8 @@ export function HabitOfMind() {
         experience of doing it all yourself.
         
       </Reveal>
-/*<br />
-        And I believe that&rsquo;s where I come in.*/
+<br />
+      
       <Reveal className="habit__credentials mono">
         <span>SAMUEL GIOVANNI FIELD</span>
         <span>LONDON</span>
@@ -37,7 +48,7 @@ export function HabitOfMind() {
         aspect="4 / 5"
         rotate="rotate(2deg)"
         parallax={0.1}
-        caption="SHOT ON A HILL IN TUSCANY"
+        caption="SHOT IN TUSCANY"
         captionAlign="right"
         tone="ink"
       />

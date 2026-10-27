@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import type { Block, Inline, Project } from '../../content/projects';
+import type { Block, Inline, PanelAccent, Project } from '../../content/projects';
 import { MediaSlot } from './MediaSlot';
 import { VideoSlot } from './VideoSlot';
 
@@ -19,7 +19,13 @@ function InlineText({ content }: { content: Inline[] }) {
   );
 }
 
-function PanelBlock({ block }: { block: Block }) {
+const buttonTone: Record<PanelAccent, string> = {
+  flame: 'dark',
+  teal: 'dark-teal',
+  acid: 'dark-acid',
+};
+
+function PanelBlock({ block, accent }: { block: Block; accent: PanelAccent }) {
   switch (block.kind) {
     case 'heading':
       return <h4 className="panel__h4">{block.text}</h4>;
@@ -52,6 +58,20 @@ function PanelBlock({ block }: { block: Block }) {
             </p>
           ))}
         </div>
+      );
+    case 'document':
+      return (
+        <a
+          className={`detail-button detail-button--${buttonTone[accent]} panel__document`}
+          href={block.src}
+          download
+        >
+          {block.label}
+          <span className="detail-button__plus" aria-hidden="true">
+            ↓
+          </span>
+          <span className="sr-only"> (downloads a file)</span>
+        </a>
       );
     case 'media':
       return (
@@ -97,7 +117,7 @@ export function ProjectPanel({ project, titleId }: { project: Project; titleId: 
         ))}
       </div>
       {project.blocks.map((block, i) => (
-        <PanelBlock key={i} block={block} />
+        <PanelBlock key={i} block={block} accent={project.accent} />
       ))}
     </article>
   );

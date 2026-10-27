@@ -2,7 +2,6 @@ import { Section } from './Section';
 import { Reveal } from '../ui/Reveal';
 import { SlideHeading } from '../ui/SlideHeading';
 import { MediaSlot } from '../ui/MediaSlot';
-import { VideoSlot } from '../ui/VideoSlot';
 import { DetailButton } from '../ui/DetailButton';
 import type { OpenProject } from '../../types';
 

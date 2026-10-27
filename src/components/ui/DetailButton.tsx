@@ -4,7 +4,7 @@ interface DetailButtonProps {
   project: ProjectKey;
   onOpen: (key: ProjectKey, trigger: HTMLButtonElement) => void;
   /** The button takes its colour from the block it sits on. */
-  on?: 'dark' | 'dark-teal' | 'teal' | 'yellow';
+  on?: 'dark' | 'dark-teal' | 'dark-acid' | 'teal' | 'yellow';
   /** Named for the panel it opens, since "FULL DETAIL" alone says nothing out of context. */
   label?: string;
 }

@@ -8,6 +8,7 @@
  */
 
 export type ProjectKey =
+  | "nekton"
   | "plane"
   | "lexitecht"
   | "pudding"
@@ -49,7 +50,9 @@ export type Block =
   | { kind: 'pullquote'; text: string }
   | { kind: 'note'; text: string; tone: 'default' | 'muted' }
   | { kind: 'excerpt'; eyebrow: string; title: string; paragraphs: string[] }
-  | { kind: 'media'; columns: string; gap: string; items: MediaItem[] };
+  | { kind: 'media'; columns: string; gap: string; items: MediaItem[] }
+  /** A button that downloads a file. */
+  | { kind: 'document'; label: string; src: string };
 
 export interface Project {
   key: ProjectKey;
@@ -61,6 +64,26 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    key: "nekton",
+    eyebrow: "TECHNICAL · IN PROGRESS",
+    accent: "acid",
+    title: "Project NEKTON",
+    facts: [
+      { label: "WHAT", value: "An RC boat that maps lake beds (depth and surface type) and locates fish in real time, with a 200kHz ultrasound transducer" },
+      { label: "WHEN", value: "In progress · finishing summer 2027" },
+      { label: "WHY", value: "To better grasp physics concepts involved." },
+    ],
+    blocks: [
+    {
+      kind: 'paragraph',
+      content: [
+        "NEKTON is too complex to explain here. Please read the dev log below: last updated 27 Oct.",
+      ],
+    },
+    { kind: 'document', label: "READ THE DEV LOG", src: "/assets/nekton-devlog-copy.docx" }
+    ],
+  },
   {
     key: "plane",
     eyebrow: "TECHNICAL · 2026",

@@ -3,7 +3,6 @@ import { Reveal } from '../ui/Reveal';
 import { SlideHeading } from '../ui/SlideHeading';
 import { Tag } from '../ui/Tag';
 import { MediaSlot } from '../ui/MediaSlot';
-import { VideoSlot } from '../ui/VideoSlot';
 import { DetailButton } from '../ui/DetailButton';
 import type { OpenProject } from '../../types';
 
@@ -22,8 +21,33 @@ export function Technical({ onOpen }: { onOpen: OpenProject }) {
         </p>
       </div>
 
+      <Reveal className="technical__row technical__row--nekton grid12">
+        <div className="technical__idx technical__idx--flame mono">/01<br/>[IN PROGRESS]</div>
+        <div className="technical__body technical__body--nekton">
+          <h3 className="h3">Project NEKTON</h3>
+          <p className="body body--48">
+            Most complex project yet. NEKTON - Narrowbeam Echosounder for Kinematic Tracking and Organism Numeration - is the Ancient Greek word for fish. It's an RC boat (still in progress - finishing summer 2027) which will be capable of mapping the beds of lakes (both depth mapping and surface type), and locating fish in real time to help with fishing. All done with a 200kHz ultrasound transducer from Florida.
+          </p>
+          <div className="tags">
+            <Tag>Applied Physics</Tag>
+            <Tag>Computer Science</Tag>
+          </div>
+          <DetailButton project="nekton" onOpen={onOpen}  label="Project NEKTON" />
+        </div>
+        <div className="technical__media technical__media--nekton">
+          <MediaSlot
+            src="/assets/transducerpins.png"
+            alt="Placeholder image"
+            aspect="16 / 10"
+            parallax={0.05}
+            caption="NEKTON'S TRANSDUCER PINS · WORK IN PROGRESS"
+            background="#161513"
+          />
+        </div>
+      </Reveal>
+
       <Reveal className="technical__row grid12">
-        <div className="technical__idx technical__idx--flame mono">/01</div>
+        <div className="technical__idx technical__idx--flame mono">/02</div>
         <div className="technical__body technical__body--plane">
           <h3 className="h3">AI seed‑dropping plane</h3>
           <p className="body body--48">
@@ -70,7 +94,7 @@ export function Technical({ onOpen }: { onOpen: OpenProject }) {
       </Reveal>
 
       <Reveal className="technical__row technical__row--lexitecht grid12">
-        <div className="technical__idx technical__idx--teal mono">/02</div>
+        <div className="technical__idx technical__idx--teal mono">/03</div>
         <div className="technical__body technical__body--lexitecht">
           <h3 className="h3">Lexitecht</h3>
           <p className="body body--48">
@@ -99,7 +123,7 @@ export function Technical({ onOpen }: { onOpen: OpenProject }) {
       </Reveal>
 
       <Reveal className="technical__row grid12">
-        <div className="technical__idx technical__idx--flame mono">/03</div>
+        <div className="technical__idx technical__idx--flame mono">/04</div>
         <div className="technical__body technical__body--pudding">
           <h3 className="h3">Pudding Trolley</h3>
           <p className="body body--44">
@@ -123,46 +147,40 @@ export function Technical({ onOpen }: { onOpen: OpenProject }) {
           </div>
           <DetailButton project="leuiraciu" onOpen={onOpen} label="Leuiráciu" />
         </div>
-        <div className="technical__idx technical__idx--trailing mono">/04</div>
+        <div className="technical__idx technical__idx--trailing mono">/05</div>
       </Reveal>
 
       <Reveal className="technical__grid">
         <MediaSlot
-          src="/assets/wideisa.jpg"
-          alt="Placeholder image"
+          src="/assets/pt-const-alt.jpg"
+          alt="Pudding trolley car attached to pudding trolley"
           aspect="3 / 2"
-          caption="SLOT · PUDDING TROLLEY, CHASSIS"
+          caption="PUDDING TROLLEY RC CAR · FIXED TO TROLLEY"
           background="#161513"
         />
         <MediaSlot
-          className="technical__grid-offset"
-          src="/assets/auracat.jpg"
+          src="/assets/pt-elec.jpg"
           alt="Placeholder image"
           aspect="3 / 2"
-          caption="SLOT · WIRING BENCH"
+          caption="PUDDING TROLLEY · ELECTRONICS"
           background="#161513"
         />
         <MediaSlot
-          src="/assets/castlemotif.jpg"
+          src="/assets/pt-fusion.png"
           alt="Placeholder image"
           aspect="3 / 2"
-          caption="SLOT · LEUIRÁCIU SCRIPT SHEET"
+          caption="PUDDING TROLLEY · CAD"
           background="#161513"
         />
-        <VideoSlot
-          className="technical__grid-wide"
-          src="/assets/torre.jpg"
-          aspect="21 / 9"
-          label="00:45"
-          caption="VIDEO SLOT · PLANE TEST FLIGHT"
-        />
-        <VideoSlot
-          src="/assets/lampmoon.jpg"
+        <MediaSlot
+          src="/assets/leuiraciu.png"
+          alt="Leuiraciu flag"
           aspect="3 / 2"
-          size="sm"
-          caption="VIDEO SLOT · DISPENSER, BENCH TEST"
+          caption="LEUIRACIU · FLAG"
+          background="#161513"
         />
       </Reveal>
+
     </Section>
   );
 }

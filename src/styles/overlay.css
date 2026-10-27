@@ -208,6 +208,11 @@
   color: #46433d;
 }
 
+.panel__document {
+  margin: 22px 0 6px;
+  text-decoration: none;
+}
+
 /* Where a panel leads with a paragraph rather than a heading. */
 .panel__eyebrow + .panel__title + .panel__facts + .panel__p {
   margin-top: 22px;

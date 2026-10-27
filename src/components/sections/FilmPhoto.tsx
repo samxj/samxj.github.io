@@ -105,7 +105,7 @@ export function FilmPhoto({ onOpen }: { onOpen: OpenProject }) {
           meta="2023 & 2022"
           title={
             <>
-              Red Robin Art Studio
+              Red Robin Art Studio &
               <br />
               Chanctonbury Church
             </>
